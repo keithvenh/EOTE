@@ -1,0 +1,38 @@
+<header class="header">
+    <div class="header-left"></div>
+    <div class="header-center"><%= image_tag("sw-logo.png", class: "header-image header-logo") %></div>
+    <div class="header-right">
+        <%= link_to edit_user_registration_path(@user) do %>
+            <div class="user translate">
+                <p class="sw"><%= @user.username %></p>
+                <p class="en"><%= @user.username %></p>
+            </div>
+        <% end %>
+    </div>
+</header>
+<nav class="header-nav">
+    <%= link_to root_path do %>
+        <div class="nav-item translate">
+            <p class="sw">Home</p>
+            <p class="en">Home</p>
+        </div>
+    <% end %>
+    <%= link_to root_path do %>
+        <div class="nav-item translate">
+            <p class="sw">Stats</p>
+            <p class="en">Stats</p>
+        </div>
+    <% end %>
+    <%= link_to root_path do %>
+        <div class="nav-item translate">
+            <p class="sw">Loadouts</p>
+            <p class="en">Loadouts</p>
+        </div>
+    <% end %>
+    <%= link_to root_path do %>
+        <div class="nav-item translate">
+            <p class="sw">Store</p>
+            <p class="en">Store</p>
+        </div>
+    <% end %>
+</nav>

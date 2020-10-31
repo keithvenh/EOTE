@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-
-    def index
-        render "Edge of the Empire: Legacy of the Iron Shadow"
-    end
+    protect_from_forgery prepend: true
+    before_action :authenticate_user!
 end
