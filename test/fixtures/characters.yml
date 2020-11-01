@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  race: MyString
+  career: MyString
+  soak: 1
+  wound_threshold: 1
+  strain_threshold: MyString
+  defense_ranged: 1
+  defense_melee: 
+  brawn: 1
+  agility: 1
+  intellect: 1
+  cunning: 1
+  presence: 1
+
+two:
+  name: MyString
+  race: MyString
+  career: MyString
+  soak: 1
+  wound_threshold: 1
+  strain_threshold: MyString
+  defense_ranged: 1
+  defense_melee: 
+  brawn: 1
+  agility: 1
+  intellect: 1
+  cunning: 1
+  presence: 1
