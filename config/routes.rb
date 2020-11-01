@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'pages/index'
-  get 'pages/about'
-  get 'pages/help'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'pages#index'
+
+  get 'pages/index', to: 'pages#index', as: 'home'
+  get 'pages/about', to: 'pages#about', as: 'about'
+  get 'pages/help', to: 'pages#help', as: 'help'
+  
+  resources :characters
+  devise_for :users
 end

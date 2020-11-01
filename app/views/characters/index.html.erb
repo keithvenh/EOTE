@@ -1,0 +1,12 @@
+<div class="page-container">
+    <div class="screen screen-lg">
+        <% @characters.each do |c| %>
+            <%= link_to character_path(c) do %>
+                <div class="character-list translate">
+                    <p class="sw"><%= c.name %></p>
+                    <p class="en"><%= c.name %></p>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="page-container">
+<div class="screen screen-left-lg">
+    <section class="character-encumbrance">
+        <div class="general-data">
+            <div class="translate data-type">
+                <p class="sw">Encumbrance</p>
+                <p class="en">Encumbrance</p>
+            </div>
+            <p class="sw data"><%= 0 %> || <%= @character.brawn + 5 %></p>
+        </div>
+    </section>
+</div>
+<div class="screen screen-lg">
+    <header class="character-header">
+        <div class="translate">
+            <p class="sw"><%= @character.name %></p>
+            <p class="en"><%= @character.name %></p>
+        </div>
+        <div class="translate">
+            <p class="sw"><%= @character.race %></p>
+            <p class="en"><%= @character.race %></p>
+        </div>
+        <div class="translate">
+            <p class="sw"><%= @character.career %></p>
+            <p class="en"><%= @character.career %></p>
+        </div>
+
+    </header>
+
+    <article class="character-details">
+        <section class="character-general">
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Soak</p>
+                    <p class="en">Soak</p>
+                </div>
+                <p class="sw data"><%= @character.soak %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Wound Threshold</p>
+                    <p class="en">Wound Threshold</p>
+                </div>
+                <p class="sw data"><%= @character.wound_threshold %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Strain Threshold</p>
+                    <p class="en">Strain Threshold</p>
+                </div>
+                <p class="sw data"><%= @character.strain_threshold %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Ranged Defense</p>
+                    <p class="en">Ranged Defense</p>
+                </div>
+                <p class="sw data"><%= @character.defense_ranged %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Melee Defense</p>
+                    <p class="en">Melee Defense</p>
+                </div>
+                <p class="sw data"><%= @character.defense_melee %></p>
+            </div>
+        </section>
+
+        <section class="character-attributes">
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Brawn</p>
+                    <p class="en">Brawn</p>
+                </div>
+                <p class="sw data"><%= @character.brawn %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Agility</p>
+                    <p class="en">Agility</p>
+                </div>
+                <p class="sw data"><%= @character.agility %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Intellect</p>
+                    <p class="en">Intellect</p>
+                </div>
+                <p class="sw data"><%= @character.intellect %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Cunning</p>
+                    <p class="en">Cunning</p>
+                </div>
+                <p class="sw data"><%= @character.cunning %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Willpower</p>
+                    <p class="en">Willpower</p>
+                </div>
+                <p class="sw data"><%= @character.willpower %></p>
+            </div>
+            <div class="general-data">
+                <div class="translate data-type">
+                    <p class="sw">Presence</p>
+                    <p class="en">Presence</p>
+                </div>
+                <p class="sw data"><%= @character.presence %></p>
+            </div>
+        </section>
+
+    </article>
+</div>
+</div>

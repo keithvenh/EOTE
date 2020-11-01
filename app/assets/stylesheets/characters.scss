@@ -1,0 +1,66 @@
+.character-header {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    width: 100%;
+}
+
+.character-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-general, .character-attributes {
+    margin: 32px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    .general-data {
+        width: 15%;
+        height: calc(width);
+        .data-type {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px;
+            margin: 0;
+            .sw {
+                font-size: 24px;
+            }
+        }
+        .data {
+            text-align: center;
+            font-size: 2em;
+            padding: 6px;
+            margin: 0;
+        }
+    }
+}
+
+.character-encumbrance {
+    display: flex;
+    flex-direction: column;
+    .general-data {
+        .data-type {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px;
+            margin: 0;
+            .sw {
+                font-size: 24px;
+            }
+        }
+        .data {
+            text-align: center;
+            font-size: 2em;
+            padding: 6px;
+            margin: 0;
+        }
+    }
+}
+
+.character-list {
+    p {
+        text-align: left;
+    }
+    margin: 12px;
+}

@@ -8,16 +8,51 @@
 
 .translate {
     text-align: right;
-    .sw {
-        font-family: 'aurebesh';
+    .sw {       
         color: #fff;
         font-size: 36px;
         margin: 0;
     }
     .en {
-        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
         margin: 0;
         text-transform: uppercase;
         font-size: 12px;      
     }
+}
+
+.sw {
+    font-family: 'aurebesh';
+}
+
+
+
+.screen {
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px #0ff;
+    border-radius: 15% 5%;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 32px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.screen-md {
+    height: 18vw;
+    width: 32vw;
+}
+
+.screen-lg {
+    height: 36vw;
+    width: 64vw;
+}
+
+.screen-left-md, .screen-right-md {
+    width: 25vw;
+    height: 18vw;
+}
+
+.screen-left-lg, .screen-right-lg {
+    width: 18vw;
+    height: 32vw;
+    border-radius: 5% 15%;
 }
