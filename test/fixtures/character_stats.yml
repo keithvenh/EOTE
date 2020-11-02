@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  character: one
+  combat_kills: 1
+  combat_assists: 1
+  combat_damage: 1
+  combat_crits: 1
+  wounds_taken: 1
+  wounds_healed: 1
+  crit_inj_sustained: 1
+  crit_inj_healed: 1
+
+two:
+  character: two
+  combat_kills: 1
+  combat_assists: 1
+  combat_damage: 1
+  combat_crits: 1
+  wounds_taken: 1
+  wounds_healed: 1
+  crit_inj_sustained: 1
+  crit_inj_healed: 1

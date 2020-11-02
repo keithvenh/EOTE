@@ -1,14 +1,95 @@
 <div class="page-container">
 <div class="screen screen-left-lg">
-    <section class="character-encumbrance">
+    <section class="character-stats">
+        <div class="translate">
+            <p class="sw">Statistics</p>
+            <p class="en">Statistics</p>
+        </div>
+        <div class="statistics">
+          <p class="label">Kills</p>
+          <p class="count sw"><%= @character.character_stat.combat_kills %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Assists</p>
+          <p class="count sw"><%= @character.character_stat.combat_assists %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Damage</p>
+          <p class="count sw"><%= @character.character_stat.combat_damage %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Critical Hits</p>
+          <p class="count sw"><%= @character.character_stat.combat_crits %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Wounds Taken</p>
+          <p class="count sw"><%= @character.character_stat.wounds_taken %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Critical Injuries Sustained</p>
+          <p class="count sw"><%= @character.character_stat.crit_inj_sustained %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Wounds Healed</p>
+          <p class="count sw"><%= @character.character_stat.wounds_healed %></p>
+        </div>
+        <div class="statistics">
+          <p class="label">Critical Injuries Healed</p>
+          <p class="count sw"><%= @character.character_stat.crit_inj_healed %></p>
+        </div>
+    </section>
+<!--  <section class="character-encumbrance">
+        <% encum = 0 %>
+        <% encum_thr = @character.brawn + 5%>
         <div class="general-data">
             <div class="translate data-type">
                 <p class="sw">Encumbrance</p>
                 <p class="en">Encumbrance</p>
             </div>
-            <p class="sw data"><%= 0 %> || <%= @character.brawn + 5 %></p>
+            <p class="sw data"><span id="used-enc"></span> || <span id="avail-enc"></span></p>
         </div>
+        <div class="armor">
+            <div class="translate data-type">
+                <p class="sw">Armor</p>
+                <p class="en">Armor</p>
+            </div>
+            <% @character.character_armors.each do |armor| %>
+                <p class="item"><%= armor.armor.name %></p>
+                <% armor.armor.encumbrance > 3 ? encum += armor.armor.encumbrance - 3 : nil %>
+            <% end %>
+        </div>
+        <div class="weapons">
+            <div class="translate data-type">
+                <p class="sw">Weapons</p>
+                <p class="en">Weapons</p>
+            </div>
+            <% @character.character_weapons.each do |weapon| %>
+                <p class="item"><%= weapon.weapon.name %></p>
+                <% encum += weapon.weapon.encumbrance %>
+            <% end %>
+        </div>
+        <div class="equipment">
+            <div class="translate data-type">
+                <p class="sw">Equipment</p>
+                <p class="en">Equipment</p>
+            </div>
+            <% @character.character_equipments.each do |equipment| %>
+                <p class="item"><%= equipment.equipment.name %></p>
+                <% if equipment.equipment.encumbrance < 1000 %>
+                    <% encum += equipment.equipment.encumbrance %>
+                <% else %>
+                    <% encum_thr += (equipment.equipment.encumbrance / 1000) %>
+                <% end %>
+            <% end %>
+        </div>
+
+        <script>
+            document.getElementById('used-enc').innerHTML = <%= encum %>;
+            document.getElementById('avail-enc').innerHTML = <%= encum_thr %>;
+        </script>
+
     </section>
+-->
 </div>
 <div class="screen screen-lg">
     <header class="character-header">
@@ -110,6 +191,73 @@
                 <p class="sw data"><%= @character.presence %></p>
             </div>
         </section>
+
+        <section class="character-skills">
+            <div class="category general">
+                <div class="translate">
+                    <p class="sw">General</p>
+                    <p class="en">General</p>
+                </div>
+                    <% @character.skills.each do |skill| %>
+                        <% if skill.category == "General" %>
+                            <div class="skill">
+                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <div class="level-display">
+                                    <% skill.level.times do %>
+                                        <div class="level level-true"></div>
+                                    <% end %>
+                                    <% (5 - skill.level).times do %>
+                                        <div class="level level-false"></div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        <% end %>
+                    <% end %>
+            </div>
+            <div class="other">
+                <div class="category combat">
+                    <div class="translate">
+                        <p class="sw">Combat</p>
+                        <p class="en">Combat</p>
+                    </div>
+                        <% @character.skills.each do |skill| %>
+                        <% if skill.category == "Combat" %>
+                            <div class="skill">
+                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <div class="level-display">
+                                    <% skill.level.times do %>
+                                        <div class="level level-true"></div>
+                                    <% end %>
+                                    <% (5 - skill.level).times do %>
+                                        <div class="level level-false"></div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        <% end %>
+                    <% end %>
+                </div>
+                <div class="category knowledge">
+                    <div class="translate">
+                        <p class="sw">Knowledge</p>
+                        <p class="en">Knowledge</p>
+                    </div>
+                        <% @character.skills.each do |skill| %>
+                        <% if skill.category == "Knowledge" %>
+                            <div class="skill">
+                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <div class="level-display">
+                                    <% skill.level.times do %>
+                                        <div class="level level-true"></div>
+                                    <% end %>
+                                    <% (5 - skill.level).times do %>
+                                        <div class="level level-false"></div>
+                                    <% end %>
+                                </div>
+                            </div>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
 
     </article>
 </div>

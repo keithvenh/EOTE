@@ -10,7 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_01_172615) do
+ActiveRecord::Schema.define(version: 2020_11_02_014609) do
+
+  create_table "armors", force: :cascade do |t|
+    t.string "name"
+    t.boolean "restricted"
+    t.integer "defense"
+    t.integer "soak"
+    t.integer "cost"
+    t.integer "encumbrance"
+    t.integer "rarity"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "hard_points"
+  end
+
+  create_table "character_armors", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.integer "armor_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["armor_id"], name: "index_character_armors_on_armor_id"
+    t.index ["character_id"], name: "index_character_armors_on_character_id"
+  end
+
+  create_table "character_equipments", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.integer "equipment_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_character_equipments_on_character_id"
+    t.index ["equipment_id"], name: "index_character_equipments_on_equipment_id"
+  end
+
+  create_table "character_stats", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.integer "combat_kills"
+    t.integer "combat_assists"
+    t.integer "combat_damage"
+    t.integer "combat_crits"
+    t.integer "wounds_taken"
+    t.integer "wounds_healed"
+    t.integer "crit_inj_sustained"
+    t.integer "crit_inj_healed"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_character_stats_on_character_id"
+  end
+
+  create_table "character_weapons", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.integer "weapon_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_character_weapons_on_character_id"
+    t.index ["weapon_id"], name: "index_character_weapons_on_weapon_id"
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -31,6 +90,29 @@ ActiveRecord::Schema.define(version: 2020_11_01_172615) do
     t.integer "willpower"
   end
 
+  create_table "equipment", force: :cascade do |t|
+    t.string "name"
+    t.boolean "restricted"
+    t.integer "encumbrance"
+    t.integer "cost"
+    t.integer "rarity"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.string "name"
+    t.string "attr"
+    t.string "category"
+    t.boolean "career"
+    t.integer "level"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_skills_on_character_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,4 +126,28 @@ ActiveRecord::Schema.define(version: 2020_11_01_172615) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.boolean "restricted"
+    t.string "skill"
+    t.integer "damage"
+    t.integer "crit"
+    t.string "range"
+    t.integer "encumbrance"
+    t.integer "hard_points"
+    t.integer "cost"
+    t.integer "rarity"
+    t.text "specials"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "character_armors", "armors"
+  add_foreign_key "character_armors", "characters"
+  add_foreign_key "character_equipments", "characters"
+  add_foreign_key "character_equipments", "equipment"
+  add_foreign_key "character_stats", "characters"
+  add_foreign_key "character_weapons", "characters"
+  add_foreign_key "character_weapons", "weapons"
+  add_foreign_key "skills", "characters"
 end
