@@ -1,41 +1,34 @@
 <header class="header">
     <div class="header-left"></div>
-    <div class="header-center"><%= image_tag("sw-logo.png", class: "header-image header-logo") %></div>
+
+
+    <div class="header-center">
+        <%= image_tag("sw-logo.png", class: "header-image header-logo") %>
+    </div>
+
+
     <div class="header-right">
         <% if user_signed_in? %>
             <%= link_to character_path(@character) do %>
-                <div class="user translate">
-                    <p class="sw"><%= @user.username %></p>
-                    <p class="en"><%= @user.username %></p>
-                </div>
+                <%= translate(@user.username, "translate-lg translate-right") %>
             <% end %>
         <% end %>
     </div>
 </header>
+
+
 <nav class="header-nav">
     <%= link_to root_path do %>
-        <div class="nav-item translate">
-            <p class="sw">Home</p>
-            <p class="en">Home</p>
-        </div>
+        <%= translate("Home", "translate-sm translate-right nav-item") %>
     <% end %>
     <%= link_to characters_path do %>
-        <div class="nav-item translate">
-            <p class="sw">Characters</p>
-            <p class="en">Characters</p>
-        </div>
+        <%= translate("Characters", "translate-sm translate-right nav-item") %>
     <% end %>
     <%= link_to root_path do %>
-        <div class="nav-item translate">
-            <p class="sw">Stats</p>
-            <p class="en">Stats</p>
-        </div>
+        <%= translate("Stats", "translate-sm translate-right nav-item") %>
     <% end %>
     
     <%= link_to root_path do %>
-        <div class="nav-item translate">
-            <p class="sw">Store</p>
-            <p class="en">Store</p>
-        </div>
+        <%= translate("Store", "translate-sm translate-right nav-item") %>
     <% end %>
 </nav>

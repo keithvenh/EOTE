@@ -1,10 +1,7 @@
 <div class="page-container">
 <div class="screen screen-left-lg">
     <section class="character-stats">
-        <div class="translate">
-            <p class="sw">Statistics</p>
-            <p class="en">Statistics</p>
-        </div>
+        <%= translate("Statistics", "translate-center") %>
         <div class="statistics">
           <p class="label">Kills</p>
           <p class="count sw"><%= @character.character_stat.combat_kills %></p>
@@ -93,115 +90,69 @@
 </div>
 <div class="screen screen-lg">
     <header class="character-header">
-        <div class="translate">
-            <p class="sw"><%= @character.name %></p>
-            <p class="en"><%= @character.name %></p>
-        </div>
-        <div class="translate">
-            <p class="sw"><%= @character.race %></p>
-            <p class="en"><%= @character.race %></p>
-        </div>
-        <div class="translate">
-            <p class="sw"><%= @character.career %></p>
-            <p class="en"><%= @character.career %></p>
-        </div>
-
+        <%= translate(@character.name, "translate-left") %>
+        <%= translate(@character.race, "translate-left") %>
+        <%= translate(@character.career, "translate-left") %>
     </header>
 
     <article class="character-details">
         <section class="character-general">
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Soak</p>
-                    <p class="en">Soak</p>
-                </div>
+                <%= translate("Soak", "data-type translate-center translate-sm") %>
                 <p class="sw data"><%= @character.soak %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Wound Threshold</p>
-                    <p class="en">Wound Threshold</p>
-                </div>
+                <%= translate("Wound Threshold", "data-type translate-center translate-sm") %>
                 <p class="sw data"><%= @character.wound_threshold %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Strain Threshold</p>
-                    <p class="en">Strain Threshold</p>
-                </div>
+                <%= translate("Strain Threshold", "data-type translate-center translate-sm") %>
                 <p class="sw data"><%= @character.strain_threshold %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Ranged Defense</p>
-                    <p class="en">Ranged Defense</p>
-                </div>
+                <%= translate("Ranged Defense", "data-type translate-center translate-sm") %>
                 <p class="sw data"><%= @character.defense_ranged %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Melee Defense</p>
-                    <p class="en">Melee Defense</p>
-                </div>
+                <%= translate("Melee Defense", "data-type translate-center translate-sm") %>
                 <p class="sw data"><%= @character.defense_melee %></p>
             </div>
         </section>
 
         <section class="character-attributes">
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Brawn</p>
-                    <p class="en">Brawn</p>
-                </div>
-                <p class="sw data"><%= @character.brawn %></p>
+                <%= translate("Brawn", "translate-center translate-sm brawn") %>
+                <p class="sw data brawn"><%= @character.brawn %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Agility</p>
-                    <p class="en">Agility</p>
-                </div>
+                <%= translate("Agility", "translate-center translate-sm agility") %>
                 <p class="sw data"><%= @character.agility %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Intellect</p>
-                    <p class="en">Intellect</p>
-                </div>
+                <%= translate("Intellect", "translate-center translate-sm intellect") %>
                 <p class="sw data"><%= @character.intellect %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Cunning</p>
-                    <p class="en">Cunning</p>
-                </div>
+                <%= translate("Cunning", "translate-center translate-sm cunning") %>
                 <p class="sw data"><%= @character.cunning %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Willpower</p>
-                    <p class="en">Willpower</p>
-                </div>
+                <%= translate("Willpower", "translate-center translate-sm willpower") %>
                 <p class="sw data"><%= @character.willpower %></p>
             </div>
             <div class="general-data">
-                <div class="translate data-type">
-                    <p class="sw">Presence</p>
-                    <p class="en">Presence</p>
-                </div>
+                <%= translate("Presence", "translate-center translate-sm presence") %>
                 <p class="sw data"><%= @character.presence %></p>
             </div>
         </section>
 
         <section class="character-skills">
             <div class="category general">
-                <div class="translate">
-                    <p class="sw">General</p>
-                    <p class="en">General</p>
-                </div>
+                <%= translate("General", "translate-left") %>
                     <% @character.skills.each do |skill| %>
                         <% if skill.category == "General" %>
                             <div class="skill">
-                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <p class="<%= skill.career ? 'career' : '' %> <%= skill.attr.downcase %>"><%= skill.name %></p>
                                 <div class="level-display">
                                     <% skill.level.times do %>
                                         <div class="level level-true"></div>
@@ -216,10 +167,7 @@
             </div>
             <div class="other">
                 <div class="category combat">
-                    <div class="translate">
-                        <p class="sw">Combat</p>
-                        <p class="en">Combat</p>
-                    </div>
+                    <%= translate("Combat", "translate-left") %>
                         <% @character.skills.each do |skill| %>
                         <% if skill.category == "Combat" %>
                             <div class="skill">
@@ -237,10 +185,7 @@
                     <% end %>
                 </div>
                 <div class="category knowledge">
-                    <div class="translate">
-                        <p class="sw">Knowledge</p>
-                        <p class="en">Knowledge</p>
-                    </div>
+                    <%= translate("Knowledge", "translate-left") %>
                         <% @character.skills.each do |skill| %>
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">

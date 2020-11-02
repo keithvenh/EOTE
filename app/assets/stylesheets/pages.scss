@@ -1,41 +1,21 @@
-@font-face {
-    font-family: 'aurebesh';
-    src: font-url('Aurebesh.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.index-container {
+    flex-wrap: wrap;
 }
-
-
-.translate {
-    text-align: right;
-    .sw {       
-        color: #fff;
-        font-size: 36px;
-        margin: 0;
-    }
-    .en {
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 12px;      
-    }
-}
-
-.sw {
-    font-family: 'aurebesh';
-}
-
-
-
 .screen {
     border: 2px solid #fff;
     box-shadow: 0 0 10px #0ff;
     border-radius: 15% 5%;
     background-color: rgba(0, 255, 255, 0.1);
     padding: 32px;
+    margin: 16px;
     box-sizing: border-box;
     overflow-y: scroll;
 }
 
+.screen-sm {
+    height: 13.5vw;
+    width: 24vw;
+}
 .screen-md {
     height: 18vw;
     width: 32vw;
