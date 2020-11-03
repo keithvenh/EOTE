@@ -1,2 +1,46 @@
-<h1>Planets#show</h1>
-<p>Find me in app/views/planets/show.html.erb</p>
+<div class="page-container">
+    <div class="screen screen-left-lg">
+        <%= link_to edit_planet_path(@planet) do %>
+            <%= translate("Edit Planet", "") %>
+        <% end %>
+        <%= link_to @planet, method: :delete, data: { confirm: 'Are you sure you wish to delete this planet?' } do %>
+            <%= translate("Destroy Planet", "") %>
+        <% end %>
+        <%= translate("Data", "translate-center") %>
+    </div>
+    <div class="screen screen-lg">    
+        <header class="ship-header">
+            <%= translate(@planet.name, "translate-center translate-lg") %>
+        </header>
+        <article class="ship-details">
+            <section class="ship-general">
+                <div class="general-data">
+                    <%= translate("System", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @planet.system %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Sector", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @planet.sector %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Region", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @planet.region %></p>
+                </div>
+            </section>
+            <section class="ship-attributes">
+                <div class="general-data">
+                    <%= translate("Year Length", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @planet.year %> days</p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Day Length", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @planet.day %> hours</p>
+                </div>
+                <div class="general-data">
+                    <%= translate("population", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= number_to_human(@planet.population) %></p>
+                </div>
+            </section>
+        </article>
+    </div>
+</div>

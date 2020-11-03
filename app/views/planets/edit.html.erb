@@ -1,2 +1,42 @@
-<h1>Planets#edit</h1>
-<p>Find me in app/views/planets/edit.html.erb</p>
+<div class="page-container">
+    <article class="screen screen-lg">
+    <%= translate("Planet Creation", "translate-lg translate-center") %>
+        <%= form_for @planet do |f| %>
+            <div class="form-category">
+                <%= translate("General Info", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Name ::</p>
+                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">System ::</p>
+                    <%= f.text_field :system, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Sector ::</p>
+                    <%= f.text_field :sector, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Region ::</p>
+                    <%= f.text_field :region, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Days per Year ::</p>
+                    <%= f.text_field :year, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Hours per Day ::</p>
+                    <%= f.text_field :day, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Population ::</p>
+                    <%= f.text_field :population, class: "form-input text" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+            <% end %>
+    </article>
+</div>
+

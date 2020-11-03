@@ -1,15 +1,15 @@
-.character-header {
+.character-header, .ship-header {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.character-details {
+.character-details, .ship-details {
     display: flex;
     flex-direction: column;
 }
 
-.character-general, .character-attributes {
+.character-general, .character-attributes, .ship-general, .ship-attributes {
     margin: 32px 0;
     display: flex;
     justify-content: space-evenly;
@@ -27,9 +27,19 @@
             padding: 6px;
             margin: 0;
         }
+        .human-data {
+            text-transform: uppercase;
+            font-family: monospace;
+            font-size: 1.5em;
+        }
     }
 }
-
+.mono {
+    font-family: monospace;
+}
+.center {
+    text-align: center;
+}
 .character-encumbrance {
     display: flex;
     flex-direction: column;

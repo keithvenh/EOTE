@@ -1,2 +1,110 @@
-<h1>Vehicles#show</h1>
-<p>Find me in app/views/vehicles/show.html.erb</p>
+<div class="page-container">
+    <div class="screen screen-left-lg">
+        <%= link_to edit_vehicle_path(@ship) do %>
+            <%= translate("Edit Vehicle", "") %>
+        <% end %>
+        <%= link_to @ship, method: :delete, data: { confirm: 'Are you sure you wish to delete this vehicle?' } do %>
+            <%= translate("Destroy Vehicle", "") %>
+        <% end %>
+        <%= translate("Data", "translate-center") %>
+    </div>
+    <div class="screen screen-lg">     
+        <header class="ship-header">
+            <%= translate(@ship.name, "translate-left") %>   
+            
+            <%= translate(@ship.model, "translate-left") %>
+            <%= translate(@ship.hull_type, "translate-left") %>
+        </header>
+        <%= translate(@ship.manufacturer, "translate-sm translate-center") %>
+        <%= translate("Complement", "data-type translate-center translate-sm") %>
+        <p class="mono center human-data data"><%= @ship.complement %></p>
+        <article class="ship-details">
+            <section class="ship-general">
+                <div class="general-data">
+                    <%= translate("Cost", "data-type translate-center translate-sm") %>
+                    <p class="sw data">$<%= @ship.cost %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Rarity", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.rarity %></p>
+                </div>
+            </section>
+            <section class="ship-attributes">
+                <div class="general-data">
+                    <%= translate("Hyperdrive", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.primary_hyperdrive %> / <%= @ship.secondary_hyperdrive %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Sensor Range", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @ship.sensor_range %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Navicomputer", "data-type translate-center translate-sm") %>
+                    <p class="human-data data"><%= @ship.navicomputer %></p>
+                </div>
+            </section>
+            <section class="ship-attributes">
+                <div class="general-data">
+                    <%= translate("Passengers", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.passenger_capacity %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Capacity", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.capacity %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Hard Points", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.hard_points %></p>
+                </div>
+            </section>
+            <section class="ship-attributes">
+                <div class="general-data">
+                    <%= translate("Silhouette", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.silhouette %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Speed", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.speed %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Handling", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.handling %></p>
+                </div>
+            </section>
+            <section class="ship-attributes">
+                <div class="general-data">
+                    <%= translate("Armor", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.armor %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Hull Trauma Threshold", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.hull_trauma_threshold %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("System Strain Threshold", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.system_strain_threshold %></p>
+                </div>
+            </section>
+            <%= translate("Defense", "translate-center") %>
+            <section class="ship-attributes">
+                
+                <div class="general-data">
+                    <%= translate("Fore", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.defense_fore %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Port", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.defense_port %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Starboard", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.defense_starboard %></p>
+                </div>
+                <div class="general-data">
+                    <%= translate("Aft", "data-type translate-center translate-sm") %>
+                    <p class="sw data"><%= @ship.defense_aft %></p>
+                </div>
+            </section>
+        </article>
+    </div>
+</div>

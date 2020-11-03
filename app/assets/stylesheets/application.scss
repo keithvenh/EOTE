@@ -41,6 +41,10 @@
      text-decoration: none;
  }
 
+ input {
+     padding: 0;
+ }
+
  .page-container {
      display: flex;
      justify-content: space-evenly;

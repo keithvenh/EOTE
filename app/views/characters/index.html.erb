@@ -1,11 +1,13 @@
 <div class="page-container">
+    <div class="screen screen-left-lg">
+        <%= link_to new_character_path do %>
+            <%= translate("Character Creation", "translate-left") %>
+        <% end %>
+    </div>
     <div class="screen screen-lg">
-        <% @characters.each do |c| %>
-            <%= link_to character_path(c) do %>
-                <div class="character-list translate">
-                    <p class="sw"><%= c.name %></p>
-                    <p class="en"><%= c.name %></p>
-                </div>
+        <% @characters.each do |char| %>
+            <%= link_to character_path(char) do %>
+                <%= translate(char.name, "character-list") %>
             <% end %>
         <% end %>
     </div>

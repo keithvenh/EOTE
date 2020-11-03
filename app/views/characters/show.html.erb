@@ -1,155 +1,75 @@
 <div class="page-container">
 <div class="screen screen-left-lg">
-    <section class="character-stats">
-        <%= translate("Statistics", "translate-center") %>
-        <div class="statistics">
-          <p class="label">Kills</p>
-          <p class="count sw"><%= @character.character_stat.combat_kills %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Assists</p>
-          <p class="count sw"><%= @character.character_stat.combat_assists %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Damage</p>
-          <p class="count sw"><%= @character.character_stat.combat_damage %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Critical Hits</p>
-          <p class="count sw"><%= @character.character_stat.combat_crits %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Wounds Taken</p>
-          <p class="count sw"><%= @character.character_stat.wounds_taken %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Critical Injuries Sustained</p>
-          <p class="count sw"><%= @character.character_stat.crit_inj_sustained %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Wounds Healed</p>
-          <p class="count sw"><%= @character.character_stat.wounds_healed %></p>
-        </div>
-        <div class="statistics">
-          <p class="label">Critical Injuries Healed</p>
-          <p class="count sw"><%= @character.character_stat.crit_inj_healed %></p>
-        </div>
-    </section>
-<!--  <section class="character-encumbrance">
-        <% encum = 0 %>
-        <% encum_thr = @character.brawn + 5%>
-        <div class="general-data">
-            <div class="translate data-type">
-                <p class="sw">Encumbrance</p>
-                <p class="en">Encumbrance</p>
-            </div>
-            <p class="sw data"><span id="used-enc"></span> || <span id="avail-enc"></span></p>
-        </div>
-        <div class="armor">
-            <div class="translate data-type">
-                <p class="sw">Armor</p>
-                <p class="en">Armor</p>
-            </div>
-            <% @character.character_armors.each do |armor| %>
-                <p class="item"><%= armor.armor.name %></p>
-                <% armor.armor.encumbrance > 3 ? encum += armor.armor.encumbrance - 3 : nil %>
-            <% end %>
-        </div>
-        <div class="weapons">
-            <div class="translate data-type">
-                <p class="sw">Weapons</p>
-                <p class="en">Weapons</p>
-            </div>
-            <% @character.character_weapons.each do |weapon| %>
-                <p class="item"><%= weapon.weapon.name %></p>
-                <% encum += weapon.weapon.encumbrance %>
-            <% end %>
-        </div>
-        <div class="equipment">
-            <div class="translate data-type">
-                <p class="sw">Equipment</p>
-                <p class="en">Equipment</p>
-            </div>
-            <% @character.character_equipments.each do |equipment| %>
-                <p class="item"><%= equipment.equipment.name %></p>
-                <% if equipment.equipment.encumbrance < 1000 %>
-                    <% encum += equipment.equipment.encumbrance %>
-                <% else %>
-                    <% encum_thr += (equipment.equipment.encumbrance / 1000) %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <script>
-            document.getElementById('used-enc').innerHTML = <%= encum %>;
-            document.getElementById('avail-enc').innerHTML = <%= encum_thr %>;
-        </script>
-
-    </section>
--->
+    <%= link_to edit_character_path(@char) do %>
+        <%= translate("Edit Character", "") %>
+    <% end %>
+    <%= link_to @char, method: :delete, data: { confirm: 'Are you sure you wish to delete this character?' } do %>
+        <%= translate("Destroy Character", "") %>
+    <% end %>
+    <%= translate("Data", "translate-center") %>
 </div>
 <div class="screen screen-lg">
     <header class="character-header">
-        <%= translate(@character.name, "translate-left") %>
-        <%= translate(@character.race, "translate-left") %>
-        <%= translate(@character.career, "translate-left") %>
+        <%= translate(@char.name, "translate-left") %>
+        <%= translate(@char.race, "translate-left") %>
+        <%= translate(@char.career, "translate-left") %>
     </header>
 
     <article class="character-details">
         <section class="character-general">
             <div class="general-data">
                 <%= translate("Soak", "data-type translate-center translate-sm") %>
-                <p class="sw data"><%= @character.soak %></p>
+                <p class="sw data"><%= @char.soak %></p>
             </div>
             <div class="general-data">
                 <%= translate("Wound Threshold", "data-type translate-center translate-sm") %>
-                <p class="sw data"><%= @character.wound_threshold %></p>
+                <p class="sw data"><%= @char.wound_threshold %></p>
             </div>
             <div class="general-data">
                 <%= translate("Strain Threshold", "data-type translate-center translate-sm") %>
-                <p class="sw data"><%= @character.strain_threshold %></p>
+                <p class="sw data"><%= @char.strain_threshold %></p>
             </div>
             <div class="general-data">
                 <%= translate("Ranged Defense", "data-type translate-center translate-sm") %>
-                <p class="sw data"><%= @character.defense_ranged %></p>
+                <p class="sw data"><%= @char.defense_ranged %></p>
             </div>
             <div class="general-data">
                 <%= translate("Melee Defense", "data-type translate-center translate-sm") %>
-                <p class="sw data"><%= @character.defense_melee %></p>
+                <p class="sw data"><%= @char.defense_melee %></p>
             </div>
         </section>
 
         <section class="character-attributes">
             <div class="general-data">
                 <%= translate("Brawn", "translate-center translate-sm brawn") %>
-                <p class="sw data brawn"><%= @character.brawn %></p>
+                <p class="sw data brawn"><%= @char.brawn %></p>
             </div>
             <div class="general-data">
                 <%= translate("Agility", "translate-center translate-sm agility") %>
-                <p class="sw data agility"><%= @character.agility %></p>
+                <p class="sw data agility"><%= @char.agility %></p>
             </div>
             <div class="general-data">
                 <%= translate("Intellect", "translate-center translate-sm intellect") %>
-                <p class="sw data intellect"><%= @character.intellect %></p>
+                <p class="sw data intellect"><%= @char.intellect %></p>
             </div>
             <div class="general-data">
                 <%= translate("Cunning", "translate-center translate-sm cunning") %>
-                <p class="sw data cunning"><%= @character.cunning %></p>
+                <p class="sw data cunning"><%= @char.cunning %></p>
             </div>
             <div class="general-data">
                 <%= translate("Willpower", "translate-center translate-sm willpower") %>
-                <p class="sw data willpower"><%= @character.willpower %></p>
+                <p class="sw data willpower"><%= @char.willpower %></p>
             </div>
             <div class="general-data">
                 <%= translate("Presence", "translate-center translate-sm presence") %>
-                <p class="sw data presence"><%= @character.presence %></p>
+                <p class="sw data presence"><%= @char.presence %></p>
             </div>
         </section>
 
         <section class="character-skills">
             <div class="category general">
                 <%= translate("General", "translate-left") %>
-                <% @character.skills.each do |skill| %>
+                <% @char.skills.each do |skill| %>
                     <% if skill.category == "General" %>
                         <div class="skill">
                             <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>
@@ -165,7 +85,7 @@
             <div class="other">
                 <div class="category combat">
                     <%= translate("Combat", "translate-left") %>
-                    <% @character.skills.each do |skill| %>
+                    <% @char.skills.each do |skill| %>
                         <% if skill.category == "Combat" %>
                             <div class="skill">
                                 <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>
@@ -180,7 +100,7 @@
                 </div>
                 <div class="category knowledge">
                     <%= translate("Knowledge", "translate-left") %>
-                    <% @character.skills.each do |skill| %>
+                    <% @char.skills.each do |skill| %>
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">
                                 <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>

@@ -1,2 +1,123 @@
-<h1>Vehicles#edit</h1>
-<p>Find me in app/views/vehicles/edit.html.erb</p>
+<div class="page-container">
+    <article class="screen screen-lg">
+    <%= translate("Vehicle Creation", "translate-lg translate-center") %>
+        <%= form_for @ship do |f| %>
+            <div class="form-category">
+                <%= translate("General Info", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Name ::</p>
+                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Manufacturer ::</p>
+                    <%= f.text_field :manufacturer, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Model ::</p>
+                    <%= f.text_field :model, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Hull Type ::</p>
+                    <%= f.text_field :hull_type, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Cost ::</p>
+                    <%= f.text_field :cost, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Rarity ::</p>
+                    <%= f.text_field :rarity, class: "form-input integer" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= translate("Hardware", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Primary Hyperdrive ::</p>
+                    <%= f.text_field :primary_hyperdrive, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Backup Hyperdrive ::</p>
+                    <%= f.text_field :secondary_hyperdrive, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Navicomputer ::</p>
+                    <div class="form-input">
+                        <%= f.check_box :navicomputer, class: "boolean" %>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Sensor Range ::</p>
+                    <%= f.text_field :sensor_range, class: "form-input text" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= translate("Capacities", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Complement ::</p>
+                    <%= f.text_field :complement, class: "form-input text" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Passengers ::</p>
+                    <%= f.text_field :passenger_capacity, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Encumbrance Capacity ::</p>
+                    <%= f.text_field :capacity, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Hard Points ::</p>
+                    <%= f.text_field :hard_points, class: "form-input integer" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= translate("Flight Details", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Silhouette ::</p>
+                    <%= f.text_field :silhouette, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Speed ::</p>
+                    <%= f.text_field :speed, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Handling ::</p>
+                    <%= f.text_field :handling, class: "form-input integer" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= translate("Defensive Capabilities", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Armor ::</p>
+                    <%= f.text_field :armor, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Hull Trauma Threshold ::</p>
+                    <%= f.text_field :hull_trauma_threshold, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">System Strain Threshold ::</p>
+                    <%= f.text_field :system_strain_threshold, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Fore::</p>
+                    <%= f.text_field :defense_fore, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Aft ::</p>
+                    <%= f.text_field :defense_aft, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Port ::</p>
+                    <%= f.text_field :defense_port, class: "form-input integer" %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Starboard ::</p>
+                    <%= f.text_field :defense_starboard, class: "form-input integer" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+            <% end %>
+    </article>
+</div>

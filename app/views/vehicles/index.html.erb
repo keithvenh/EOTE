@@ -1,2 +1,14 @@
-<h1>Vehicles#index</h1>
-<p>Find me in app/views/vehicles/index.html.erb</p>
+<div class="page-container">
+    <div class="screen screen-left-lg">
+        <%= link_to new_vehicle_path do %>
+            <%= translate("Vehicle Creation", "translate-left") %>
+        <% end %>
+    </div>
+    <div class="screen screen-lg">
+        <% @ships.each do |ship| %>
+            <%= link_to vehicle_path(ship) do %>
+                <%= translate(ship.name, "ship-list") %>
+            <% end %>
+        <% end %>
+    </div>
+</div>
