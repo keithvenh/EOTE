@@ -1,51 +1,51 @@
 # CREATE USERS
-# User.create(
-#     email: "krachtig@iron-shadow.com",
-#     username: "Krachtig",
-#     password: "Krachtig",
-#     password_confirmation: "Krachtig"
-# )
+User.create(
+    email: "krachtig@iron-shadow.com",
+    username: "Krachtig",
+    password: "Krachtig",
+    password_confirmation: "Krachtig"
+)
 
-# User.create(
-#     email: "aleni@iron-shadow.com",
-#     username: "Aleni",
-#     password: "Aleni1",
-#     password_confirmation: "Aleni1"
-# )
+User.create(
+    email: "aleni@iron-shadow.com",
+    username: "Aleni",
+    password: "Aleni1",
+    password_confirmation: "Aleni1"
+)
 
-# Character.create(
-#     name: "Aleni",
-#     race: "Cerean",
-#     career: "Explorer",
-#     soak: 3,
-#     wound_threshold: 12,
-#     strain_threshold: 15,
-#     defense_ranged: 0,
-#     defense_melee: 0,
-#     brawn: 2,
-#     agility: 3,
-#     intellect: 3,
-#     cunning: 3,
-#     willpower: 2,
-#     presence: 2
-# )
+Character.create(
+    name: "Aleni",
+    race: "Cerean",
+    career: "Explorer",
+    soak: 3,
+    wound_threshold: 12,
+    strain_threshold: 15,
+    defense_ranged: 0,
+    defense_melee: 0,
+    brawn: 2,
+    agility: 3,
+    intellect: 3,
+    cunning: 3,
+    willpower: 2,
+    presence: 2
+)
 
-# Character.create(
-#     name: "Krachtig",
-#     race: "Kadas'sa'Nikto",
-#     career: "Technician",
-#     soak: 4,
-#     wound_threshold: 14,
-#     strain_threshold: 13,
-#     defense_ranged: 0,
-#     defense_melee: 0,
-#     brawn: 3,
-#     agility: 3,
-#     intellect: 3,
-#     cunning: 3,
-#     willpower: 2,
-#     presence: 1
-# )
+Character.create(
+    name: "Krachtig",
+    race: "Kadas'sa'Nikto",
+    career: "Technician",
+    soak: 4,
+    wound_threshold: 14,
+    strain_threshold: 13,
+    defense_ranged: 0,
+    defense_melee: 0,
+    brawn: 3,
+    agility: 3,
+    intellect: 3,
+    cunning: 3,
+    willpower: 2,
+    presence: 1
+)
 
 Weapon.create(
     name: "Merr-Sonn E-11 Blaster Rifle",
@@ -191,77 +191,77 @@ Equipment.create(
     description: "Hand-held visual magnification"
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Backpack").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Breath Mask and Respirator").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Datapad").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Ration Pack").id,
     quantity: 2
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Stimpack").id,
     quantity: 4
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Binders").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Handheld Comlink").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Macrobinoculars").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Utility Belt").id,
     quantity: 1
 )
 CharacterEquipment.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     equipment_id: Equipment.find_by(name: "Extra Weapon Reload").id,
     quantity: 2
 )
 CharacterArmor.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     armor_id: 1,
     quantity: 1
 )
 CharacterWeapon.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     weapon_id: Weapon.find_by(name: "Merr-Sonn E-11 Blaster Rifle").id,
     quantity: 1
 )
 CharacterWeapon.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     weapon_id: Weapon.find_by(name: "Merr-Sonn Model 434 Blaster Pistol").id,
     quantity: 1
 )
 CharacterWeapon.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     weapon_id: Weapon.find_by(name: "Merr-Sonn C-22 Frag Grenade").id,
     quantity: 2
 )
 CharacterWeapon.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     weapon_id: Weapon.find_by(name: "Merr-Sonn C-10 Stun Grenade").id,
     quantity: 1
 )
@@ -310,7 +310,7 @@ knowledge_skills = [
 
 general_skills.each do |s|
     Skill.create(
-        character_id: 2,
+        character_id: Character.find_by(name: "Aleni").id,
         name: s[0],
         attr: s[1],
         category: "General",
@@ -321,7 +321,7 @@ end
 
 combat_skills.each do |s|
     Skill.create(
-        character_id: 2,
+        character_id: Character.find_by(name: "Aleni").id,
         name: s[0],
         attr: s[1],
         category: "Combat",
@@ -332,7 +332,7 @@ end
 
 knowledge_skills.each do |s|
     Skill.create(
-        character_id: 2,
+        character_id: Character.find_by(name: "Aleni").id,
         name: s[0],
         attr: "Intellect",
         category: "Knowledge",
@@ -385,7 +385,7 @@ knowledge_skills = [
 
 general_skills.each do |s|
     Skill.create(
-        character_id: 3,
+        character_id: Character.find_by(name: "Krachtig").id,
         name: s[0],
         attr: s[1],
         category: "General",
@@ -396,7 +396,7 @@ end
 
 combat_skills.each do |s|
     Skill.create(
-        character_id: 3,
+        character_id: Character.find_by(name: "Krachtig").id,
         name: s[0],
         attr: s[1],
         category: "Combat",
@@ -407,7 +407,7 @@ end
 
 knowledge_skills.each do |s|
     Skill.create(
-        character_id: 3,
+        character_id: Character.find_by(name: "Krachtig").id,
         name: s[0],
         attr: "Intellect",
         category: "Knowledge",
@@ -416,7 +416,7 @@ knowledge_skills.each do |s|
     )
 end
 CharacterStat.create(
-    character_id: 2,
+    character_id: Character.find_by(name: "Aleni").id,
     combat_kills: 12,
     combat_assists: 2,
     combat_damage: 107,
@@ -428,7 +428,7 @@ CharacterStat.create(
 )
 
 CharacterStat.create(
-    character_id: 3,
+    character_id: Character.find_by(name: "Krachtig").id,
     combat_kills: 21,
     combat_assists: 3,
     combat_damage: 168,

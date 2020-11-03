@@ -126,58 +126,52 @@
             </div>
             <div class="general-data">
                 <%= translate("Agility", "translate-center translate-sm agility") %>
-                <p class="sw data"><%= @character.agility %></p>
+                <p class="sw data agility"><%= @character.agility %></p>
             </div>
             <div class="general-data">
                 <%= translate("Intellect", "translate-center translate-sm intellect") %>
-                <p class="sw data"><%= @character.intellect %></p>
+                <p class="sw data intellect"><%= @character.intellect %></p>
             </div>
             <div class="general-data">
                 <%= translate("Cunning", "translate-center translate-sm cunning") %>
-                <p class="sw data"><%= @character.cunning %></p>
+                <p class="sw data cunning"><%= @character.cunning %></p>
             </div>
             <div class="general-data">
                 <%= translate("Willpower", "translate-center translate-sm willpower") %>
-                <p class="sw data"><%= @character.willpower %></p>
+                <p class="sw data willpower"><%= @character.willpower %></p>
             </div>
             <div class="general-data">
                 <%= translate("Presence", "translate-center translate-sm presence") %>
-                <p class="sw data"><%= @character.presence %></p>
+                <p class="sw data presence"><%= @character.presence %></p>
             </div>
         </section>
 
         <section class="character-skills">
             <div class="category general">
                 <%= translate("General", "translate-left") %>
-                    <% @character.skills.each do |skill| %>
-                        <% if skill.category == "General" %>
-                            <div class="skill">
-                                <p class="<%= skill.career ? 'career' : '' %> <%= skill.attr.downcase %>"><%= skill.name %></p>
-                                <div class="level-display">
-                                    <% skill.level.times do %>
-                                        <div class="level level-true"></div>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false"></div>
-                                    <% end %>
-                                </div>
+                <% @character.skills.each do |skill| %>
+                    <% if skill.category == "General" %>
+                        <div class="skill">
+                            <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>
+                            <div class="level-display">
+                                <% skill.level.times do %>
+                                    <div class="level level-true <%= skill.attr.downcase %>"></div>
+                                <% end %>
                             </div>
-                        <% end %>
+                        </div>
                     <% end %>
+                <% end %>
             </div>
             <div class="other">
                 <div class="category combat">
                     <%= translate("Combat", "translate-left") %>
-                        <% @character.skills.each do |skill| %>
+                    <% @character.skills.each do |skill| %>
                         <% if skill.category == "Combat" %>
                             <div class="skill">
-                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>
                                 <div class="level-display">
                                     <% skill.level.times do %>
-                                        <div class="level level-true"></div>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false"></div>
+                                        <div class="level level-true <%= skill.attr.downcase %>"></div>
                                     <% end %>
                                 </div>
                             </div>
@@ -186,16 +180,13 @@
                 </div>
                 <div class="category knowledge">
                     <%= translate("Knowledge", "translate-left") %>
-                        <% @character.skills.each do |skill| %>
+                    <% @character.skills.each do |skill| %>
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">
-                                <p class=<%= skill.career ? "career" : "" %>><%= skill.name %> [<%= skill.attr[0..1].upcase %>]</p>
+                                <p class="<%= skill.attr.downcase %>"><%= skill.career ? '<span class="sw">(</span>'.html_safe : '' %> <%= skill.name %></p>
                                 <div class="level-display">
                                     <% skill.level.times do %>
-                                        <div class="level level-true"></div>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false"></div>
+                                        <div class="level level-true <%= skill.attr.downcase %>"></div>
                                     <% end %>
                                 </div>
                             </div>
