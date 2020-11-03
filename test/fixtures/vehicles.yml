@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  make: MyString
+  model: MyString
+  hard_points: 1
+  capacity: 1
+  silhouette: 1
+  speed: 1
+  handling: 1
+  armor: 1
+  hull_trauma_threshold: 1
+  system_strain_threshold: MyString
+  defense_fore: 1
+  defense_aft: 1
+  defense_port: 1
+  defense_starboard: 1
+
+two:
+  name: MyString
+  make: MyString
+  model: MyString
+  hard_points: 1
+  capacity: 1
+  silhouette: 1
+  speed: 1
+  handling: 1
+  armor: 1
+  hull_trauma_threshold: 1
+  system_strain_threshold: MyString
+  defense_fore: 1
+  defense_aft: 1
+  defense_port: 1
+  defense_starboard: 1

@@ -100,12 +100,6 @@
     margin: 2px;
     box-sizing: border-box;
 }
-
-.level-true {
-    background-color: #0aa;
-    box-shadow: 0 0 7px #0ff;
-    border: 1px solid #0ff;
-}
 .level-display {
     display: flex;
     align-items: center;
@@ -114,20 +108,6 @@
     margin-bottom: 16px;
     .translate {
         margin-bottom: 16px;
-    }
-}
-
-.armor, .weapons, .equipment {
-    margin-bottom: 16px;
-    .translate {
-        text-align: center;
-        margin-bottom: 12px;
-        .sw {
-            font-size: 24px;
-        }
-        .en {
-            font-size: 12px;
-        }
     }
 }
 
@@ -160,7 +140,6 @@
 }
 .level-true.brawn {
     background-color: #55f;
-    box-shadow: 0 0 10px #55f;
 }
 .intellect {
     color: #ff5;
@@ -170,7 +149,6 @@
 }
 .level-true.intellect {
     background-color: #ff5;
-    box-shadow: 0 0 10px #ff5;
 }
 .agility {
     color: #5f5;
@@ -180,7 +158,6 @@
 }
 .level-true.agility {
     background-color: #5f5;
-    box-shadow: 0 0 10px #5f5;
 }
 .cunning {
     color: #fa5;
@@ -190,7 +167,6 @@
 }
 .level-true.cunning {
     background-color: #fa5;
-    box-shadow: 0 0 10px #fa5;
 }
 .presence {
     color: #a5f;
@@ -200,7 +176,6 @@
 }
 .level-true.presence {
     background-color: #a5f;
-    box-shadow: 0 0 10px #a5f;
 }
 .willpower {
     color: #f55;
@@ -210,6 +185,5 @@
 }
 .level-true.willpower {
     background-color: #f55;
-    box-shadow: 0 0 10px #f55;
 }
 

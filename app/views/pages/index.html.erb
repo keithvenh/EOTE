@@ -1,21 +1,68 @@
 <div class="page-container index-container">
     <div class="screen screen-sm">
-        <%= translate("Planets", "translate-left") %>
+        <%= translate("Planets", "translate-center") %>
+        <% @planets.each do |planet| %>
+            <%= link_to root_path do %>
+                <%= translate(planet.name, "translate-sm") %>
+            <% end %>
+        <% end %>
     </div>
     <div class="screen screen-sm">
-        <%= translate("Characters", "translate-left") %>
+        <%= translate("Characters", "translate-center") %>
+        <% @characters.each do |char| %>
+            <%= link_to character_path(char) do %>
+                <%= translate(char.name, "translate-sm")%>
+            <% end %>
+        <% end %>
     </div>
     <div class="screen screen-sm">
-        <%= translate("Ships", "translate-left") %>
+        <%= translate("Ships", "translate-center") %>
+        <% @vehicles.each do |vehicle| %>
+            <%= link_to root_path do %>
+                <%= translate(vehicle.name, "translate-sm")%>
+            <% end %>
+        <% end %>
     </div>
     <div class="screen screen-sm">
-        <%= translate("Equipment", "translate-left") %>
+        <%= translate("Equipment", "translate-center") %>
+        <%= link_to root_path do %>
+            <%= translate("Armor", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Attachments", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Equipment", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Weapons", "translate-sm") %>
+        <% end %>
     </div>
     <div class="screen screen-sm">
-        <%= translate("Contacts", "translate-left") %>
+        <%= translate("Contacts", "translate-center") %>
+        <% @contacts.each do |contact| %>
+            <%= link_to root_path do %>
+                <%= translate(contact.character.name, "translate-sm")%>
+            <% end %>
+        <% end %>
     </div>
     <div class="screen screen-sm">
-        <%= translate("Gameplay", "translate-left") %>
+        <%= translate("Gameplay", "translate-center") %>
+        <%= link_to root_path do %>
+            <%= translate("Careers", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Skills", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Specializations", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Species", "translate-sm") %>
+        <% end %>
+        <%= link_to root_path do %>
+            <%= translate("Talents", "translate-sm") %>
+        <% end %>
     </div>
     
 </div>

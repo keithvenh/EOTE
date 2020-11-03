@@ -3,6 +3,7 @@
 }
 
 .translate {
+    margin-bottom: 8px;
     .sw {       
         font-size: 24px;
         margin: 0;
@@ -47,7 +48,4 @@
 
 .translate-horizontal {
     display: flex;
-    .en {
-        margin-left: 12px;
-    }
 }

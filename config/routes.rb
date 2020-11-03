@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
+
   root 'pages#index'
 
-  get 'pages/index', to: 'pages#index', as: 'home'
-  get 'pages/about', to: 'pages#about', as: 'about'
-  get 'pages/help', to: 'pages#help', as: 'help'
+  get 'index', to: 'pages#index', as: 'home'
+  get 'about', to: 'pages#about', as: 'about'
+  get 'help', to: 'pages#help', as: 'help'
+  get 'store', to: 'pages#store'
   
-  resources :characters
   devise_for :users
+
+  resources :armors
+  resources :careers
+  resources :characters
+  resources :contacts
+  resources :equipments
+  resources :planets
+  resources :skills
+  resources :specializations
+  resources :species
+  resources :talents
+  resources :vehicles
+  resources :weapons
 end

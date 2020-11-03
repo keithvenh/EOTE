@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_014609) do
+ActiveRecord::Schema.define(version: 2020_11_03_055110) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -90,6 +90,18 @@ ActiveRecord::Schema.define(version: 2020_11_02_014609) do
     t.integer "willpower"
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.string "last_known_location"
+    t.integer "planet_id", null: false
+    t.text "details"
+    t.integer "warmth"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_contacts_on_character_id"
+    t.index ["planet_id"], name: "index_contacts_on_planet_id"
+  end
+
   create_table "equipment", force: :cascade do |t|
     t.string "name"
     t.boolean "restricted"
@@ -97,6 +109,18 @@ ActiveRecord::Schema.define(version: 2020_11_02_014609) do
     t.integer "cost"
     t.integer "rarity"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.string "system"
+    t.string "sector"
+    t.string "region"
+    t.integer "year"
+    t.integer "day"
+    t.bigint "population"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -126,6 +150,35 @@ ActiveRecord::Schema.define(version: 2020_11_02_014609) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vehicles", force: :cascade do |t|
+    t.string "name"
+    t.string "manufacturer"
+    t.string "model"
+    t.string "hull_type"
+    t.integer "primary_hyperdrive"
+    t.integer "secondary_hyperdrive"
+    t.boolean "navicomputer"
+    t.string "sensor_range"
+    t.integer "passenger_capacity"
+    t.string "complement"
+    t.integer "cost"
+    t.integer "rarity"
+    t.integer "hard_points"
+    t.integer "capacity"
+    t.integer "silhouette"
+    t.integer "speed"
+    t.integer "handling"
+    t.integer "armor"
+    t.integer "hull_trauma_threshold"
+    t.string "system_strain_threshold"
+    t.integer "defense_fore"
+    t.integer "defense_aft"
+    t.integer "defense_port"
+    t.integer "defense_starboard"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "weapons", force: :cascade do |t|
     t.string "name"
     t.boolean "restricted"
@@ -149,5 +202,7 @@ ActiveRecord::Schema.define(version: 2020_11_02_014609) do
   add_foreign_key "character_stats", "characters"
   add_foreign_key "character_weapons", "characters"
   add_foreign_key "character_weapons", "weapons"
+  add_foreign_key "contacts", "characters"
+  add_foreign_key "contacts", "planets"
   add_foreign_key "skills", "characters"
 end
