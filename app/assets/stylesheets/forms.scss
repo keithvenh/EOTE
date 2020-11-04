@@ -18,6 +18,11 @@
     width: 55%;
 }
 
+.form-field-long {
+    height: 100px;
+    align-items: flex-start;
+}
+
 .form-label {
     font-size: 12px;
     text-transform: uppercase;
@@ -43,6 +48,13 @@
     &::placeholder {
         font-family: 'aurebesh';
         color: #aaa;
+    }
+    &.select {
+        font-family: monospace;
+    }
+    &.long-text {
+        height: 85px;
+        resize: none;
     }
 }
 

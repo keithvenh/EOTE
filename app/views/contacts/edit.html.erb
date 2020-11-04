@@ -1,2 +1,36 @@
-<h1>Contacts#edit</h1>
-<p>Find me in app/views/contacts/edit.html.erb</p>
+<div class="page-container">
+    <article class="screen screen-lg">
+    <%= translate("Contact Creation", "translate-lg translate-center") %>
+        <%= form_for @contact do |f| %>
+            <div class="form-category">
+                <%= translate("General Info", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Character ::</p>
+                    <%= f.collection_select(:character_id, @characters, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Planet ::</p>
+                    <%= f.collection_select(:planet_id, @planets, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Warmth ::</p>
+                    <%= f.text_field :warmth, class: "form-input integer" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= translate("Details", "translate-center form-category-label") %>
+                <div class="form-field form-field-long">
+                    <p class="form-label">Last Know Location ::</p>
+                    <%= f.text_area :last_known_location, class: "form-input long-text" %>
+                </div>
+                <div class="form-field form-field-long ">
+                    <p class="form-label">Contact Details ::</p>
+                    <%= f.text_area :details, class: "form-input long-text" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+        <% end %>
+    </article>
+</div>
