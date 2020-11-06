@@ -1,4 +1,39 @@
-<div class="page-container">
+<div class="page-container character-show-container">
+    
+    <section class="screen screen-left-lg character-menu">
+        <div class="character-data">
+            <%= translate("Basics", "translate-center") %>
+            <%= translate(@char.name, "translate-lg") %>
+            <%= translate(@char.race, "") %>
+            <%= translate(@char.career, "") %>
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Character", edit_character_path(@char) %></p>
+            <p><%= link_to "Delete Character", @char, method: :delete, data: {confirm: "Are you sure you wish to delete this character? This cannot be undone." } %></p>
+
+        </div>
+    </section>
+
+    <article class="character-show-primary">
+
+        <section class="screen screen-md">
+            <%= translate("Attributes", "translate-center") %>
+        </section>
+        
+        <section class="screen screen-md">
+            <%= translate("Skills", "translate-center") %>
+        </section>
+
+    </article>
+
+    <section class="screen screen-right-lg">
+        <%= translate("Talents", "translate-center") %>
+
+    </section>
+
+</div>
+
 <div class="screen screen-left-lg">
     <%= link_to edit_character_path(@char) do %>
         <%= translate("Edit Character", "") %>

@@ -1,6 +1,10 @@
 class CharactersController < ApplicationController
   def index
-    @characters = Character.all.order('name ASC')
+    @pc = Character.where(category: "Player Character").order('name ASC')
+    @named = Character.where(category: "Named NPC").order('name ASC')
+    @adversaries = Character.where(category: "Adversary").order('name ASC')
+    @rivals = Character.where(category: "Rival").order('name ASC')
+    @minions = Character.where(category: "Minion").order('name ASC')
   end
 
   def new
@@ -41,6 +45,6 @@ class CharactersController < ApplicationController
   private
 
     def character_params
-      params.require(:character).permit(:name, :race, :career, :brawn, :agility, :intellect, :cunning, :willpower, :presence, :soak, :wound_threshold, :strain_threshold, :defense_ranged, :defense_melee)
+      params.require(:character).permit(:name, :race, :career, :brawn, :agility, :intellect, :cunning, :willpower, :presence, :soak, :wound_threshold, :strain_threshold, :defense_ranged, :defense_melee, :category)
     end
 end
