@@ -1,38 +1,13 @@
+// ===== INDEX PAGE ===== //
+
 .index-container {
-    flex-wrap: wrap;
-}
-.screen {
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px #0ff;
-    border-radius: 15% 5%;
-    background-color: rgba(0, 255, 255, 0.1);
-    padding: 32px;
-    margin: 16px;
-    box-sizing: border-box;
-    overflow-y: scroll;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.screen-sm {
-    height: 13.5vw;
-    width: 24vw;
-}
-.screen-md {
-    height: 18vw;
-    width: 32vw;
-}
-
-.screen-lg {
-    height: 36vw;
-    width: 64vw;
-}
-
-.screen-left-md, .screen-right-md {
-    width: 25vw;
-    height: 18vw;
-}
-
-.screen-left-lg, .screen-right-lg {
-    width: 18vw;
-    height: 32vw;
-    border-radius: 5% 15%;
+.index-primary {
+    display: flex;
+    flex-direction: column;
 }

@@ -27,7 +27,7 @@
      background-image: url('stars.png');
      background-repeat: repeat;
      color: #fafafa;
-     font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+     font-family: 'Share Tech Mono', 'Open Sans', 'Helvetica', 'Arial', sans-serif;
      font-size: 16px;
      letter-spacing: 1px;
  }
@@ -46,9 +46,8 @@
  }
 
  .page-container {
+     padding-top: 24px;
      display: flex;
      justify-content: space-evenly;
-     align-items: center;
-     padding: 20px;
      box-sizing: border-box;
  }

@@ -1,5 +1,58 @@
 <div class="page-container index-container">
-    <div class="screen screen-sm">
+
+    <article class="index-primary">
+
+        <div class="screen screen-md">
+            <%= link_to planets_path do %>
+                <%= translate("Planets", "translate-center") %>
+            <% end %>
+            <% @planets.each do |planet| %>
+                <%= link_to planet_path(planet) do %>
+                    <%= translate(planet.name, "translate-sm") %>
+                <% end %>
+            <% end %>
+        </div>
+
+        <div class="screen screen-md">
+            <%= link_to characters_path do %>
+                <%= translate("Characters", "translate-center") %>
+            <% end %>
+            <% @characters.each do |character| %>
+                <%= link_to character_path(character) do %>
+                    <%= translate(character.name, "translate-sm") %>
+                <% end %>
+            <% end %>
+        </div>
+
+        <div class="screen screen-md">
+            <%= link_to vehicles_path do %>
+                <%= translate("Vehicles", "translate-center") %>
+            <% end %>
+            <% @vehicles.each do |vehicle| %>
+                <%= link_to vehicle_path(vehicle) do %>
+                    <%= translate(vehicle.name, "translate-sm") %>
+                <% end %>
+            <% end %>
+        </div>
+
+    </article>
+    <aside class="screen screen-right-lg index-menu">
+        <%= translate("More", "translate-center") %>
+        <%= link_to weapons_path do %>
+            <%= translate("Weapons", "translate-sm") %>
+        <% end %>
+        <%= link_to armors_path do %>
+            <%= translate("Armor", "translate-sm") %>
+        <% end %>
+        <%= link_to equipments_path do %>
+            <%= translate("Equipment", "translate-sm") %>
+        <% end %>
+        <%= link_to contacts_path do %>
+            <%= translate("Contacts", "translate-sm") %>
+        <% end %>
+    </aside>
+</div>
+<!--    <div class="screen screen-sm">
         <%= link_to planets_path do %>
             <%= translate("Planets", "translate-center") %>
         <% end %>
@@ -74,5 +127,4 @@
             <%= translate("Talents", "translate-sm") %>
         <% end %>
     </div>
-    
-</div>
+-->    
