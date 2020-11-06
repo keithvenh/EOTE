@@ -50,4 +50,9 @@
      display: flex;
      justify-content: space-evenly;
      box-sizing: border-box;
+     height: calc(100vh-135px);
+     max-height: calc(100vh - 135px);
+     min-height: calc(100vh - 135px);
+     overflow-y: scroll;
+     align-items: space-between;
  }

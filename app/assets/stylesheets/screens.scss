@@ -1,47 +1,63 @@
 .screen {
     border: 2px solid #fff;
-    box-shadow: 0 0 10px #0ff;
     border-top-left-radius: 10% 100%;
     border-bottom-left-radius: 10% 100%;
     border-top-right-radius: 10% 100%;
     border-bottom-right-radius: 10% 100%;
-    background-color: rgba(0, 255, 255, 0.1);
     padding: 16px 32px;
     margin: 16px;
     box-sizing: border-box;
     overflow-y: scroll;
-    min-height: 300px;
-    min-width: 530px;
+    flex: 0 0 auto;
+}
+.screen.blue {
+    box-shadow: 0 0 10px #0ff;
+    background-color: rgba(0, 255, 255, 0.1);
+}
+.screen.orange {
+    box-shadow: 0 0 10px #fa0;
+    background-color: rgba(255, 191, 0, 0.1);
+}
+.screen.green {
+    box-shadow: 0 0 10px #0f0;
+    background-color: rgba(0, 255, 0, 0.075)
+}
+.screen.yellow {
+    box-shadow: 0 0 10px #ff0;
+    background-color: rgba(255, 255, 0, 0.1);
+}
+.screen.red {
+    box-shadow: 0 0 10px #f00;
+    background-color: rgba(255, 0, 0, 0.075);
 }
 
-.screen-sm {
-    height: 13.5vw;
-    width: 24vw;
-}
 .screen-md {
-    height: 18vw;
-    width: 32vw;
+    width: 592px;
+    height: 333px;
 }
-
+.screen-sm {
+    height: 252px;
+    width: 448px;
+}
 .screen-lg {
-    height: 36vw;
-    width: 64vw;
+    width: 1088px;
+    height: 612px;
 }
 
-.screen-left-md, .screen-right-md {
-    width: 25vw;
-    height: 18vw;
-    min-width: 300px;
-    min-height: 530px;
-}
-
-.screen-left-lg, .screen-right-lg {
-    width: 18vw;
-    height: 25vw;
+.screen-vert {
+    width: 342px;
+    height: 608px;
     border-top-left-radius: 100% 10%;
     border-bottom-left-radius: 100% 10%;
     border-top-right-radius: 100% 10%;
     border-bottom-right-radius: 100% 10%;
-    min-width: 300px;
-    min-height: 530px;
+}
+
+.screen-bottom {
+    width: 1776px;
+    height: 252px;
+    border-top-left-radius: 3% 100%;
+    border-bottom-left-radius: 3% 100%;
+    border-top-right-radius: 3% 100%;
+    border-bottom-right-radius: 3% 100%;
 }

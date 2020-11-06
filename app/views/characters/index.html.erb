@@ -1,5 +1,5 @@
 <div class="page-container character-index-container">
-    <section class="screen screen-left-lg character-menu">
+    <section class="screen screen-vert blue character-menu">
 
         <div class="special-characters">
             <%= translate("Special Characters", "translate-center") %>
@@ -17,27 +17,47 @@
     </section>
 
     <article class="character-index-primary">
-        <div class="screen screen-md">
-            <%= translate("Adversaries", "translate-center") %>
-            <% @adversaries.each do |char| %>
-                <%= link_to character_path(char) do %>
-                    <%= translate(char.name, "translate-sm") %>
+
+        <div class="character-index-section">
+            <div class="screen screen-md green">
+                <%= translate("Named NPCs", "translate-center") %>
+                <% @named.each do |char| %>
+                    <%= link_to character_path(char) do %>
+                        <%= translate(char.name, "translate-sm") %>
+                    <% end %>
                 <% end %>
-            <% end %>
+            </div>
+
+            <div class="screen screen-md yellow">
+                <%= translate("Adversaries", "translate-center") %>
+                <% @adversaries.each do |char| %>
+                    <%= link_to character_path(char) do %>
+                        <%= translate(char.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+            </div>
         </div>
 
-        <div class="screen screen-md">
-            <%= translate("Rivals", "translate-center") %>
-        </div>
+        <div class="character-index-section">
+            <div class="screen screen-md orange">
+                <%= translate("Rivals", "translate-center")%>
+                <% @rivals.each do |char| %>
+                    <%= link_to character_path(char) do %>
+                        <%= translate(char.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
 
-        <div class="screen screen-md">
-            <%= translate("Minions", "translate-center")%>
+            </div>
 
-        </div>
+            <div class="screen screen-md red">
+                <%= translate("Minions", "translate-center")%>
+                <% @minions.each do |char| %>
+                    <%= link_to character_path(char) do %>
+                        <%= translate(char.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
 
-        <div class="screen screen-md">
-            <%= translate("Minions", "translate-center")%>
-
+            </div>
         </div>
 
     </article>

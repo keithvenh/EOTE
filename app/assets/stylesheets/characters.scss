@@ -1,6 +1,13 @@
+.page-container.character-index-container {
+    justify-content: space-evenly;
+}
 .character-index-primary {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.character-index-section {
+    display: flex;
 }
 
 .character-menu {
@@ -15,58 +22,80 @@
     text-transform: uppercase;
 }
 
-.brawn {
-    color: #55f;
-}
-.level.brawn {
-    border: 1px solid #55f;
-}
-.level-true.brawn {
-    background-color: #55f;
-}
-.intellect {
-    color: #ff5;
-}
-.level.intellect {
-    border: 1px solid #ff5;
-}
-.level-true.intellect {
-    background-color: #ff5;
-}
-.agility {
-    color: #5f5;
-}
-.level.agility {
-    border: 1px solid #5f5;
-}
-.level-true.agility {
-    background-color: #5f5;
-}
-.cunning {
-    color: #fa5;
-}
-.level.cunning {
-    border: 1px solid #fa5;
-}
-.level-true.cunning {
-    background-color: #fa5;
-}
-.presence {
-    color: #a5f;
-}
-.level.presence {
-    border: 1px solid #a5f;
-}
-.level-true.presence {
-    background-color: #a5f;
-}
-.willpower {
-    color: #f55;
-}
-.level.willpower {
-    border: 1px solid #f55;
-}
-.level-true.willpower {
-    background-color: #f55;
+.attribute-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 12px 0;
+    .general-data {
+        text-align: center;
+        box-sizing: border-box;
+        .data {
+            font-size: 24px;
+            margin: 0;
+        }
+    }
 }
 
+.character-skills-container {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.character-skill-title {
+    width: 100%;
+}
+
+.category-wrapper {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 18px;
+        margin: 6px 0;
+    }
+}
+
+.level-display {
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+    align-items: center;
+    .level {
+        height: 20px;
+        max-height: 20px;
+        width: 40px;
+        max-width: 40px;
+    }
+    .level {
+        border-right: 1px solid #222;
+    }
+    .level-5 {
+        border-right: none;
+    }
+    .level-true {
+        background-color: #0af;
+        box-shadow: 0 0 3px #0af;
+    }
+    .level-false.level-1 {
+        background-color: rgba(0,0,0,0.25);
+    }
+    .level-false.level-2 {
+        background-color: rgba(0,0,0,0.3);
+    }
+    .level-false.level-3 {
+        background-color: rgba(0,0,0,0.35);
+    }
+    .level-false.level-4 {
+        background-color: rgba(0,0,0,0.4);
+    }
+    .level-false.level-5 {
+        background-color: rgba(0,0,0,0.45);
+    }
+}

@@ -2,9 +2,9 @@
 
     <article class="index-primary">
 
-        <div class="screen screen-md">
+        <div class="screen screen-md yellow">
             <%= link_to planets_path do %>
-                <%= translate("Planets", "translate-center") %>
+                <%= translate("Planets", "translate-center translate-lg") %>
             <% end %>
             <% @planets.each do |planet| %>
                 <%= link_to planet_path(planet) do %>
@@ -13,9 +13,9 @@
             <% end %>
         </div>
 
-        <div class="screen screen-md">
+        <div class="screen screen-md green">
             <%= link_to characters_path do %>
-                <%= translate("Characters", "translate-center") %>
+                <%= translate("Characters", "translate-center translate-lg") %>
             <% end %>
             <% @characters.each do |character| %>
                 <%= link_to character_path(character) do %>
@@ -24,9 +24,9 @@
             <% end %>
         </div>
 
-        <div class="screen screen-md">
+        <div class="screen screen-md red">
             <%= link_to vehicles_path do %>
-                <%= translate("Vehicles", "translate-center") %>
+                <%= translate("Vehicles", "translate-center translate-lg") %>
             <% end %>
             <% @vehicles.each do |vehicle| %>
                 <%= link_to vehicle_path(vehicle) do %>
@@ -34,97 +34,23 @@
                 <% end %>
             <% end %>
         </div>
-
     </article>
-    <aside class="screen screen-right-lg index-menu">
-        <%= translate("More", "translate-center") %>
-        <%= link_to weapons_path do %>
-            <%= translate("Weapons", "translate-sm") %>
-        <% end %>
-        <%= link_to armors_path do %>
-            <%= translate("Armor", "translate-sm") %>
-        <% end %>
-        <%= link_to equipments_path do %>
-            <%= translate("Equipment", "translate-sm") %>
-        <% end %>
-        <%= link_to contacts_path do %>
-            <%= translate("Contacts", "translate-sm") %>
-        <% end %>
+
+    <aside class="screen screen-bottom index-menu orange">
+        <%= translate("More", "translate-center translate-lg") %>
+        <div class="menu">
+            <%= link_to weapons_path do %>
+                <%= translate("Weapons", "translate-sm") %>
+            <% end %>
+            <%= link_to armors_path do %>
+                <%= translate("Armor", "translate-sm") %>
+            <% end %>
+            <%= link_to equipments_path do %>
+                <%= translate("Equipment", "translate-sm") %>
+            <% end %>
+            <%= link_to contacts_path do %>
+                <%= translate("Contacts", "translate-sm") %>
+            <% end %>
+        </div>
     </aside>
 </div>
-<!--    <div class="screen screen-sm">
-        <%= link_to planets_path do %>
-            <%= translate("Planets", "translate-center") %>
-        <% end %>
-        <% @planets.each do |planet| %>
-            <%= link_to planet_path(planet) do %>
-                <%= translate(planet.name, "translate-sm") %>
-            <% end %>
-        <% end %>
-    </div>
-    <div class="screen screen-sm">
-        <%= link_to characters_path do %>
-            <%= translate("Characters", "translate-center") %>
-        <% end %>
-        <% @characters.each do |char| %>
-            <%= link_to character_path(char) do %>
-                <%= translate(char.name, "translate-sm")%>
-            <% end %>
-        <% end %>
-    </div>
-    <div class="screen screen-sm">
-        <%= link_to vehicles_path do %>
-            <%= translate("Vehicles", "translate-center") %>
-        <% end %>
-        <% @vehicles.each do |vehicle| %>
-            <%= link_to vehicle_path(vehicle) do %>
-                <%= translate(vehicle.name, "translate-sm")%>
-            <% end %>
-        <% end %>
-    </div>
-    <div class="screen screen-sm">
-        <%= link_to equipments_path do %>
-            <%= translate("Equipment", "translate-center") %>
-        <% end %>
-        <%= link_to equipments_path do %>
-            <%= translate("Armor", "translate-sm") %>
-        <% end %>
-        <%= link_to equipments_path do %>
-            <%= translate("Attachments", "translate-sm") %>
-        <% end %>
-        <%= link_to equipments_path do %>
-            <%= translate("Equipment", "translate-sm") %>
-        <% end %>
-        <%= link_to equipments_path do %>
-            <%= translate("Weapons", "translate-sm") %>
-        <% end %>
-    </div>
-    <div class="screen screen-sm">
-        <%= link_to contacts_path do %>
-            <%= translate("Contacts", "translate-center") %>
-        <% end %>
-        <% @contacts.each do |contact| %>
-            <%= link_to contact_path(contact) do %>
-                <%= translate(contact.character.name, "translate-sm")%>
-            <% end %>
-        <% end %>
-    </div>
-    <div class="screen screen-sm">
-        <%= translate("Gameplay", "translate-center") %>
-        <%= link_to careers_path do %>
-            <%= translate("Careers", "translate-sm") %>
-        <% end %>
-        <%= link_to skills_path do %>
-            <%= translate("Skills", "translate-sm") %>
-        <% end %>
-        <%= link_to specializations_path do %>
-            <%= translate("Specializations", "translate-sm") %>
-        <% end %>
-        <%= link_to species_index_path do %>
-            <%= translate("Species", "translate-sm") %>
-        <% end %>
-        <%= link_to talents_path do %>
-            <%= translate("Talents", "translate-sm") %>
-        <% end %>
-    </div>
--->    

@@ -3,7 +3,7 @@
 }
 
 .translate {
-    margin-bottom: 8px;
+    margin: 12px 0;
     .sw {       
         font-size: 24px;
         margin: 0;
@@ -11,26 +11,28 @@
     .en {
         margin: 0;
         text-transform: uppercase;
-        font-size: 12px;      
+        font-size: 14px;      
     }
 }
 
 .translate-sm {
+    margin-bottom: 12px;
     .sw {
         font-size: 20px;
     }
     .en {
-        font-size: 10px;
+        font-size: 11px;
     }
 
 }
 
 .translate-lg {
+    margin-bottom: 20px;
     .sw {
         font-size: 36px;
     }
     .en {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 

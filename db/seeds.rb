@@ -28,7 +28,7 @@ Character.create(
     cunning: 3,
     willpower: 2,
     presence: 2,
-    type: "Adversary"
+    category: "Player Character"
 )
 
 Character.create(
@@ -46,7 +46,7 @@ Character.create(
     cunning: 3,
     willpower: 2,
     presence: 1,
-    type: "Adversary"
+    category: "Player Character"
 )
 
 Weapon.create(

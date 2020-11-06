@@ -1,6 +1,6 @@
 .header {
     width: 100vw;
-    height: 134px;
+    height: 84px;
     max-height: 134px;
     text-align: center;
     padding: 6px 0;
@@ -10,7 +10,7 @@
  }
 
  .header-logo {
-     height: 88px;
+     height: 60px;
  }
 
  .header-left, .header-right, .header-center {
@@ -28,6 +28,7 @@
  .header-nav {
      width: 100vw;
      max-width: 100%;
+     height: 51px;
      box-sizing: border-box;
      display: flex;
      justify-content: center;

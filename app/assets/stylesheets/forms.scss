@@ -24,7 +24,6 @@
 }
 
 .form-label {
-    font-size: 12px;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -42,6 +41,8 @@
     letter-spacing: 1px;
     box-sizing: border-box;
     width: 300px;
+    font-family: 'Space Tech Mono';
+    font-size: 18px;
     &.integer {
         font-family: 'aurebesh';
     }
@@ -50,7 +51,7 @@
         color: #aaa;
     }
     &.select {
-        font-family: monospace;
+        font-family: 'Space Tech Mono';
     }
     &.long-text {
         height: 85px;
