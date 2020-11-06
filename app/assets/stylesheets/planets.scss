@@ -1,3 +1,51 @@
-// Place all the styles related to the planets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.planet-index-container {
+    flex-direction: column;
+}
+.planet-index-section {
+    display: flex;
+}
+.planet-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-menu-links {
+    text-transform: uppercase;
+}
+
+.planet-show-container {
+    padding-top: 32px;
+}
+
+.planet-show-primary {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    align-items: center;
+}
+
+.planet-details {
+    display: flex;
+}
+
+.general-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-info {
+    display: flex;
+    justify-content: space-evenly;
+    .data {
+        text-align: center;
+    }
+}
+
+.cycle-info {
+    display: flex;
+    justify-content: space-evenly;
+    .data {
+        text-align: center;
+    }
+}
