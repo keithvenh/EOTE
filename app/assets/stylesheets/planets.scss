@@ -1,5 +1,6 @@
 .planet-index-container {
     flex-direction: column;
+    align-items: space-evenly;
 }
 .planet-index-section {
     display: flex;
@@ -8,6 +9,14 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.planet-index-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .planet-menu-links {

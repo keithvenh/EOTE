@@ -1,7 +1,7 @@
 <div class="page-container planet-show-container">
 
-    <section class="screen screen-vert blue character-menu">
-        <div class="character-data">
+    <section class="screen screen-vert blue planet-menu">
+        <div class="planet-data">
             <%= translate("Basics", "translate-center") %>
 
             <%= translate(@planet.name, "translate-lg") %>
@@ -46,17 +46,17 @@
 
                     <div class="planet-data">
                         <%= translate("Year", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.year %> days</p>
+                        <p class="data"><%= @planet.year %> DAYS</p>
                     </div>
 
                     <div class="planet-data">
                         <%= translate("Day", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.day %> hours</p>
+                        <p class="data"><%= @planet.day %> HOURS</p>
                     </div>
 
                     <div class="planet-data">
                         <%= translate("Population", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= number_to_human(@planet.population) %></p>
+                        <p class="data"><%= number_to_human(@planet.population).upcase %></p>
                     </div>
 
                 </div>

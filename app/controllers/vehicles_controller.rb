@@ -1,6 +1,12 @@
 class VehiclesController < ApplicationController
   def index
-    @ships = Vehicle.all.order('name ASC')
+    @airspeeders = Vehicle.where(hull_type: "Airspeeder").order('name ASC')
+    @landspeeders = Vehicle.where(hull_type: "Landspeeder").order('name ASC')
+    @wheeled = Vehicle.where(hull_type: "Tracked").order('name ASC')
+    @walkers = Vehicle.where(hull_type: "Walker").order('name ASC')
+    @fighters = (Vehicle.where(hull_type: "Starfighter").or(Vehicle.where(hull_type: "Patrol Boat"))).order('name ASC')
+    @freighters = (Vehicle.where(hull_type: "Freighter").or(Vehicle.where(hull_type: 'Transport'))).order('name ASC')
+    @capitals = (Vehicle.where(hull_type: "Corvette").or(Vehicle.where(hull_type: "Frigate"))).order('name ASC')
   end
   
   def new

@@ -512,7 +512,8 @@ Character.create(
     intellect: 4,
     cunning: 1,
     willpower: 1,
-    presence: 2
+    presence: 2,
+    category: "Named NPC"
 )
 
 Contact.create(
