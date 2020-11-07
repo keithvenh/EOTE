@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     @weapons = Weapon.all.order('cost ASC')
     @equipment = Equipment.all.order('cost ASC')
     @armor = Armor.all.order('cost ASC')
+    @mods = Modification.all.order('cost ASC')
   end
 
   def gear

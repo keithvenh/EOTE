@@ -1,0 +1,47 @@
+<div class="page-container character-show-container">
+    
+    <section class="screen screen-vert green character-menu">
+        <div class="character-data">
+            <%= translate("Basics", "translate-center") %>
+
+            <% if @char_equipment.equipment.restricted %>
+                <%= translate("Restriced", "translate-center danger")%>
+            <% end %>
+
+            <%= translate(@char_equipment.equipment.name, "translate") %>
+
+            <div class="gear-rarity">
+                <%= translate("Encumbrance", "translate-sm") %>
+                <p class="sw"><%= @char_equipment.equipment.encumbrance %></p>
+            </div>
+            
+            <div class="gear-rarity">
+                <%= translate("Rarity", "translate-sm") %>
+                <p class="sw"><%= @char_equipment.equipment.rarity %></p>
+            </div>
+
+            <p class='sw gear-cost'>$ <%= @char_equipment.equipment.cost %></p>
+
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Equipment", edit_character_character_equipment_path(character_id: @char.id, id: @char_equipment) %></p>
+
+            <p><%= link_to "Delete Equipment", [@char, @char_equipment], method: :delete, data: {confirm: "Are you sure you wish to delete this character equipment? This cannot be undone." } %></p>
+        </div>
+
+    </section>
+
+    <article class="screen screen-lg orange">
+
+        <section class="weapon-attributes">
+
+            <%= translate("Description", "translate-center translate-lg") %>
+
+            <%= @char_equipment.equipment.description %>
+
+        </section>
+
+    </article>
+
+</div>

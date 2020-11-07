@@ -8,8 +8,11 @@ class CharactersController < ApplicationController
   end
 
   def gear
-    @weapons = Character.find(params[:character_id]).character_weapons
-    @armor = Character.find(params[:character_id]).character_armors
+    @char = Character.find(params[:character_id])
+    @weapons = @char.character_weapons
+    @armor = @char.character_armors
+    @gear = @char.character_equipment
+    @mods = @char.character_modifications
   end
 
   def new

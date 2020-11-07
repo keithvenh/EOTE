@@ -1,23 +1,75 @@
-<div class="page-contatiner">
+<div class="page-container equipment-container">
+    <section class="screen screen-vert blue equipment-menu">
 
-    <section class="screen screen-md red">
+        <div class="special-characters">
+            <%= translate("Menu", "translate-center") %>
+        </div>
 
-        <%= translate("Weapons", "translate-center") %>
-
-        <% @weapons.each do |weapon| %>
-            <p><%= link_to "#{weapon.brand} #{weapon.weapon.name}", character_character_weapon_path(character_id: @character.id, id: weapon.id) %></p>
-        <% end %>
-
-    </section>
-
-    <section class="screen screen-md blue">
-
-        <%= translate("Armor", "translate-center") %>
-
-        <% @armor.each do |armor| %>
-            <p><%= link_to "#{armor.brand} #{armor.armor.name}", character_character_armor_path(character_id: @character.id, id: armor.id) %></p>
-        <% end %>
+        <div class="bottom">
+            <p><%= link_to "New Armor", new_character_character_armor_path(character_id: @char.id) %></p>
+            <p><%= link_to "New Attachement", new_character_character_modification_path(character_id: @char.id) %></p>
+            <p><%= link_to "New Equipment", new_character_character_equipment_path(character_id: @char.id) %></p>
+            <p><%= link_to "New Weapon", new_character_character_weapon_path(character_id: @char.id) %></p>
+        </div>
 
     </section>
+
+    <article class="character-index-primary">
+
+        <div class="character-index-section">
+
+            <div class="screen screen-md green">
+
+                <%= translate("Armor", "translate-center") %>
+
+                <% @armor.each do |armor| %>
+                    <%= link_to character_character_armor_path(@char, armor) do %>
+                        <%= translate(armor.armor.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+
+            <div class="screen screen-md yellow">
+
+                <%= translate("Attachments", "translate-center") %>
+
+                <% @mods.each do |mod| %>
+                    <%= link_to character_character_modification_path(@char, mod) do %>
+                        <%= translate(mod.modification.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+                
+            </div>
+        </div>
+
+        <div class="character-index-section">
+
+            <div class="screen screen-md orange">
+
+                <%= translate("Gear", "translate-center")%>
+
+                <% @gear.each do |gear| %>
+                    <%= link_to character_character_equipment_path(@char, gear) do %>
+                        <%= translate(gear.equipment.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+
+            <div class="screen screen-md red">
+
+                <%= translate("Weapons", "translate-center")%>
+            
+                <% @weapons.each do |weapon| %>
+                    <%= link_to character_character_weapon_path(@char, weapon) do %>
+                        <%= translate(weapon.weapon.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+        </div>
+
+    </article>
 
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_07_130603) do
+ActiveRecord::Schema.define(version: 2020_11_07_201257) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -47,6 +47,17 @@ ActiveRecord::Schema.define(version: 2020_11_07_130603) do
     t.string "brand"
     t.index ["character_id"], name: "index_character_equipments_on_character_id"
     t.index ["equipment_id"], name: "index_character_equipments_on_equipment_id"
+  end
+
+  create_table "character_modifications", force: :cascade do |t|
+    t.integer "character_id", null: false
+    t.integer "modification_id", null: false
+    t.integer "quantity"
+    t.string "brand"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_character_modifications_on_character_id"
+    t.index ["modification_id"], name: "index_character_modifications_on_modification_id"
   end
 
   create_table "character_stats", force: :cascade do |t|
@@ -222,6 +233,8 @@ ActiveRecord::Schema.define(version: 2020_11_07_130603) do
   add_foreign_key "character_armors", "characters"
   add_foreign_key "character_equipments", "characters"
   add_foreign_key "character_equipments", "equipment"
+  add_foreign_key "character_modifications", "characters"
+  add_foreign_key "character_modifications", "modifications"
   add_foreign_key "character_stats", "characters"
   add_foreign_key "character_weapons", "characters"
   add_foreign_key "character_weapons", "weapons"

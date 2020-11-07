@@ -17,10 +17,12 @@
                     <p class="form-input"><%= @weapon.name %></p>
                 </div>
 
+            <% if @weapon.brands %>
                 <div class="form-field">
                     <p class="form-label">Brand ::</p>
                     <%= f.select(:brand, get_brands(@weapon), {prompt: ''}, {class: "form-input select"}) %>
                 </div>
+            <% end %>
 
                 <div class="form-field">
                     <p class="form-label">Quantity ::</p>

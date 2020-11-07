@@ -2,25 +2,25 @@
 
     <article class="screen screen-lg green">
 
-    <%= translate("Update Armor for #{@char.name}", "translate-lg translate-center") %>
+    <%= translate("Update Gear for #{@char.name}", "translate-lg translate-center") %>
 
-        <%= form_for [@char, @charm] do |f| %>
+        <%= form_for [@char, @char_equipment] do |f| %>
 
             <div class="form-category">
 
                 <%= f.hidden_field :character_id, value: @char.id %>
 
-                <%= f.hidden_field :armor_id, value: @armor.id %>
+                <%= f.hidden_field :armor_id, value: @equipment.id %>
 
                 <div class="form-field">
                     <p class="form-label">Armor ::</p>
-                    <p class="form-input"><%= @armor.name %></p>
+                    <p class="form-input"><%= @equipment.name %></p>
                 </div>
 
-                <% if @armor.brands %>
+                <% if @equipment.brands %>
                     <div class="form-field">
                         <p class="form-label">Brand ::</p>
-                        <%= f.select(:brand, get_brands(@armor), {prompt: ''}, {class: "form-input select"}) %>
+                        <%= f.select(:brand, get_brands(@equipment), {prompt: ''}, {class: "form-input select"}) %>
                     </div>
                 <% end %>
 

@@ -1,0 +1,2 @@
+module CharacterEquipmentsHelper
+end

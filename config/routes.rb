@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'character_modifications/new'
+  get 'character_modifications/show'
+  get 'character_modifications/edit'
+  get 'character_equipments/new'
+  get 'character_equipments/show'
+  get 'character_equipments/edit'
   get 'charms/new'
   get 'charms/show'
   get 'charms/edit'
@@ -22,6 +28,7 @@ Rails.application.routes.draw do
     resources :character_equipments
     resources :character_armors
     resources :character_weapons
+    resources :character_modifications
   end
   resources :contacts do
     resources :notations

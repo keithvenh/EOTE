@@ -1,22 +1,57 @@
 <div class="page-container">
 
-    <section class="screen screen-md red">
-        
-        <%= translate("Weapons", "translate-center") %>
+    <section class="screen screen-vert green">
 
-        <% @weapons.each do |weapon| %>
-            <p><%= link_to weapon.name, new_character_character_weapon_path(@character, weapon_id: weapon.id) %></p>
-        <% end %>
-            
     </section>
 
-    <section class="screen screen-md blue">
-
-        <%= translate("Armor", "translate-center") %>
-
-        <% @armor.each do |armor| %>
-            <p><%= link_to armor.name, new_character_character_armor_path(@character, armor_id: armor.id) %></p>
-        <% end %>
+    <article clss="store">
         
-    </section>
+        <div class="store-section">
+
+            <section class="screen screen-md red">
+                
+                <%= translate("Weapons", "translate-center") %>
+
+                <% @weapons.each do |weapon| %>
+                    <p><%= link_to weapon.name, new_character_character_weapon_path(@character, weapon_id: weapon.id) %></p>
+                <% end %>
+                    
+            </section>
+
+            <section class="screen screen-md blue">
+
+                <%= translate("Armor", "translate-center") %>
+
+                <% @armor.each do |armor| %>
+                    <p><%= link_to armor.name, new_character_character_armor_path(@character, armor_id: armor.id) %></p>
+                <% end %>
+                
+            </section>
+
+        </div>
+
+        <div class="store-section ">
+            <section class="screen screen-md orange">
+
+                <%= translate("Gear", "translate-center") %>
+
+                <% @equipment.each do |equipment| %>
+                    <p><%= link_to equipment.name, new_character_character_equipment_path(@character, equipment_id: equipment.id) %></p>
+                <% end %>
+                
+            </section>
+
+            <section class="screen screen-md yellow">
+
+                <%= translate("Attachments", "translate-center") %>
+
+                <% @mods.each do |modification| %>
+                    <p><%= link_to modification.name, new_character_character_modification_path(@character, modification_id: modification.id) %></p>
+                <% end %>
+                
+            </section>
+        </div>
+
+    </article>
+    
 </div>

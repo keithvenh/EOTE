@@ -1,0 +1,70 @@
+<div class="page-container character-show-container">
+    
+    <section class="screen screen-vert green character-menu">
+        <div class="character-data">
+            <%= translate("Basics", "translate-center") %>
+
+            <% if @char_mod.modification.restricted %>
+                <%= translate("Restriced", "translate-center danger")%>
+            <% end %>
+
+            <%= translate(@char_mod.modification.name, "translate") %>
+
+            <%= translate(@char_mod.modification.attachment_type, "translate-sm") %>
+
+            <div class="gear-rarity">
+                <%= translate("Rarity", "translate-sm") %>
+                <p class="sw"><%= @char_mod.modification.rarity %></p>
+            </div>
+
+            <p class='sw gear-cost'>$ <%= @char_mod.modification.cost %></p>
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Attachcment", edit_character_character_modification_path(character_id: @char.id, id: @char_mod.id) %></p>
+
+            <p><%= link_to "Delete Attachment", [@char, @char_mod], method: :delete, data: {confirm: "Are you sure you wish to delete this character attachment? This cannot be undone." } %></p>
+        </div>
+
+    </section>
+
+    <article class="screen screen-lg orange">
+
+        <section class="weapon-attributes">
+
+            <%= translate("Attributes", "translate-center translate-lg") %>
+
+            <div class="attribute-container">
+
+                <div class="general-data">
+                    <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
+                    <p class="sw data"><%= @char_mod.modification.encumbrance %></p>
+                </div>
+
+                <div class="general-data">
+                    <%= translate("Required Hard Points", "translate-center translate-sm agility") %>
+                    <p class="sw data"><%= @char_mod.modification.hp_required %></p>
+                </div>
+
+            </div>
+
+
+            <%= translate("Base Modifiers", "translate-center modifier-title") %>
+            <%= parse_base_modifiers(@char_mod.modification) %>
+
+            <%= translate("Modification Options", "translate-center modifier-title") %>
+            <%= parse_mod_options(@char_mod.modification) %>
+
+        </section>
+
+    </article>
+
+    <section class="screen screen-vert blue">
+
+        <%= translate("Models", "translate-center") %>
+
+        <%= parse_brands(@char_mod.modification) %>
+
+    </section>
+
+</div>
