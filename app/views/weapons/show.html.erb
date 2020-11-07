@@ -1,2 +1,80 @@
-<h1>Weapons#show</h1>
-<p>Find me in app/views/weapons/show.html.erb</p>
+<div class="page-container character-show-container">
+    
+    <section class="screen screen-vert green character-menu">
+        <div class="character-data">
+            <%= translate("Basics", "translate-center") %>
+
+            <% if @weapon.restricted %>
+                <%= translate("Restriced", "translate-center danger")%>
+            <% end %>
+
+            <%= translate(@weapon.name, "translate") %>
+
+            <%= translate(@weapon.skill, "translate-sm") %>
+
+            <div class="gear-rarity">
+                <%= translate("Rarity", "translate-sm") %>
+                <p class="sw"><%= @weapon.rarity %></p>
+            </div>
+
+            <p class='sw gear-cost'>$ <%= @weapon.cost %></p>
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Weapon", edit_weapon_path(@weapon) %></p>
+
+            <p><%= link_to "Delete Weapon", @weapon, method: :delete, data: {confirm: "Are you sure you wish to delete this weapon? This cannot be undone." } %></p>
+        </div>
+
+    </section>
+
+    <article class="screen screen-lg orange">
+
+        <section class="weapon-attributes">
+
+            <%= translate("Attributes", "translate-center translate-lg") %>
+
+            <div class="attribute-container">
+                <div class="general-data">
+                    <%= translate("Damage", "data-type translate-center") %>
+                    <p class="sw data"><%= @weapon.damage %></p>
+                </div>
+
+                <div class="general-data">
+                    <%= translate("Crit", "data-type translate-center") %>
+                    <p class="sw data"><%= @weapon.crit < 999 ? @weapon.crit : "N/A" %></p>
+                </div>
+
+                <div class="general-data">
+                    <%= translate("Range", "data-type translate-center") %>
+                    <p class="data"><%= @weapon.range.upcase %></p>
+                </div>
+            </div>
+
+            <div class="attribute-container">
+
+                <div class="general-data">
+                    <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
+                    <p class="sw data"><%= @weapon.encumbrance %></p>
+                </div>
+
+                <div class="general-data">
+                    <%= translate("Hard Points", "translate-center translate-sm agility") %>
+                    <p class="sw data"><%= @weapon.hard_points %></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </article>
+
+    <section class="screen screen-vert blue">
+
+        <%= translate("Specials", "translate-center") %>
+
+        <%= parse_specials(@weapon) %>
+
+    </section>
+
+</div>

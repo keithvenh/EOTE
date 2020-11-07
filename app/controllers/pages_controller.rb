@@ -18,4 +18,10 @@ class PagesController < ApplicationController
     @equipment = Equipment.all.order('cost ASC')
     @armor = Armor.all.order('cost ASC')
   end
+
+  def gear
+    @armor = Armor.all.order('cost ASC')
+    @gear = Equipment.all.order('cost ASC')
+    @weapons = Weapon.all.order('cost ASC')
+  end
 end

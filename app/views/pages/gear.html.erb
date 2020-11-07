@@ -1,0 +1,69 @@
+<div class="page-container equipment-container">
+    <section class="screen screen-vert blue equipment-menu">
+
+        <div class="special-characters">
+            <%= translate("Menu", "translate-center") %>
+        </div>
+
+        <div class="bottom">
+            <p><%= link_to "New Armor", new_armor_path %></p>
+            <p><%= link_to "New Attachement", help_path %></p>
+            <p><%= link_to "New Equipment", new_equipment_path %></p>
+            <p><%= link_to "New Weapon", new_weapon_path %></p>
+        </div>
+
+    </section>
+
+    <article class="character-index-primary">
+
+        <div class="character-index-section">
+
+            <div class="screen screen-md green">
+
+                <%= translate("Armor", "translate-center") %>
+
+                <% @armor.each do |armor| %>
+                    <%= link_to armor_path(armor) do %>
+                        <%= translate(armor.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+
+            <div class="screen screen-md yellow">
+
+                <%= translate("Attachments", "translate-center") %>
+                
+            </div>
+        </div>
+
+        <div class="character-index-section">
+
+            <div class="screen screen-md orange">
+
+                <%= translate("Gear", "translate-center")%>
+
+                <% @gear.each do |gear| %>
+                    <%= link_to equipment_path(gear) do %>
+                        <%= translate(gear.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+
+            <div class="screen screen-md red">
+
+                <%= translate("Weapons", "translate-center")%>
+            
+                <% @weapons.each do |weapon| %>
+                    <%= link_to weapon_path(weapon) do %>
+                        <%= translate(weapon.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
+
+            </div>
+        </div>
+
+    </article>
+
+</div>

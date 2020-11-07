@@ -36,14 +36,14 @@ ActiveRecord::Schema.define(version: 2020_11_06_024837) do
     t.index ["character_id"], name: "index_character_armors_on_character_id"
   end
 
-  create_table "character_equipments", force: :cascade do |t|
+  create_table "character_equipment", force: :cascade do |t|
     t.integer "character_id", null: false
     t.integer "equipment_id", null: false
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["character_id"], name: "index_character_equipments_on_character_id"
-    t.index ["equipment_id"], name: "index_character_equipments_on_equipment_id"
+    t.index ["character_id"], name: "index_character_equipment_on_character_id"
+    t.index ["equipment_id"], name: "index_character_equipment_on_equipment_id"
   end
 
   create_table "character_stats", force: :cascade do |t|
@@ -198,8 +198,8 @@ ActiveRecord::Schema.define(version: 2020_11_06_024837) do
 
   add_foreign_key "character_armors", "armors"
   add_foreign_key "character_armors", "characters"
-  add_foreign_key "character_equipments", "characters"
-  add_foreign_key "character_equipments", "equipment"
+  add_foreign_key "character_equipment", "characters"
+  add_foreign_key "character_equipment", "equipment"
   add_foreign_key "character_stats", "characters"
   add_foreign_key "character_weapons", "characters"
   add_foreign_key "character_weapons", "weapons"

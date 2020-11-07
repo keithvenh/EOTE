@@ -2,9 +2,9 @@
 
     <article class="screen screen-lg green">
 
-    <%= translate("New Armor", "translate-lg translate-center") %>
+    <%= translate("Update Equipment", "translate-lg translate-center") %>
 
-        <%= form_for @armor do |f| %>
+        <%= form_for @equipment do |f| %>
 
             <div class="form-category">
 
@@ -23,23 +23,8 @@
                 </div>
 
                 <div class="form-field">
-                    <p class="form-label">Defense ::</p>
-                    <%= f.text_field :defense, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Soak ::</p>
-                    <%= f.text_field :soak, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field">
                     <p class="form-label">Encumbrance ::</p>
                     <%= f.text_field :encumbrance, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Hard Points ::</p>
-                    <%= f.text_field :hard_points, class: "form-input integer" %>
                 </div>
 
                 <div class="form-field">
@@ -66,3 +51,5 @@
         <% end %>
     </article>
 </div>
+
+

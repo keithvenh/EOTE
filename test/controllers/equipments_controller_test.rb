@@ -1,33 +1,33 @@
 require 'test_helper'
 
-class EquipmentsControllerTest < ActionDispatch::IntegrationTest
+class EquipmentControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get equipments_index_url
+    get equipment_index_url
     assert_response :success
   end
 
   test "should get create" do
-    get equipments_create_url
+    get equipment_create_url
     assert_response :success
   end
 
   test "should get new" do
-    get equipments_new_url
+    get equipment_new_url
     assert_response :success
   end
 
   test "should get show" do
-    get equipments_show_url
+    get equipment_show_url
     assert_response :success
   end
 
   test "should get edit" do
-    get equipments_edit_url
+    get equipment_edit_url
     assert_response :success
   end
 
   test "should get destroy" do
-    get equipments_destroy_url
+    get equipment_destroy_url
     assert_response :success
   end
 

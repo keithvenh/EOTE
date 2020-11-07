@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'index', to: 'pages#index', as: 'home'
   get 'about', to: 'pages#about', as: 'about'
   get 'help', to: 'pages#help', as: 'help'
+  get 'gear', to: 'pages#gear', as: 'gear'
   get 'store', to: 'pages#store'
   
   devise_for :users
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   resources :careers
   resources :characters
   resources :contacts
-  resources :equipments
+  resources :equipment
   resources :planets
   resources :skills
   resources :specializations

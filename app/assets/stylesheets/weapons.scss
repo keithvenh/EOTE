@@ -1,3 +1,21 @@
-// Place all the styles related to the weapons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.gear-rarity {
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 24px;
+        margin: 0;
+        margin-left: 12px;
+    }
+}
+
+.gear-cost {
+    text-align: center;
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.weapon-specials {
+    p {
+        margin: 6px;
+    }
+}

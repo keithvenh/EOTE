@@ -16,3 +16,16 @@
         justify-content: space-evenly;
     }
 }
+
+.equipment-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin: 6px;
+        }
+    }
+}
