@@ -1,3 +1,43 @@
-// Place all the styles related to the contacts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.contact-index-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacts-menu {
+    align-self: center;
+}
+
+.contacts-links {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.contact-warmth {
+    display: flex;
+    align-items: center;
+    .warmth {
+        margin: 0;
+        margin-left: 16px;
+        font-size: 28px;
+        padding: 0;
+    }
+}
+
+.location-details {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.notation {
+    padding-left: 16px;
+    margin: 6px;
+    border-left: 3px solid #fff;
+    border-radius: 6px;
+}

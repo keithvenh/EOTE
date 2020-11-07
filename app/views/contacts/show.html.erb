@@ -1,42 +1,46 @@
 <div class="page-container">
-    <div class="screen screen-left-lg">
-        <%= link_to edit_contact_path(@contact) do %>
-            <%= translate("Edit Contact", "") %>
-        <% end %>
-        <%= link_to @contact, method: :delete, data: { confirm: 'Are you sure you wish to delete this contact?' } do %>
-            <%= translate("Destroy Contact", "") %>
-        <% end %>
-        <%= translate("Data", "translate-center") %>
-    </div>
-    <div class="screen screen-lg">
-        <header class="character-header">
-            <%= link_to character_path(@contact.character) do %>
-                <%= translate(@contact.character.name, "translate-left") %>
-            <% end %>
-            <%= link_to planet_path(@contact.planet) do %>
-                <%= translate(@contact.planet.name, "translate-left") %>
-            <% end %>
-        </header>
-        <article class="character-details">
-        <section class="character-general">
-                <div class="general-data">
-                    <%= translate("Warmth", "data-type translate-center translate-sm") %>
-                    <p class="sw data"><%= @contact.warmth %></p>
-                </div>
-            </section>
-            <section class="character-general">
-                <div class="general-data">
-                    <%= translate("Last Know Location", "data-type translate-center translate-sm") %>
-                    <p class="human-data data"><%= @contact.last_known_location %></p>
-                </div>
-            </section>
-            <section class="character-general">
-                <div class="general-data">
-                    <%= translate("Details", "data-type translate-center translate-sm") %>
-                    <p class="human-data data"><%= @contact.details %></p>
-                </div>
-            </section>
-        </article>
 
-    </div>
+    <section class="screen screen-vert blue character-menu">
+
+        <div class="character-data">
+
+            <%= translate("Basics", "translate-center") %>
+
+            <%= translate(@contact.character.name, "translate-lg") %>
+
+            <%= translate(@contact.character.race, "") %>
+
+            <div class="contact-warmth">
+                <%= translate("Warmth", "translate-sm") %>
+                <p class="sw warmth"><%= @contact.warmth %></p>
+            </div>
+
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Contact", edit_contact_path(@contact) %></p>
+
+            <p><%= link_to "Delete Contact", @contact, method: :delete, data: {confirm: "Are you sure you wish to delete this contact? This cannot be undone." } %></p>
+        </div>
+
+    </section>
+
+    <% color = "red" %>
+    <% if @contact.warmth > 1 %>
+        <% color = "green" %>
+    <% elsif @contact.warmth > -2 %>
+        <% color = "yellow" %>
+    <% end %>
+
+    <article class="screen screen-lg <%= color %>">
+
+        <%= translate(@contact.planet.name, "translate-lg translate-center") %>
+
+        <p class="location-details">Last Known Location :: <%= @contact.last_known_location %></p>
+
+        <%= translate("Notations", "translate-lg translate-center") %>
+        <p class="notation"><%= @contact.details %></p>
+
+    </article>
+
 </div>

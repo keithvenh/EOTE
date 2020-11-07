@@ -1,14 +1,52 @@
-<div class="page-container">
-    <div class="screen screen-left-lg">
-        <%= link_to new_contact_path do %>
-            <%= translate("Contact Creation", "translate-left") %>
-        <% end %>
-    </div>
-    <div class="screen screen-lg">
-        <% @contacts.each do |contact| %>
-            <%= link_to contact_path(contact) do %>
-                <%= translate(contact.character.name, "contact-list") %>
+<div class="page-container contact-index-container">
+
+    <article class="contacts-container">
+        
+        <section class="screen screen-vert green">
+
+            <%= translate("Warm", "translate-lg translate-center") %>
+
+            <% @friend.each do |cont| %>
+                <%= link_to contact_path(cont) do %>
+                    <%= translate(cont.character.name, "translate-sm") %>
+                <% end %>
             <% end %>
-        <% end %>
-    </div>
+
+        </section>
+
+        <section class="screen screen-vert yellow">
+
+            <%= translate("Neutral", "translate-lg translate-center") %>
+
+            <% @neut.each do |cont| %>
+                <%= link_to contact_path(cont) do %>
+                    <%= translate(cont.character.name, "translate-sm") %>
+                <% end %>
+            <% end %>
+
+        </section>
+
+        <section class="screen screen-vert red">
+
+            <%= translate("Cold", "translate-lg translate-center") %>
+
+            <% @enemy.each do |cont| %>
+                <%= link_to contact_path(cont) do %>
+                    <%= translate(cont.character.name, "translate-sm") %>
+                <% end %>
+            <% end %>
+
+        </section>
+
+    </article>
+    
+    <section class="screen screen-bottom blue contacts-menu">
+
+        <%= translate("Menu", "translate-center translate-lg") %>
+
+        <div class="contacts-links">
+            <%= link_to "New Contact", new_contact_path %>
+        </div>
+    </section>
+
 </div>
