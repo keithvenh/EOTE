@@ -7,6 +7,10 @@ class CharactersController < ApplicationController
     @minions = Character.where(category: "Minion").order('name ASC')
   end
 
+  def gear
+    @weapons = Character.find(params[:character_id]).character_weapons
+  end
+
   def new
     @char = Character.new
   end

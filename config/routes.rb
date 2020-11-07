@@ -12,8 +12,13 @@ Rails.application.routes.draw do
 
   resources :armors
   resources :careers
+
   resources :characters do
+    get 'gear', to: 'characters#gear'
     resources :skills
+    resources :character_equipments
+    resources :character_armors
+    resources :character_weapons
   end
   resources :contacts do
     resources :notations

@@ -41,6 +41,6 @@ class WeaponsController < ApplicationController
   private
 
     def weapon_params
-      params.require(:weapon).permit(:name, :restricted, :skill, :damage, :crit, :range, :encumbrance, :hard_points, :cost, :rarity, :specials)
+      params.require(:weapon).permit(:name, :restricted, :skill, :damage, :crit, :range, :encumbrance, :hard_points, :cost, :rarity, :specials, :brands)
     end
 end

@@ -46,9 +46,13 @@
                     <p class="form-label">Rarity ::</p>
                     <%= f.text_field :rarity, class: "form-input integer" %>
                 </div>
-                <div class="form-field">
+                <div class="form-field form-field-long">
                     <p class="form-label">Specials ::</p>
-                    <%= f.text_field :specials, class: "form-input text" %>
+                    <%= f.text_area :specials, class: "form-input long-text" %>
+                </div>
+                <div class="form-field ">
+                    <p class="form-label">Brands ::</p>
+                    <%= f.text_area :brands, class: "form-input long-text" %>
                 </div>
             </div>
             <div class="form-category">

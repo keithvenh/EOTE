@@ -19,4 +19,17 @@ module WeaponsHelper
 
         return special_display.html_safe
     end
+
+    def parse_brands(weapon)
+        brands = weapon.brands.split(';')
+        display = "<div class='weapon-brands'>"
+
+        brands.each do |b|
+            display += "<p>#{b}</p>"
+        end
+
+        display += "</div>"
+
+        return display.html_safe
+    end
 end

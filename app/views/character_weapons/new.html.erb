@@ -1,0 +1,40 @@
+<div class="page-container">
+
+    <article class="screen screen-lg green">
+
+    <%= translate("New Weapon for #{@char.name}", "translate-lg translate-center") %>
+
+        <%= form_for [@char, @char_weapon] do |f| %>
+
+            <div class="form-category">
+
+                <%= f.hidden_field :character_id, value: @char.id %>
+
+                <%= f.hidden_field :weapon_id, value: @weapon.id %>
+
+                <div class="form-field">
+                    <p class="form-label">Weapon ::</p>
+                    <p class="form-input"><%= @weapon.name %></p>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Brand ::</p>
+                    <%= f.select(:brand, get_brands(@weapon), {prompt: ''}, {class: "form-input select"}) %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Quantity ::</p>
+                    <%= f.text_field :quantity, class: "form-input integer" %>
+                </div>
+
+            </div>
+            
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+
+        <% end %>
+
+    </article>
+
+</div>

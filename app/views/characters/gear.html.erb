@@ -1,0 +1,13 @@
+<div class="page-contatiner">
+
+    <section class="screen screen-md red">
+
+        <%= translate("Weapons", "translate-center") %>
+
+        <% @weapons.each do |weapon| %>
+            <p><%= link_to "#{weapon.brand} #{weapon.weapon.name}", edit_character_character_weapon_path(character_id: @character.id, id: weapon.id) %></p>
+        <% end %>
+
+    </section>
+
+</div>
