@@ -1,30 +1,29 @@
 <div class="page-container character-show-container">
     
-    <section class="screen screen-vert green character-menu">
+    <section class="screen screen-vert blue character-menu">
         <div class="character-data">
             <%= translate("Basics", "translate-center") %>
 
-            <% if @char_weapon.weapon.restricted %>
+            <% if @charm.armor.restricted %>
                 <%= translate("Restriced", "translate-center danger")%>
             <% end %>
 
-            <%= translate("#{@char_weapon.brand} #{@char_weapon.weapon.name}", "translate") %>
-
-            <%= translate(@char_weapon.weapon.skill, "translate-sm") %>
+            <%= translate(@charm.armor.name, "translate") %>
 
             <div class="gear-rarity">
                 <%= translate("Rarity", "translate-sm") %>
-                <p class="sw"><%= @char_weapon.weapon.rarity %></p>
+                <p class="sw"><%= @charm.armor.rarity %></p>
             </div>
 
-            <p class='sw gear-cost'>$ <%= @char_weapon.weapon.cost %></p>
+            <p class='sw gear-cost'>$ <%= @charm.armor.cost %></p>
 
+            <p><%= @charm.brand %></p>
         </div>
         
         <div class="bottom">
-            <p><%= link_to "Edit Weapon", edit_character_character_weapon_path(character_id: @char.id, id: @char_weapon.id) %></p>
+            <p><%= link_to "Edit Armor", edit_character_character_armor_path(character_id: @char.id, id: @charm.id) %></p>
 
-            <p><%= link_to "Delete Weapon", [@char, @char_weapon], method: :delete, data: {confirm: "Are you sure you wish to delete this character weapon? This cannot be undone." } %></p>
+            <p><%= link_to "Delete Armor", [@char, @charm], method: :delete, data: {confirm: "Are you sure you wish to delete this character armor? This cannot be undone." } %></p>
         </div>
 
     </section>
@@ -36,36 +35,32 @@
             <%= translate("Attributes", "translate-center translate-lg") %>
 
             <div class="attribute-container">
+
                 <div class="general-data">
                     <%= translate("Damage", "data-type translate-center") %>
-                    <p class="sw data"><%= @char_weapon.weapon.damage %></p>
+                    <p class="sw data"><%= @charm.armor.defense %></p>
                 </div>
 
                 <div class="general-data">
                     <%= translate("Crit", "data-type translate-center") %>
-                    <p class="sw data"><%= @char_weapon.weapon.crit < 999 ? @char_weapon.weapon.crit : "N/A" %></p>
+                    <p class="sw data"><%= @charm.armor.soak %></p>
                 </div>
 
-                <div class="general-data">
-                    <%= translate("Range", "data-type translate-center") %>
-                    <p class="data"><%= @char_weapon.weapon.range.upcase %></p>
-                </div>
             </div>
 
             <div class="attribute-container">
 
                 <div class="general-data">
                     <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
-                    <p class="sw data"><%= @char_weapon.weapon.encumbrance %></p>
+                    <p class="sw data"><%= @charm.armor.encumbrance %></p>
                 </div>
 
                 <div class="general-data">
                     <%= translate("Hard Points", "translate-center translate-sm agility") %>
-                    <p class="sw data"><%= @char_weapon.weapon.hard_points %></p>
+                    <p class="sw data"><%= @charm.armor.hard_points %></p>
                 </div>
 
             </div>
-
 
         </section>
 
@@ -73,9 +68,9 @@
 
     <section class="screen screen-vert blue">
 
-        <%= translate("Specials", "translate-center") %>
+        <%= translate("Description", "translate-center") %>
 
-        <%= parse_specials(@char_weapon.weapon) %>
+        <%= @charm.armor.description %>
 
     </section>
 

@@ -9,6 +9,7 @@ class CharactersController < ApplicationController
 
   def gear
     @weapons = Character.find(params[:character_id]).character_weapons
+    @armor = Character.find(params[:character_id]).character_armors
   end
 
   def new

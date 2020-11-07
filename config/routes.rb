@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'charms/new'
+  get 'charms/show'
+  get 'charms/edit'
   root 'pages#index'
 
   get 'index', to: 'pages#index', as: 'home'

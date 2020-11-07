@@ -9,4 +9,14 @@
         <% end %>
             
     </section>
+
+    <section class="screen screen-md blue">
+
+        <%= translate("Armor", "translate-center") %>
+
+        <% @armor.each do |armor| %>
+            <p><%= link_to armor.name, new_character_character_armor_path(@character, armor_id: armor.id) %></p>
+        <% end %>
+        
+    </section>
 </div>
