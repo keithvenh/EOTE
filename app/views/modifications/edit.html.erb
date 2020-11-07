@@ -1,0 +1,62 @@
+<div class="page-container">
+    <article class="screen screen-lg green">
+    <%= translate("Update Attachment", "translate-lg translate-center") %>
+        <%= form_for @mod do |f| %>
+            <div class="form-category">
+                <%= translate("General Info", "translate-center form-category-label") %>
+                <div class="form-field">
+                    <p class="form-label">Name ::</p>
+                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Restricted? ::</p>
+                    <div class="form-input">
+                        <%= f.check_box :restricted, class: "boolean" %>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <p class="form-label">Type ::</p>
+                    <%= f.select(:attachment_type, ['Armor', 'Weapon'], {prompt: ''}, {class: "form-input select"}) %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Encumbrance ::</p>
+                    <%= f.text_field :encumbrance, class: "form-input integer" %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Required Hard Points ::</p>
+                    <%= f.text_field :hp_required, class: "form-input integer" %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Cost ::</p>
+                    <%= f.text_field :cost, class: "form-input integer" %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Rarity ::</p>
+                    <%= f.text_field :rarity, class: "form-input integer" %>
+                </div>
+
+                <div class="form-field form-field-long">
+                    <p class="form-label">Base Modifiers ::</p>
+                    <%= f.text_area :base_modifiers, class: "form-input long-text" %>
+                </div>
+
+                <div class="form-field form-field-long">
+                    <p class="form-label">Modification Options ::</p>
+                    <%= f.text_area :mod_options, class: "form-input long-text" %>
+                </div>
+
+                <div class="form-field form-field-long">
+                    <p class="form-label">Models ::</p>
+                    <%= f.text_area :brands, class: "form-input long-text" %>
+                </div>
+            </div>
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+            <% end %>
+    </article>
+</div>

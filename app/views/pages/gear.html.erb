@@ -34,9 +34,9 @@
 
                 <%= translate("Attachments", "translate-center") %>
 
-                <% @attachments.each do |attachment| %>
-                    <%= link_to modification_path(attachment) do %>
-                        <%= translate(attachment.name, "translate-sm") %>
+                <% @mods.each do |mod| %>
+                    <%= link_to modification_path(mod) do %>
+                        <%= translate(mod.name, "translate-sm") %>
                     <% end %>
                 <% end %>
                 

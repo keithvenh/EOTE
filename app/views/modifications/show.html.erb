@@ -1,0 +1,70 @@
+<div class="page-container character-show-container">
+    
+    <section class="screen screen-vert green character-menu">
+        <div class="character-data">
+            <%= translate("Basics", "translate-center") %>
+
+            <% if @mod.restricted %>
+                <%= translate("Restriced", "translate-center danger")%>
+            <% end %>
+
+            <%= translate(@mod.name, "translate") %>
+
+            <%= translate(@mod.attachment_type, "translate-sm") %>
+
+            <div class="gear-rarity">
+                <%= translate("Rarity", "translate-sm") %>
+                <p class="sw"><%= @mod.rarity %></p>
+            </div>
+
+            <p class='sw gear-cost'>$ <%= @mod.cost %></p>
+        </div>
+        
+        <div class="bottom">
+            <p><%= link_to "Edit Attachcment", edit_modification_path(@mod) %></p>
+
+            <p><%= link_to "Delete Attachment", @mod, method: :delete, data: {confirm: "Are you sure you wish to delete this attachment? This cannot be undone." } %></p>
+        </div>
+
+    </section>
+
+    <article class="screen screen-lg orange">
+
+        <section class="weapon-attributes">
+
+            <%= translate("Attributes", "translate-center translate-lg") %>
+
+            <div class="attribute-container">
+
+                <div class="general-data">
+                    <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
+                    <p class="sw data"><%= @mod.encumbrance %></p>
+                </div>
+
+                <div class="general-data">
+                    <%= translate("Required Hard Points", "translate-center translate-sm agility") %>
+                    <p class="sw data"><%= @mod.hp_required %></p>
+                </div>
+
+            </div>
+
+
+            <%= translate("Base Modifiers", "translate-center modifier-title") %>
+            <%= parse_base_modifiers(@mod) %>
+
+            <%= translate("Modification Options", "translate-center modifier-title") %>
+            <%= parse_mod_options(@mod) %>
+
+        </section>
+
+    </article>
+
+    <section class="screen screen-vert blue">
+
+        <%= translate("Models", "translate-center") %>
+
+        <%= parse_brands(@mod) %>
+
+    </section>
+
+</div>

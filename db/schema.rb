@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_07_030352) do
+ActiveRecord::Schema.define(version: 2020_11_07_062118) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -116,17 +116,17 @@ ActiveRecord::Schema.define(version: 2020_11_07_030352) do
 
   create_table "modifications", force: :cascade do |t|
     t.string "name"
-    t.string "attachment_type"
+    t.boolean "restricted"
     t.integer "cost"
     t.integer "encumbrance"
-    t.integer "hard_points_required"
+    t.integer "hp_required"
     t.integer "rarity"
     t.text "brands"
     t.text "base_modifiers"
-    t.text "modifications"
-    t.boolean "restricted"
+    t.text "mod_options"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "attachment_type"
   end
 
   create_table "planets", force: :cascade do |t|
