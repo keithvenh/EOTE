@@ -1,6 +1,18 @@
 <div class="page-container contact-index-container">
 
     <article class="contacts-container">
+
+        <section class="screen screen-vert blue equipment-menu">
+
+        <div class="special-characters">
+            <%= translate("Menu", "translate-center") %>
+        </div>
+
+        <div class="bottom">
+            <p><%= link_to "New Contact", new_armor_path %></p>
+        </div>
+
+    </section>
         
         <section class="screen screen-vert green">
 
@@ -39,14 +51,4 @@
         </section>
 
     </article>
-    
-    <section class="screen screen-bottom blue contacts-menu">
-
-        <%= translate("Menu", "translate-center translate-lg") %>
-
-        <div class="contacts-links">
-            <%= link_to "New Contact", new_contact_path %>
-        </div>
-    </section>
-
 </div>

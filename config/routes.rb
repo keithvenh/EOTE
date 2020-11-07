@@ -12,8 +12,12 @@ Rails.application.routes.draw do
 
   resources :armors
   resources :careers
-  resources :characters
-  resources :contacts
+  resources :characters do
+    resources :skills
+  end
+  resources :contacts do
+    resources :notations
+  end
   resources :equipment
   resources :modifications
   resources :planets

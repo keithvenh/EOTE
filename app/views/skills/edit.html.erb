@@ -1,2 +1,54 @@
-<h1>Skills#edit</h1>
-<p>Find me in app/views/skills/edit.html.erb</p>
+<div class="page-container">
+
+    <article class="screen screen-lg yellow skill-edit-screen">
+
+        <%= form_for [@char, @skill] do |f| %>
+
+            <%= translate("Update Skill for #{@char.name}", "translate-lg translate-center") %>
+
+            <div class="form-category">
+
+                <%= f.hidden_field :character_id, value: @char.id %>
+
+                <div class="form-field">
+                    <p class="form-label">Skill ::</p>
+                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select"}) %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Attribute ::</p>
+                    <%= f.select(:attr, ['Agility', 'Brawn', 'Cunning', 'Intellect', 'Presence', 'Willpower'], {prompt: ''}, {class: "form-input select"}) %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Category ::</p>
+                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select"}) %>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Career? ::</p>
+                    <div class="form-input">
+                        <%= f.check_box :career, class: "boolean" %>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Level ::</p>
+                    <%= f.text_field :level, class: "form-input integer" %>
+                </div>
+
+            </div>
+            
+            <div class="form-category">
+                <%= f.submit "Submit", class: "button form-button" %>
+            </div>
+
+        <% end %>
+
+        <%= link_to [@char, @skill], method: :delete, data: {confirm: "Are you sure you wish to delete this character? This cannot be undone." }, class: "danger-link" do %>
+            <%= translate("Delete Skill", "translate-sm translate-center button danger-button") %>
+        <% end %>
+
+    </article>
+
+</div>

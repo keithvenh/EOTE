@@ -84,26 +84,31 @@
 
         <section class="character-skills-container">
 
-            <%= translate("Skills", "translate-lg translate-center character-skill-title") %>
+            <div class="character-skill-title">
+                <%= translate("Skills", "translate-lg translate-center") %>
+                <p class="new-char-skill-link"><%= link_to "New Skill", new_character_skill_path(@char) %></p>
+            </div>
 
             <div class="category-wrapper">
                 <%= translate("General", "translate-left category-title") %>
                     <% @char.skills.each do |skill| %>
                         <% if skill.category == "General" %>
-                            <div class="skill">
-                                <p class="<%= skill.attr.downcase %>"><%= skill.career ? '&#9865;'.html_safe : '' %> <%= skill.name %></p>
-                                <div class="level-display">
-                                    <% i = 1 %>
-                                    <% skill.level.times do %>
-                                        <div class="level level-true level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
+                            <%= link_to edit_character_skill_path(@char, skill) do %>
+                                <div class="skill">
+                                    <p class="<%= skill.attr.downcase %>"><%= skill.career ? '&#9865;'.html_safe : '' %> <%= skill.name %></p>
+                                    <div class="level-display">
+                                        <% i = 1 %>
+                                        <% skill.level.times do %>
+                                            <div class="level level-true level-<%= i %>"></div>
+                                            <% i += 1 %>
+                                        <% end %>
+                                        <% (5 - skill.level).times do %>
+                                            <div class="level level-false level-<%= i %>"></div>
+                                            <% i += 1 %>
+                                        <% end %>
+                                    </div>
                                 </div>
-                            </div>
+                            <% end %>
                         <% end %>
                     <% end %>
             </div>

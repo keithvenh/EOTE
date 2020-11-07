@@ -55,3 +55,20 @@
 .translate.danger {
     color: #a00;
 }
+
+.button.danger-button {
+    color: #fff;
+    background-color: #a00;
+    box-shadow: 0 0 7px #f00;
+    border: none;
+    margin: 0;
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.danger-link {
+    align-self: center;
+    justify-self: flex-end;
+    display: inline-block;
+}

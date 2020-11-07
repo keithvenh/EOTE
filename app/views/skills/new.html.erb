@@ -1,75 +1,50 @@
 <div class="page-container">
-    <article class="screen screen-lg">
-    <%= translate("Skill Creation for #{@char.name}", "translate-lg translate-center") %>
-        <%= form_for @char do |f| %>
+
+    <article class="screen screen-lg green">
+
+    <%= translate("New Skill for #{@char.name}", "translate-lg translate-center") %>
+
+        <%= form_for [@char, @skill] do |f| %>
+
             <div class="form-category">
-                <%= translate("General Info", "translate-center form-category-label") %>
+
+                <%= f.hidden_field :character_id, value: @char.id %>
+
                 <div class="form-field">
-                    <p class="form-label">Name ::</p>
-                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                    <p class="form-label">Skill ::</p>
+                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select"}) %>
                 </div>
+
                 <div class="form-field">
-                    <p class="form-label">Race ::</p>
-                    <%= f.text_field :race, class: "form-input text" %>
+                    <p class="form-label">Attribute ::</p>
+                    <%= f.select(:attr, ['Agility', 'Brawn', 'Cunning', 'Intellect', 'Presence', 'Willpower'], {prompt: ''}, {class: "form-input select"}) %>
                 </div>
+
                 <div class="form-field">
-                    <p class="form-label">Career ::</p>
-                    <%= f.text_field :career, class: "form-input text" %>
+                    <p class="form-label">Category ::</p>
+                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select"}) %>
                 </div>
+
+                <div class="form-field">
+                    <p class="form-label">Career? ::</p>
+                    <div class="form-input">
+                        <%= f.check_box :career, class: "boolean" %>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <p class="form-label">Level ::</p>
+                    <%= f.text_field :level, class: "form-input integer" %>
+                </div>
+
             </div>
-            <div class="form-category">
-                <%= translate("Attributes", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Brawn ::</p>
-                    <%= f.text_field :brawn, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Agility ::</p>
-                    <%= f.text_field :agility, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Intellect ::</p>
-                    <%= f.text_field :intellect, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Cunning ::</p>
-                    <%= f.text_field :cunning, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Willpower ::</p>
-                    <%= f.text_field :willpower, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Presence ::</p>
-                    <%= f.text_field :presence, class: "form-input integer" %>
-                </div>
-            </div>
-            <div class="form-category">
-                <%= translate("Derived Attributes", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Soak ::</p>
-                    <%= f.text_field :soak, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Wound Threshold ::</p>
-                    <%= f.text_field :wound_threshold, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Strain Threshold ::</p>
-                    <%= f.text_field :strain_threshold, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Defense Ranged ::</p>
-                    <%= f.text_field :defense_ranged, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Defense Melee ::</p>
-                    <%= f.text_field :defense_melee, class: "form-input integer" %>
-                </div>
-            </div>
+            
             <div class="form-category">
                 <%= f.submit "Submit", class: "button form-button" %>
             </div>
-            <% end %>
+
+        <% end %>
+
     </article>
+
 </div>

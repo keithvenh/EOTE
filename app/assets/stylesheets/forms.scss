@@ -52,6 +52,7 @@
     }
     &.select {
         font-family: 'Space Tech Mono';
+        background-color: black;
     }
     &.long-text {
         height: 85px;
@@ -63,7 +64,7 @@
     background-color: #0f0;
     box-shadow: 0 0 7px #0f0;
     border: none;
-    margin: none;
+    margin: 0;
     font-family: 'aurebesh';
     padding: 8px;
     font-size: 24px;
