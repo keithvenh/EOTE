@@ -7,7 +7,7 @@
 
         <div class="bottom">
             <p><%= link_to "New Armor", new_armor_path %></p>
-            <p><%= link_to "New Attachement", help_path %></p>
+            <p><%= link_to "New Attachement", new_modification_path %></p>
             <p><%= link_to "New Equipment", new_equipment_path %></p>
             <p><%= link_to "New Weapon", new_weapon_path %></p>
         </div>
@@ -33,6 +33,12 @@
             <div class="screen screen-md yellow">
 
                 <%= translate("Attachments", "translate-center") %>
+
+                <% @attachments.each do |attachment| %>
+                    <%= link_to modification_path(attachment) do %>
+                        <%= translate(attachment.name, "translate-sm") %>
+                    <% end %>
+                <% end %>
                 
             </div>
         </div>

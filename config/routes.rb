@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :characters
   resources :contacts
   resources :equipment
+  resources :modifications
   resources :planets
   resources :skills
   resources :specializations
