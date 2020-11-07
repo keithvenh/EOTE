@@ -24,7 +24,7 @@
 
                 <% @armor.each do |armor| %>
                     <%= link_to armor_path(armor) do %>
-                        <%= translate(armor.name, "translate-sm") %>
+                        <p class="gear-item"><%= armor.name %></p>
                     <% end %>
                 <% end %>
 
@@ -36,7 +36,7 @@
 
                 <% @mods.each do |mod| %>
                     <%= link_to modification_path(mod) do %>
-                        <%= translate(mod.name, "translate-sm") %>
+                        <p class="gear-item"><%= mod.name %></p>
                     <% end %>
                 <% end %>
                 
@@ -51,7 +51,7 @@
 
                 <% @gear.each do |gear| %>
                     <%= link_to equipment_path(gear) do %>
-                        <%= translate(gear.name, "translate-sm") %>
+                        <p class="gear-item"><%= gear.name %></p>
                     <% end %>
                 <% end %>
 
@@ -63,7 +63,7 @@
             
                 <% @weapons.each do |weapon| %>
                     <%= link_to weapon_path(weapon) do %>
-                        <%= translate(weapon.name, "translate-sm") %>
+                        <p class="gear-item"><%= weapon.name %></p>
                     <% end %>
                 <% end %>
 

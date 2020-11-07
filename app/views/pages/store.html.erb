@@ -13,7 +13,13 @@
                 <%= translate("Weapons", "translate-center") %>
 
                 <% @weapons.each do |weapon| %>
-                    <p><%= link_to weapon.name, new_character_character_weapon_path(@character, weapon_id: weapon.id) %></p>
+                    <p class="store-item">
+                        <%= link_to new_character_character_weapon_path(@character, weapon_id: weapon.id)  do %>
+
+                            <span class="sw">$ <%= weapon.cost %> </span> :: <%= weapon.name %>
+
+                        <% end %>                        
+                    </p>
                 <% end %>
                     
             </section>
@@ -23,7 +29,13 @@
                 <%= translate("Armor", "translate-center") %>
 
                 <% @armor.each do |armor| %>
-                    <p><%= link_to armor.name, new_character_character_armor_path(@character, armor_id: armor.id) %></p>
+                    <p class="store-item">
+                        <%= link_to new_character_character_armor_path(@character, armor_id: armor.id)  do %>
+
+                            <span class="sw">$ <%= armor.cost %> </span> :: <%= armor.name %>
+                            
+                        <% end %>                        
+                    </p>
                 <% end %>
                 
             </section>
@@ -36,7 +48,13 @@
                 <%= translate("Gear", "translate-center") %>
 
                 <% @equipment.each do |equipment| %>
-                    <p><%= link_to equipment.name, new_character_character_equipment_path(@character, equipment_id: equipment.id) %></p>
+                    <p class="store-item">
+                        <%= link_to new_character_character_equipment_path(@character, equipment_id: equipment.id)  do %>
+
+                            <span class="sw">$ <%= equipment.cost %> </span> :: <%= equipment.name %>
+                            
+                        <% end %>                        
+                    </p>
                 <% end %>
                 
             </section>
@@ -46,7 +64,13 @@
                 <%= translate("Attachments", "translate-center") %>
 
                 <% @mods.each do |modification| %>
-                    <p><%= link_to modification.name, new_character_character_modification_path(@character, modification_id: modification.id) %></p>
+                    <p class="store-item">
+                        <%= link_to new_character_character_modification_path(@character, modification_id: modification.id)  do %>
+
+                            <span class="sw">$ <%= modification.cost %> </span> :: <%= modification.name %>
+                            
+                        <% end %>                        
+                    </p>
                 <% end %>
                 
             </section>
