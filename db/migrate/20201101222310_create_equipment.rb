@@ -7,6 +7,7 @@ class CreateEquipment < ActiveRecord::Migration[6.0]
       t.integer :cost
       t.integer :rarity
       t.text :description
+      t.text :brands
 
       t.timestamps
     end

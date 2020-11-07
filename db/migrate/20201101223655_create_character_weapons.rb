@@ -4,6 +4,7 @@ class CreateCharacterWeapons < ActiveRecord::Migration[6.0]
       t.references :character, null: false, foreign_key: true
       t.references :weapon, null: false, foreign_key: true
       t.integer :quantity
+      t.string :brand
 
       t.timestamps
     end

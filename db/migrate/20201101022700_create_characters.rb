@@ -14,6 +14,8 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.integer :intellect
       t.integer :cunning
       t.integer :presence
+      t.integer :willpower
+      t.string :category
 
       t.timestamps
     end

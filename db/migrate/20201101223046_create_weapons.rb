@@ -12,6 +12,7 @@ class CreateWeapons < ActiveRecord::Migration[6.0]
       t.integer :cost
       t.integer :rarity
       t.text :specials
+      t.text :brands
 
       t.timestamps
     end

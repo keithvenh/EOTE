@@ -4,6 +4,8 @@ class CreateCharacterArmors < ActiveRecord::Migration[6.0]
       t.references :character, null: false, foreign_key: true
       t.references :armor, null: false, foreign_key: true
       t.integer :quantity
+      t.integer :hard_points
+      t.string :brand
 
       t.timestamps
     end

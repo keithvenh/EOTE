@@ -9,6 +9,7 @@ class CreateArmors < ActiveRecord::Migration[6.0]
       t.integer :encumbrance
       t.integer :rarity
       t.text :description
+      t.text :brands
 
       t.timestamps
     end

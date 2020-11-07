@@ -10,6 +10,7 @@ class CreateModifications < ActiveRecord::Migration[6.0]
       t.text :brands
       t.text :base_modifiers
       t.text :mod_options
+      t.string :attachment_type
 
       t.timestamps
     end
