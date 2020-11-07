@@ -1,29 +1,49 @@
-<h2>Sign up</h2>
+<div class="page-container">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <article class="screen screen-lg yellow">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= translate("Create User", "translate-lg translate-center") %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="form-category">
+        <%= render "devise/shared/error_messages", resource: resource %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="form-category">
 
-<%= render "devise/shared/links" %>
+        <div class="form-field">
+          <p class="form-label">Email ::</p>
+          <%= f.email_field :email, class: "form-input text" %>
+        </div>
+
+        <div class="form-field">
+          <p class="form-label">Username ::</p>
+          <%= f.text_field :username, autofocus: true, class: "form-input text"%>
+        </div>
+
+        <div class="form-field">
+          <p class="form-label">Credits ::</p>
+          <%= f.text_field :credits, class: "form-input integer" %>
+        </div>
+
+        <div class="form-field">
+          <p class="form-label">New Password ::</p>
+          <%= f.password_field :password, class: "form-input text" %>
+        </div>
+
+        <div class="form-field">
+          <p class="form-label">Confirm Password ::</p>
+          <%= f.password_field :password_confirmation, class: "form-input text" %>
+        </div>
+
+      </div>
+
+      <div class="form-category">
+        <%= f.submit "Submit", class: "button form-button" %>
+      </div>
+    <% end %>
+
+  </article>
+
+</div>

@@ -1,5 +1,7 @@
 <header class="header">
-    <div class="header-left"></div>
+    <div class="header-left">
+        <p class="sw user-credits">$ <%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
+    </div>
 
 
     <div class="header-center">
@@ -9,7 +11,7 @@
 
     <div class="header-right">
         <% if user_signed_in? %>
-            <%= link_to character_path(@character) do %>
+            <%= link_to edit_user_registration_path(@user) do %>
                 <%= translate(@user.username, "translate-lg translate-right") %>
             <% end %>
         <% end %>

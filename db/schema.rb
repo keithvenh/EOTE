@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_07_062118) do
+ActiveRecord::Schema.define(version: 2020_11_07_130603) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "hard_points"
+    t.text "brands"
   end
 
   create_table "character_armors", force: :cascade do |t|
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "brand"
     t.index ["armor_id"], name: "index_character_armors_on_armor_id"
     t.index ["character_id"], name: "index_character_armors_on_character_id"
   end
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "brand"
     t.index ["character_id"], name: "index_character_equipments_on_character_id"
     t.index ["equipment_id"], name: "index_character_equipments_on_equipment_id"
   end
@@ -67,6 +70,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "brand"
     t.index ["character_id"], name: "index_character_weapons_on_character_id"
     t.index ["weapon_id"], name: "index_character_weapons_on_weapon_id"
   end
@@ -112,6 +116,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "brands"
   end
 
   create_table "modifications", force: :cascade do |t|
@@ -162,6 +167,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
+    t.integer "credits"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -209,6 +215,7 @@ ActiveRecord::Schema.define(version: 2020_11_07_062118) do
     t.text "specials"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "brands"
   end
 
   add_foreign_key "character_armors", "armors"
