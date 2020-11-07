@@ -56,7 +56,11 @@
 
                     <div class="planet-data">
                         <%= translate("Population", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= number_to_human(@planet.population).upcase %></p>
+                        <% if @planet.population %>
+                            <p class="data"><%= number_to_human(@planet.population).upcase %></p>
+                        <% else %>
+                            <p class="data">Unknown</p>
+                        <% end %>
                     </div>
 
                 </div>

@@ -21,19 +21,19 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "encumbrance"
     t.integer "rarity"
     t.text "description"
+    t.text "brands"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "hard_points"
-    t.text "brands"
   end
 
   create_table "character_armors", force: :cascade do |t|
     t.integer "character_id", null: false
     t.integer "armor_id", null: false
     t.integer "quantity"
+    t.integer "hard_points"
+    t.string "brand"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "brand"
     t.index ["armor_id"], name: "index_character_armors_on_armor_id"
     t.index ["character_id"], name: "index_character_armors_on_character_id"
   end
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "character_id", null: false
     t.integer "equipment_id", null: false
     t.integer "quantity"
+    t.string "brand"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "brand"
     t.index ["character_id"], name: "index_character_equipments_on_character_id"
     t.index ["equipment_id"], name: "index_character_equipments_on_equipment_id"
   end
@@ -79,9 +79,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "character_id", null: false
     t.integer "weapon_id", null: false
     t.integer "quantity"
+    t.string "brand"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "brand"
     t.index ["character_id"], name: "index_character_weapons_on_character_id"
     t.index ["weapon_id"], name: "index_character_weapons_on_weapon_id"
   end
@@ -100,10 +100,10 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "intellect"
     t.integer "cunning"
     t.integer "presence"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.integer "willpower"
     t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -125,9 +125,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "cost"
     t.integer "rarity"
     t.text "description"
+    t.text "brands"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "brands"
   end
 
   create_table "modifications", force: :cascade do |t|
@@ -140,9 +140,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.text "brands"
     t.text "base_modifiers"
     t.text "mod_options"
+    t.string "attachment_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "attachment_type"
   end
 
   create_table "planets", force: :cascade do |t|
@@ -224,9 +224,9 @@ ActiveRecord::Schema.define(version: 2020_11_07_201257) do
     t.integer "cost"
     t.integer "rarity"
     t.text "specials"
+    t.text "brands"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "brands"
   end
 
   add_foreign_key "character_armors", "armors"
