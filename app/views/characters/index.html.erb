@@ -1,65 +1,44 @@
-<div class="page-container character-index-container">
-    <section class="screen screen-vert blue character-menu">
+<section>
 
-        <div class="special-characters">
-            <%= translate("Special Characters", "translate-center") %>
-            <% @pc.each do |char| %>
-                <%= link_to character_path(char) do %>
-                    <%= translate(char.name, "translate-sm") %>
+    <%= section_header("Profiles") %>
+
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @characters.each do |char| %>
+
+                <% if char.name[0] != letter %>
+
+                    <% letter = char.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
                 <% end %>
+
+                <p class="char-name"><%= link_to char.name, character_path(char) %></p>
+
             <% end %>
+
         </div>
 
-        <div class="bottom">
-            <%= link_to "New Character", new_character_path %>
+        <div class="char-new">
+
+            <%= link_to new_character_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
         </div>
 
-    </section>
+    </div>
 
-    <article class="character-index-primary">
+</section>
 
-        <div class="character-index-section">
-            <div class="screen screen-md green">
-                <%= translate("Named NPCs", "translate-center") %>
-                <% @named.each do |char| %>
-                    <%= link_to character_path(char) do %>
-                        <%= translate(char.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
-            </div>
+    
 
-            <div class="screen screen-md yellow">
-                <%= translate("Adversaries", "translate-center") %>
-                <% @adversaries.each do |char| %>
-                    <%= link_to character_path(char) do %>
-                        <%= translate(char.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
-            </div>
-        </div>
+<section>
 
-        <div class="character-index-section">
-            <div class="screen screen-md orange">
-                <%= translate("Rivals", "translate-center")%>
-                <% @rivals.each do |char| %>
-                    <%= link_to character_path(char) do %>
-                        <%= translate(char.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
+    <%= render 'layouts/menu.html.erb' %>
 
-            </div>
-
-            <div class="screen screen-md red">
-                <%= translate("Minions", "translate-center")%>
-                <% @minions.each do |char| %>
-                    <%= link_to character_path(char) do %>
-                        <%= translate(char.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
-
-            </div>
-        </div>
-
-    </article>
-
-</div>
+</section>

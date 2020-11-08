@@ -6,6 +6,7 @@
 @import "pages";
 @import "translate";
 @import "forms";
+@import "characters";
 
 body {
 	background-color: #000;
@@ -86,8 +87,20 @@ a {
 	.level-true.level-5 {
 		background-color: $teal;
 	}
-	.level-false {
-		background-color: silver;
+	.level-false.level-1 {
+		background-color: $red-clear;
+	}
+	.level-false.level-2 {
+		background-color: $orange-clear;
+	}
+	.level-false.level-3 {
+		background-color: $yellow-clear;
+	}
+	.level-false.level-4 {
+		background-color: $green-clear;
+	}
+	.level-false.level-5 {
+		background-color: $teal-clear;
 	}
 }
 

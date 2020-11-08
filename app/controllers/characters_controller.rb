@@ -5,6 +5,7 @@ class CharactersController < ApplicationController
     @adversaries = Character.where(category: "Adversary").order('name ASC')
     @rivals = Character.where(category: "Rival").order('name ASC')
     @minions = Character.where(category: "Minion").order('name ASC')
+    @characters = Character.all.order('name ASC')
   end
 
   def gear

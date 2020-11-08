@@ -1,107 +1,20 @@
-.page-container.character-index-container {
-    justify-content: space-evenly;
-}
-.character-index-primary {
-    display: flex;
-    flex-direction: column;
+@import 'colors';
+// ===== INDEX ===== //
+.segmentor {
+    padding: 8px;
 }
 
-.character-index-section {
-    display: flex;
+.char-name {
+    padding: 6px;
+    padding-left: 16px;
 }
 
-.character-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bottom {
-    text-align: center;
-    display: inline;
-    text-transform: uppercase;
-}
-
-.attribute-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 12px 0;
-    .general-data {
-        text-align: center;
-        box-sizing: border-box;
-        .data {
-            font-size: 24px;
-            margin: 0;
-        }
-    }
-}
-
-.character-skills-container {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.character-skill-title {
-    width: 100%;
-}
-
-.category-wrapper {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 16px;
-}
-
-.skill {
+.characters {
     display: flex;
     justify-content: space-between;
-    p {
-        font-size: 18px;
-        margin: 6px 0;
+    .char-new {
+        text-align: right;
+        font-size: 24px;
+        color: $green;
     }
-}
-
-.level-display {
-    display: flex;
-    justify-content: flex-end;
-    width: 200px;
-    align-items: center;
-    .level {
-        height: 20px;
-        max-height: 20px;
-        width: 40px;
-        max-width: 40px;
-    }
-    .level {
-        border-right: 1px solid #222;
-    }
-    .level-5 {
-        border-right: none;
-    }
-    .level-true {
-        background-color: #0af;
-        box-shadow: 0 0 3px #0af;
-    }
-    .level-false.level-1 {
-        background-color: rgba(0,0,0,0.25);
-    }
-    .level-false.level-2 {
-        background-color: rgba(0,0,0,0.3);
-    }
-    .level-false.level-3 {
-        background-color: rgba(0,0,0,0.35);
-    }
-    .level-false.level-4 {
-        background-color: rgba(0,0,0,0.4);
-    }
-    .level-false.level-5 {
-        background-color: rgba(0,0,0,0.45);
-    }
-}
-
-.new-char-skill-link {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
 }
