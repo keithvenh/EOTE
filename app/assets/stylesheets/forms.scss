@@ -1,78 +1,52 @@
-.form-category {
+@import 'fonts';
+@import 'colors';
+
+form {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 16px 0;
     flex-direction: column;
     align-items: center;
-}
-.form-category-label {
-    width: 100%;
-    padding-top: 16px;
-}
-.form-field {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 28px;
-    width: 55%;
+    min-width: 75%;
 }
 
-.form-field-long {
-    height: 100px;
-    align-items: flex-start;
-}
-
-.form-label {
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-}
-
-.form-input {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    line-height: 24px;
-    padding-top: 2px;
-    padding-left: 8px;
-    color: #fff;
-    letter-spacing: 1px;
-    box-sizing: border-box;
-    width: 300px;
-    font-family: 'Space Tech Mono';
-    font-size: 18px;
-    &.integer {
-        font-family: 'aurebesh';
-    }
-    &::placeholder {
-        font-family: 'aurebesh';
-        color: #aaa;
-    }
-    &.select {
-        font-family: 'Space Tech Mono';
-        background-color: black;
-    }
-    &.long-text {
-        height: 85px;
-        resize: none;
-    }
-}
-
-.form-button {
-    background-color: #0f0;
-    box-shadow: 0 0 7px #0f0;
-    border: none;
-    margin: 0;
-    font-family: 'aurebesh';
+.form-category {
     padding: 8px;
-    font-size: 24px;
-    cursor: pointer;
 }
 
-.form-checkbox {
-    border: 1px solid red;
-    width: 100px;
+.form-field {
+    padding-left: 8px;
+    margin: 8px 0;
+    .form-label {
+        text-transform: uppercase;
+        font-size: .8em;
+    }
+    .form-input {
+        margin: 3px 0 3px 0;
+        background: none;
+        background-color: #111;
+        border: none;
+        padding: 6px;
+        outline: none;
+        color: white;
+        border-bottom: 1px solid silver;
+        font-size: 1.1em;
+        font-family: $primary;
+        width: 100%;
+        max-width: 100%;
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+        margin: 1.1em 0 3px 0;
+        .boolean {
+            margin-right: 12px;
+        }
+    }
 }
 
+.form-button.success {
+    background-color: $green;
+}
+
+.form-input.integer {
+    font-family: $aurebesh;
+}

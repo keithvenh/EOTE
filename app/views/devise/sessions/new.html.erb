@@ -1,32 +1,32 @@
-<div class="page-container">
+<section>
 
-  <article class="screen screen-lg yellow">
+  <%= section_header("Chain Code") %>
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <%= translate("Chain Code", "translate-lg translate-center") %>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-      <div class="form-category">
-        <%= render "devise/shared/error_messages", resource: resource %>
-      </div>
+      <% if resource.errors.any? %>
+        <div class="form-category">
+          <%= render "devise/shared/error_messages", resource: resource %>
+        </div>
+      <% end %>
 
       <div class="form-category">
 
         <div class="form-field">
-          <p class="form-label">Email ::</p>
-          <%= f.email_field :email, class: "form-input text" %>
+          <%= f.email_field :email, autofocus: true, class: "form-input text" %>
+          <p class="form-label">Email</p>
         </div>
 
         <div class="form-field">
-          <p class="form-label">Password ::</p>
           <%= f.password_field :password, class: "form-input text" %>
+          <p class="form-label">Password</p>
         </div>
 
         <% if devise_mapping.rememberable? %>
           <div class="form-field">
-            <p class="form-label">Stay Logged In? ::</p>
-            <div class="form-input">
-              <%= f.check_box :remember_me,  class: "boolan"%>
+            <div class="checkbox">
+              <%= f.check_box :remember_me,  class: "boolean"%>
+              <p class="form-label">Stay Logged In?</p>
             </div>
           </div>
         <% end %>
@@ -34,10 +34,9 @@
       </div>
 
       <div class="form-category">
-        <%= f.submit "Submit", class: "button form-button" %>
+        <%= f.submit "Submit", class: "button form-button success" %>
       </div>
+
     <% end %>
 
-  </article>
-
-</div>
+</section>

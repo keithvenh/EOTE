@@ -1,10 +1,8 @@
-<div class="page-container">
-
-  <article class="screen screen-lg yellow user-edit-screen">
+<section>
+  
+    <%= section_header('Update Profile') %>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-
-      <%= translate("Update User", "translate-lg translate-center") %>
 
       <div class="form-category">
         <%= render "devise/shared/error_messages", resource: resource %>
@@ -13,18 +11,18 @@
       <div class="form-category">
 
         <div class="form-field">
-          <p class="form-label">Email ::</p>
           <%= f.email_field :email, class: "form-input text" %>
+          <p class="form-label">Email</p>
         </div>
 
         <div class="form-field">
-          <p class="form-label">Username ::</p>
           <%= f.text_field :username, autofocus: true, class: "form-input text"%>
+          <p class="form-label">Username</p>
         </div>
 
         <div class="form-field">
-          <p class="form-label">Credits ::</p>
           <%= f.text_field :credits, class: "form-input integer" %>
+          <p class="form-label">Credits</p>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -32,31 +30,32 @@
         <% end %>
 
         <div class="form-field">
-          <p class="form-label">New Password ::</p>
           <%= f.password_field :password, class: "form-input text" %>
+          <p class="form-label">New Password</p>
         </div>
 
         <div class="form-field">
-          <p class="form-label">Confirm Password ::</p>
           <%= f.password_field :password_confirmation, class: "form-input text" %>
+          <p class="form-label">Confirm Password</p>
         </div>
 
         <div class="form-field">
-          <p class="form-label">Current Password ::</p>
           <%= f.password_field :current_password, class: "form-input text" %>
+          <p class="form-label">Current Password</p>
         </div>
 
       </div>
 
       <div class="form-category">
-        <%= f.submit "Submit", class: "button form-button" %>
+        <%= f.submit "Submit", class: "button form-button success" %>
       </div>
+
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <div class="button danger"><%= translate("Log Out") %></button>
+      <% end %>
+      
     <% end %>
 
-    <%= link_to destroy_user_session_path, method: :delete, class: "danger-link" do %>
-        <%= translate("Log Out", "translate-sm translate-center button danger-button") %>
-    <% end %>
+    
 
-  </article>
-
-</div>
+</section>
