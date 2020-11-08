@@ -27,3 +27,99 @@
 
     
 </section>
+
+<section class="stats">
+
+    <%= section_header("Statistics") %>
+
+    <table class="stats-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th><%= translate('Aleni')%></th>
+                <th><%= translate('Krachtig')%></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><%= translate('kills')%></th>
+                <td>12</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <th><%= translate('Assists')%></th>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th><%= translate('Damage')%></th>
+                <td>107</td>
+                <td>168</td>
+            </tr>
+            <tr>
+                <th><%= translate('Crits')%></th>
+                <td>2</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th><%= translate('Wounds')%></th>
+                <td>7</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<section>
+
+    <%= section_header("Quick Reference") %>
+
+    <div class="skills">
+        <div class="category general">
+            <p class='sw category-title'>General</p>
+            <% @character.skills.each do |skill| %>
+
+                    <% if skill.category == "General" && skill.level > 0 %>
+                        <div class="skill">
+                            <p class="name"><%= skill.name %></p>
+                            <%= display_level(skill.level) %>
+                        </div>
+                    <% end %>
+
+            <% end %>
+        </div>
+
+        <div class="skills skills-other">
+            <div class="category combat">
+                <p class='sw category-title'>Combat</p>
+                <% @character.skills.each do |skill| %>
+
+                        <% if skill.category == "Combat" && skill.level > 0 %>
+                            <div class="skill">
+                                <p class="name"><%= skill.name %></p>
+                                <%= display_level(skill.level) %>
+                            </div>
+                        <% end %>
+
+                <% end %>
+            </div>
+            <div class="category knowledge">
+                <p class='sw category-title'>Knowledge</p>
+                <% @character.skills.each do |skill| %>
+
+                        <% if skill.category == "Knowledge" && skill.level > 0 %>
+                            <div class="skill">
+                                <p class="name"><%= skill.name %></p>
+                                <%= display_level(skill.level) %>
+                            </div>
+                        <% end %>
+
+                <% end %>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>

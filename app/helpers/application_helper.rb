@@ -33,4 +33,24 @@ module ApplicationHelper
 
         return {color: colors[rand(colors.length)], char_code: "&##{characters[rand(characters.length)]};"}
     end
+
+    def display_level(level, max_level=false)
+
+        display = "<div class='level-display'>"
+        i = 5
+        level.times do 
+            display += "<div class='level level-true level-#{i}'></div>"
+            i -= 1
+        end
+        if max_level
+            (5 - level).times do 
+                display += "<div class='level level-false'></div>"
+                i -= 1
+            end
+        end
+
+        display += "</div>"
+
+        return display.html_safe
+    end
 end
