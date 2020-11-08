@@ -13,18 +13,14 @@
 
   <body>
 
-    <%= render 'layouts/header.html.erb' %>
+    <div class="datapad">
 
-<!--    
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= notice %></p>
-    <% end %>
--->
+      <%= render 'layouts/datapad_header.html.erb' %>
 
-    <%= yield %>
+      <%= yield %>
+
+    </div>
 
   </body>
+
 </html>

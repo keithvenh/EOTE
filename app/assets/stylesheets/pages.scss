@@ -1,47 +1,66 @@
+@import 'fonts';
+@import 'colors';
 // ===== INDEX PAGE ===== //
-
-.index-container {
-    flex-direction: column;
-    align-items: center;
+section {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    margin: 6px 0 18px 0;
 }
 
-.index-primary {
+.index-header {
     display: flex;
-}
-
-.index-menu {
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    .user {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 20px;
     }
 }
 
-.equipment-menu {
+.user-credits {
+    font-size: 20px;
+}
+
+.section-header {
     display: flex;
-    flex-direction: column;
+    border-bottom: 2px solid white;
     justify-content: space-between;
-    .bottom {
-        display: flex;
-        flex-direction: column;
-        p {
-            margin: 6px;
+    align-items: center;
+    padding: 6px;
+    p {
+        font-size: 20px;
+        span {
+            padding: 0 2px;
         }
     }
 }
 
-.user-edit-screen {
+.menu {
     display: flex;
+    padding: 6px;
     flex-direction: column;
+    li {
+        border: 2px solid #111;
+        padding: 6px;
+        cursor: pointer;
+        &:hover {
+            border-color: silver;
+        }
+    }
+}
+
+.index-menu.wrapper {
     justify-content: space-between;
+    align-items: center;
 }
 
-.gear-item {
-    font-size: 18px;
-    margin: 6px;
-}
-
-.store-item {
-    font-size: 18px;
-    margin: 6px;
+.sidebar {
+    width: 40%;
+    margin: 12px;
+    img {
+        max-width: 100%;
+    }
 }

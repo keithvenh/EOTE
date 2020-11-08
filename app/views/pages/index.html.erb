@@ -1,56 +1,29 @@
-<div class="page-container index-container">
+<section class="index-header">
 
-    <article class="index-primary">
+    <p class="sw user-credits">$<%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
 
-        <div class="screen screen-md yellow">
-            <%= link_to planets_path do %>
-                <%= translate("Planets", "translate-center translate-lg") %>
-            <% end %>
-            <% @planets.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "translate-sm") %>
-                <% end %>
-            <% end %>
+    <%= link_to edit_user_registration_path(@user) do %>
+        <%= translate(@user.username, "user") %>
+    <% end %>
+
+</section>
+
+<section>
+
+    <%= section_header("Menu") %>
+
+    <div class="wrapper index-menu">
+
+        <ul class="menu">
+            <%= render 'layouts/links.html.erb' %>
+        </ul>
+
+        <div class="sidebar">
+
+            <%= image_tag('blaster-pistol.png') %>
+
         </div>
+    </div>
 
-        <div class="screen screen-md green">
-            <%= link_to characters_path do %>
-                <%= translate("Characters", "translate-center translate-lg") %>
-            <% end %>
-            <% @characters.each do |character| %>
-                <%= link_to character_path(character) do %>
-                    <%= translate(character.name, "translate-sm") %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="screen screen-md red">
-            <%= link_to vehicles_path do %>
-                <%= translate("Vehicles", "translate-center translate-lg") %>
-            <% end %>
-            <% @vehicles.each do |vehicle| %>
-                <%= link_to vehicle_path(vehicle) do %>
-                    <%= translate(vehicle.name, "translate-sm") %>
-                <% end %>
-            <% end %>
-        </div>
-    </article>
-
-    <aside class="screen screen-bottom index-menu orange">
-        <%= translate("More", "translate-center translate-lg") %>
-        <div class="menu">
-            <%= link_to gear_path do %>
-                <%= translate("Weapons", "translate-sm") %>
-            <% end %>
-            <%= link_to gear_path do %>
-                <%= translate("Armor", "translate-sm") %>
-            <% end %>
-            <%= link_to gear_path do %>
-                <%= translate("Gear", "translate-sm") %>
-            <% end %>
-            <%= link_to contacts_path do %>
-                <%= translate("Contacts", "translate-sm") %>
-            <% end %>
-        </div>
-    </aside>
-</div>
+    
+</section>

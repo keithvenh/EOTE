@@ -1,73 +1,26 @@
-.sw {
-    font-family: 'aurebesh';
-}
+@import 'fonts';
 
 .translate {
-    margin: 12px 0;
-    .sw {       
-        font-size: 24px;
-        margin: 0;
-    }
-    .en {
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 14px;      
+    position: relative;
+    display: inline-block;
+    &:hover {
+        .en-tip {
+            visibility: visible;
+        }
     }
 }
 
-.translate-sm {
-    margin-bottom: 12px;
-    .sw {
-        font-size: 20px;
-    }
-    .en {
-        font-size: 11px;
-    }
-
-}
-
-.translate-lg {
-    margin-bottom: 20px;
-    .sw {
-        font-size: 36px;
-    }
-    .en {
-        font-size: 16px;
-    }
-}
-
-.translate-left {
-    text-align: left;
-}
-
-.translate-right {
-    text-align: right;
-}
-
-.translate-center {
+.en-tip {
+    visibility: hidden;
+    background-color: #111;
+    color: white;
     text-align: center;
-}
-
-.translate-horizontal {
-    display: flex;
-}
-
-.translate.danger {
-    color: #a00;
-}
-
-.button.danger-button {
-    color: #fff;
-    background-color: #f00;
-    box-shadow: 0 0 7px #f00;
-    border: none;
-    margin: 0;
-    display: inline-block;
-    padding: 8px;
-    cursor: pointer;
-}
-
-.danger-link {
-    align-self: center;
-    display: inline-block;
+    padding: 6px;
+    font-family: $primary;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -24px;
+    font-size: 14px;
 }
