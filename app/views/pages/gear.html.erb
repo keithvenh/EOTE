@@ -1,75 +1,81 @@
-<div class="page-container equipment-container">
-    <section class="screen screen-vert blue equipment-menu">
+<section>
+    
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-        <div class="special-characters">
-            <%= translate("Menu", "translate-center") %>
+        <ul class="menu">
+
+            <li class="link sw"><%= link_to "Home", root_path %></li>
+
+            <li class="link sw"><%= link_to "New Armor", new_armor_path %></li>
+
+            <li class="link sw"><%= link_to "New Attachment", new_modification_path %></li>
+
+            <li class="link sw"><%= link_to "New Gear", new_equipment_path %></li>
+
+            <li class="link sw"><%= link_to "New Weapon", new_weapon_path %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
         </div>
+    
+    </div>
+    
 
-        <div class="bottom">
-            <p><%= link_to "New Armor", new_armor_path %></p>
-            <p><%= link_to "New Attachement", new_modification_path %></p>
-            <p><%= link_to "New Equipment", new_equipment_path %></p>
-            <p><%= link_to "New Weapon", new_weapon_path %></p>
-        </div>
+</section>
 
-    </section>
 
-    <article class="character-index-primary">
+<section>
 
-        <div class="character-index-section">
+    <%= section_header("Armor") %>
 
-            <div class="screen screen-md green">
 
-                <%= translate("Armor", "translate-center") %>
+    <% @armor.each do |armor| %>
+        <%= link_to armor_path(armor) do %>
+            <p class="gear-item"><%= armor.name %></p>
+        <% end %>
+    <% end %>
 
-                <% @armor.each do |armor| %>
-                    <%= link_to armor_path(armor) do %>
-                        <p class="gear-item"><%= armor.name %></p>
-                    <% end %>
-                <% end %>
+</section>
 
-            </div>
+<section>
 
-            <div class="screen screen-md yellow">
+    <%= section_header("Attachments") %>
 
-                <%= translate("Attachments", "translate-center") %>
+    <% @mods.each do |mod| %>
+        <%= link_to modification_path(mod) do %>
+            <p class="gear-item"><%= mod.name %></p>
+        <% end %>
+    <% end %>
 
-                <% @mods.each do |mod| %>
-                    <%= link_to modification_path(mod) do %>
-                        <p class="gear-item"><%= mod.name %></p>
-                    <% end %>
-                <% end %>
-                
-            </div>
-        </div>
+</section>
 
-        <div class="character-index-section">
+<section>
 
-            <div class="screen screen-md orange">
+    <%= section_header("Gear") %>
 
-                <%= translate("Gear", "translate-center")%>
+    <% @gear.each do |gear| %>
+        <%= link_to equipment_path(gear) do %>
+            <p class="gear-item"><%= gear.name %></p>
+        <% end %>
+    <% end %>
 
-                <% @gear.each do |gear| %>
-                    <%= link_to equipment_path(gear) do %>
-                        <p class="gear-item"><%= gear.name %></p>
-                    <% end %>
-                <% end %>
+</section>
 
-            </div>
+<section>
 
-            <div class="screen screen-md red">
-
-                <%= translate("Weapons", "translate-center")%>
+    <%= section_header("Weapons") %>
             
-                <% @weapons.each do |weapon| %>
-                    <%= link_to weapon_path(weapon) do %>
-                        <p class="gear-item"><%= weapon.name %></p>
-                    <% end %>
-                <% end %>
+    <% @weapons.each do |weapon| %>
+        <%= link_to weapon_path(weapon) do %>
+            <p class="gear-item"><%= weapon.name %></p>
+        <% end %>
+    <% end %>
 
-            </div>
-        </div>
-
-    </article>
-
-</div>
+</section>
