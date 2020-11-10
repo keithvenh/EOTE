@@ -1,40 +1,38 @@
-<div class="page-container">
+<section class='form-section'>
 
-    <article class="screen screen-lg green">
+    <%= section_header ("Update #{@armor.name} for #{@char.name}") %>
 
-    <%= translate("New Armor for #{@char.name}", "translate-lg translate-center") %>
+    <%= form_for [@char, @charm] do |f| %>
 
-        <%= form_for [@char, @charm] do |f| %>
+        <div class="form-category">
 
-            <div class="form-category">
+            <%= f.hidden_field :character_id, value: @char.id %>
 
-                <%= f.hidden_field :character_id, value: @char.id %>
+            <%= f.hidden_field :armor_id, value: @armor.id %>
 
-                <%= f.hidden_field :armor_id, value: @armor.id %>
-
-                <div class="form-field">
-                    <p class="form-label">Armor ::</p>
-                    <p class="form-input"><%= @armor.name %></p>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Brand ::</p>
-                    <%= f.select(:brand, get_brands(@armor), {prompt: ''}, {class: "form-input select"}) %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Quantity ::</p>
-                    <%= f.text_field :quantity, class: "form-input integer" %>
-                </div>
-
-            </div>
-            
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+            <div class="form-field">
+                <p class="form-input"><%= @armor.name %></p>
+                <p class="form-label">Armor</p>
             </div>
 
-        <% end %>
+            <% if @armor.brands %>
+                <div class="form-field">
+                    <%= f.select(:brand, ['Brand 1, Brand2'], {prompt: ''}, {class: "form-input select"}) %>
+                    <p class="form-label">Brand</p>
+                </div>
+            <% end %>
 
-    </article>
+            <div class="form-field">
+                <%= f.text_field :quantity, class: "form-input integer" %>
+                <p class="form-label">Quantity</p>
+            </div>
 
-</div>
+        </div>
+        
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button success" %>
+        </div>
+
+    <% end %>
+
+</section>

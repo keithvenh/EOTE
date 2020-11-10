@@ -21,6 +21,7 @@ class CharacterArmorsController < ApplicationController
   
   def show
     @charm = CharacterArmor.find(params[:id])
+    @armor = @charm.armor
   end
 
   def edit

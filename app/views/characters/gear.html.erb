@@ -1,75 +1,72 @@
-<div class="page-container equipment-container">
-    <section class="screen screen-vert blue equipment-menu">
+<section>
 
-        <div class="special-characters">
-            <%= translate("Menu", "translate-center") %>
+    <%= section_header("Menu") %>
+
+    <div class="wrapper index-menu">
+
+        <ul class="menu">
+
+            <li class="link sw"><%= link_to "Home", root_path %></li>
+
+            <li class="link sw"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
         </div>
+    
+    </div>
 
-        <div class="bottom">
-            <p><%= link_to "New Armor", new_character_character_armor_path(character_id: @char.id) %></p>
-            <p><%= link_to "New Attachement", new_character_character_modification_path(character_id: @char.id) %></p>
-            <p><%= link_to "New Equipment", new_character_character_equipment_path(character_id: @char.id) %></p>
-            <p><%= link_to "New Weapon", new_character_character_weapon_path(character_id: @char.id) %></p>
-        </div>
+</section>
 
-    </section>
+<section>
 
-    <article class="character-index-primary">
+    <%= section_header("Armor") %>
 
-        <div class="character-index-section">
+    <% @armor.each do |armor| %>
+        <%= link_to character_character_armor_path(@char, armor) do %>
+            <p class="sw"><%= armor.armor.name %></p>
+        <% end %>
+    <% end %>
 
-            <div class="screen screen-md green">
+</section>
 
-                <%= translate("Armor", "translate-center") %>
+<section>
 
-                <% @armor.each do |armor| %>
-                    <%= link_to character_character_armor_path(@char, armor) do %>
-                        <%= translate(armor.armor.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
+    <%= section_header("Attachments") %>
 
-            </div>
+    <% @mods.each do |mod| %>
+        <%= link_to character_character_modification_path(@char, mod) do %>
+            <p class="sw"><%= mod.modification.name %>
+        <% end %>
+    <% end %>
 
-            <div class="screen screen-md yellow">
+</section>
 
-                <%= translate("Attachments", "translate-center") %>
+<section>
 
-                <% @mods.each do |mod| %>
-                    <%= link_to character_character_modification_path(@char, mod) do %>
-                        <%= translate(mod.modification.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
-                
-            </div>
-        </div>
+    <%= section_header("Gear") %>
 
-        <div class="character-index-section">
+    <% @gear.each do |gear| %>
+        <%= link_to character_character_equipment_path(@char, gear) do %>
+            <p class="sw"><%= gear.equipment.name %>
+        <% end %>
+    <% end %>
 
-            <div class="screen screen-md orange">
+</section>
 
-                <%= translate("Gear", "translate-center")%>
+<section>
 
-                <% @gear.each do |gear| %>
-                    <%= link_to character_character_equipment_path(@char, gear) do %>
-                        <%= translate(gear.equipment.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
+    <% section_header("Weapons") %>
 
-            </div>
+    <% @weapons.each do |weapon| %>
+        <%= link_to character_character_weapon_path(@char, weapon) do %>
+            <%= weapon.weapon.name %>
+        <% end %>
+    <% end %>
 
-            <div class="screen screen-md red">
-
-                <%= translate("Weapons", "translate-center")%>
-            
-                <% @weapons.each do |weapon| %>
-                    <%= link_to character_character_weapon_path(@char, weapon) do %>
-                        <%= translate(weapon.weapon.name, "translate-sm") %>
-                    <% end %>
-                <% end %>
-
-            </div>
-        </div>
-
-    </article>
-
-</div>
+</section>

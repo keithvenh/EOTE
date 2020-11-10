@@ -18,6 +18,7 @@ class PagesController < ApplicationController
     @equipment = Equipment.all.order('cost ASC')
     @armor = Armor.all.order('cost ASC')
     @mods = Modification.all.order('cost ASC')
+    @char = Character.find(params[:character_id])
   end
 
   def gear

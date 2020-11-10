@@ -1,81 +1,63 @@
-<div class="page-container">
+<section>
 
-    <section class="screen screen-vert green">
+    <%= section_header("Armor") %>
 
-    </section>
+    <% @armor.each do |armor| %>
+        <p class="store-item">
+            <%= link_to new_character_character_armor_path(@char, armor_id: armor.id)  do %>
 
-    <article clss="store">
-        
-        <div class="store-section">
-
-            <section class="screen screen-md red">
+                <span class="integer">$ <%= armor.cost %> </span> :: <%= armor.name %>
                 
-                <%= translate("Weapons", "translate-center") %>
+            <% end %>                        
+        </p>
+    <% end %>
 
-                <% @weapons.each do |weapon| %>
-                    <p class="store-item">
-                        <%= link_to new_character_character_weapon_path(@character, weapon_id: weapon.id)  do %>
+</section>
 
-                            <span class="sw">$ <%= weapon.cost %> </span> :: <%= weapon.name %>
+<section>
 
-                        <% end %>                        
-                    </p>
-                <% end %>
-                    
-            </section>
+    <%= section_header("Attachments") %>
 
-            <section class="screen screen-md blue">
+    <% @mods.each do |modification| %>
+        <p class="store-item">
+            <%= link_to new_character_character_modification_path(@char, modification_id: modification.id)  do %>
 
-                <%= translate("Armor", "translate-center") %>
-
-                <% @armor.each do |armor| %>
-                    <p class="store-item">
-                        <%= link_to new_character_character_armor_path(@character, armor_id: armor.id)  do %>
-
-                            <span class="sw">$ <%= armor.cost %> </span> :: <%= armor.name %>
-                            
-                        <% end %>                        
-                    </p>
-                <% end %>
+                <span class="integer">$ <%= modification.cost %> </span> :: <%= modification.name %>
                 
-            </section>
+            <% end %>                        
+        </p>
+    <% end %>
 
-        </div>
+</section>
 
-        <div class="store-section ">
-            <section class="screen screen-md orange">
+<section>
 
-                <%= translate("Gear", "translate-center") %>
+    <%= section_header("Gear") %>
 
-                <% @equipment.each do |equipment| %>
-                    <p class="store-item">
-                        <%= link_to new_character_character_equipment_path(@character, equipment_id: equipment.id)  do %>
+    <% @equipment.each do |equipment| %>
+        <p class="store-item">
+            <%= link_to new_character_character_equipment_path(@char, equipment_id: equipment.id)  do %>
 
-                            <span class="sw">$ <%= equipment.cost %> </span> :: <%= equipment.name %>
-                            
-                        <% end %>                        
-                    </p>
-                <% end %>
+                <span class="integer">$ <%= equipment.cost %> </span> :: <%= equipment.name %>
                 
-            </section>
+            <% end %>                        
+        </p>
+    <% end %>
 
-            <section class="screen screen-md yellow">
+</section>
 
-                <%= translate("Attachments", "translate-center") %>
+<section>
 
-                <% @mods.each do |modification| %>
-                    <p class="store-item">
-                        <%= link_to new_character_character_modification_path(@character, modification_id: modification.id)  do %>
+    <%= section_header("Weapons") %>
 
-                            <span class="sw">$ <%= modification.cost %> </span> :: <%= modification.name %>
-                            
-                        <% end %>                        
-                    </p>
-                <% end %>
-                
-            </section>
-        </div>
+    <% @weapons.each do |weapon| %>
+        <p class="store-item">
+            <%= link_to new_character_character_weapon_path(@char, weapon_id: weapon.id)  do %>
 
-    </article>
-    
-</div>
+                <span class="itneger">$ <%= weapon.cost %> </span> :: <%= weapon.name %>
+
+            <% end %>                        
+        </p>
+    <% end %>
+
+</section>

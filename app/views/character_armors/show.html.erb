@@ -1,77 +1,112 @@
-<div class="page-container character-show-container">
+<section>
     
-    <section class="screen screen-vert blue character-menu">
-        <div class="character-data">
-            <%= translate("Basics", "translate-center") %>
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-            <% if @charm.armor.restricted %>
-                <%= translate("Restriced", "translate-center danger")%>
-            <% end %>
+        <ul class="menu">
 
-            <%= translate(@charm.armor.name, "translate") %>
+            <li class="link sw"><%= link_to "Home", root_path %></li>
 
-            <div class="gear-rarity">
-                <%= translate("Rarity", "translate-sm") %>
-                <p class="sw"><%= @charm.armor.rarity %></p>
-            </div>
+            <li class="link sw"><%= link_to "#{@char.name}'s Armory", character_gear_path %></li>
 
-            <p class='sw gear-cost'>$ <%= @charm.armor.cost %></p>
+            <li class="link sw"><%= link_to "Update Armor", edit_character_character_armor_path(@char, @charm) %></li>
 
-            <p><%= @charm.brand %></p>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
         </div>
-        
-        <div class="bottom">
-            <p><%= link_to "Edit Armor", edit_character_character_armor_path(character_id: @char.id, id: @charm.id) %></p>
+    
+    </div>
+    
 
-            <p><%= link_to "Delete Armor", [@char, @charm], method: :delete, data: {confirm: "Are you sure you wish to delete this character armor? This cannot be undone." } %></p>
+</section>
+
+<section>
+
+    <%= section_header("Armor Basics") %>
+
+    <% if @armor.restricted %>
+        <p class="sw text danger">Restricted</p>
+    <% end %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Name</p>
+            <p class='sw data'><%= @armor.name %></p>
         </div>
 
-    </section>
+        <div class="dataset">
+            <p class="data-title">Rarity</p>
+            <p class="sw data"><%= @armor.rarity %></p>
+        </div>
 
-    <article class="screen screen-lg orange">
+        <div class="dataset">
+            <p class="data-title">Cost</p>
+            <p class="sw data"><%= @armor.cost %></p>
+        </div>
 
-        <section class="weapon-attributes">
+    </div>
 
-            <%= translate("Attributes", "translate-center translate-lg") %>
+</section>
 
-            <div class="attribute-container">
+<section>
 
-                <div class="general-data">
-                    <%= translate("Damage", "data-type translate-center") %>
-                    <p class="sw data"><%= @charm.armor.defense %></p>
-                </div>
+    <%= section_header("Armor Details") %>
 
-                <div class="general-data">
-                    <%= translate("Crit", "data-type translate-center") %>
-                    <p class="sw data"><%= @charm.armor.soak %></p>
-                </div>
+    <div class="attr">
 
-            </div>
+        <div class="dataset">
+            <p class="data-title">Soak</p>
+            <p class="integer data"><%= @armor.soak %></p>
+        </div>
 
-            <div class="attribute-container">
+        <div class="dataset">
+            <p class="data-title">Defense</p>
+            <p class="integer data"><%= @armor.defense %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
-                    <p class="sw data"><%= @charm.armor.encumbrance %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Encumbrance</p>
+            <p class="integer data"><%= @armor.encumbrance %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Hard Points", "translate-center translate-sm agility") %>
-                    <p class="sw data"><%= @charm.armor.hard_points %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Hard Points</p>
+            <p class="integer data"><%= @armor.hard_points %></p>
+        </div>
 
-            </div>
+    </div>
 
-        </section>
+</section>
 
-    </article>
 
-    <section class="screen screen-vert blue">
+<section>
 
-        <%= translate("Description", "translate-center") %>
+    <%= section_header("Armor Description") %>
 
-        <%= @charm.armor.description %>
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= @armor.description %></p>
+        </div>
+    </div>
 
-    </section>
+</section>
 
-</div>
+<section>
+
+    <%= section_header("Armor Brands") %>
+
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= @charm.brand %></p>
+        </div>
+    </div>
+
+</section>

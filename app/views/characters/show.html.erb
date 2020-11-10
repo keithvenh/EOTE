@@ -12,6 +12,8 @@
 
             <li class="link sw"><%= link_to "New Skill", new_character_skill_path(@char) %></li>
 
+            <li class="link sw"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
+
         </ul>
 
         <div class="sidebar">
