@@ -1,47 +1,86 @@
-<div class="page-container character-show-container">
+<section>
     
-    <section class="screen screen-vert green character-menu">
-        <div class="character-data">
-            <%= translate("Basics", "translate-center") %>
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-            <% if @equipment.restricted %>
-                <%= translate("Restriced", "translate-center danger")%>
-            <% end %>
+        <ul class="menu">
 
-            <%= translate(@equipment.name, "translate") %>
+            <li class="link sw"><%= link_to "Home", root_path %></li>
 
-            <div class="gear-rarity">
-                <%= translate("Encumbrance", "translate-sm") %>
-                <p class="sw"><%= @equipment.encumbrance %></p>
-            </div>
-            
-            <div class="gear-rarity">
-                <%= translate("Rarity", "translate-sm") %>
-                <p class="sw"><%= @equipment.rarity %></p>
-            </div>
+            <li class="link sw"><%= link_to "Armory", gear_path %></li>
 
-            <p class='sw gear-cost'>$ <%= @equipment.cost %></p>
+            <li class="link sw"><%= link_to "Update Gear", edit_equipment_path(@equipment) %></li>
+
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
 
         </div>
-        
-        <div class="bottom">
-            <p><%= link_to "Edit Equipment", edit_equipment_path(@equipment) %></p>
+    
+    </div>
+    
 
-            <p><%= link_to "Delete Equipment", @equipment, method: :delete, data: {confirm: "Are you sure you wish to delete this equipment? This cannot be undone." } %></p>
+</section>
+
+<section>
+
+    <%= section_header("Equipment Basics") %>
+
+    <% if @equipment.restricted %>
+        <p class="sw text danger">Restricted</p>
+    <% end %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Name</p>
+            <p class='sw data'><%= @equipment.name %></p>
         </div>
 
-    </section>
+        <div class="dataset">
+            <p class='data-title'>Encumbrance</p>
+            <p class='sw data'><%= @equipment.encumbrance %></p>
+        </div>
 
-    <article class="screen screen-lg orange">
+        <div class="dataset">
+            <p class="data-title">Rarity</p>
+            <p class="sw data"><%= @equipment.rarity %></p>
+        </div>
 
-        <section class="weapon-attributes">
+        <div class="dataset">
+            <p class="data-title">Cost</p>
+            <p class="integer data">$ <%= @equipment.cost %></p>
+        </div>
 
-            <%= translate("Description", "translate-center translate-lg") %>
+    </div>
 
-            <%= @equipment.description %>
+</section>
 
-        </section>
+<section>
 
-    </article>
+    <%= section_header("Gear Description") %>
 
-</div>
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= @equipment.description %></p>
+        </div>
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Gear Brands") %>
+
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= @equipment.brands %></p>
+        </div>
+    </div>
+
+</section>

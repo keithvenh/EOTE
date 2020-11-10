@@ -1,59 +1,54 @@
-<div class="page-container">
+<section class="form-section">
 
-    <article class="screen screen-lg green">
+    <%= section_header("New Equipment") %>
 
-    <%= translate("New Equipment", "translate-lg translate-center") %>
+    <%= form_for @equipment do |f| %>
 
-        <%= form_for @equipment do |f| %>
+        <div class="form-category">
 
-            <div class="form-category">
-
-                <%= translate("General Info", "translate-center form-category-label") %>
-
-                <div class="form-field">
-                    <p class="form-label">Name ::</p>
-                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Restricted? ::</p>
-                    <div class="form-input">
-                        <%= f.check_box :restricted, class: "boolean" %>
-                    </div>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Encumbrance ::</p>
-                    <%= f.text_field :encumbrance, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Cost ::</p>
-                    <%= f.text_field :cost, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field">
-                    <p class="form-label">Rarity ::</p>
-                    <%= f.text_field :rarity, class: "form-input integer" %>
-                </div>
-
-                <div class="form-field form-field-long">
-                    <p class="form-label">Description ::</p>
-                    <%= f.text_area :description, class: "form-input long-text" %>
-                </div>
-
-                <div class="form-field form-field-long">
-                    <p class="form-label">Brands ::</p>
-                    <%= f.text_area :brands, class: "form-input long-text" %>
-                </div>
-
+            <div class="form-field">
+                <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                <p class="form-label">Name</p>
             </div>
 
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+            <div class="form-field">
+                <div class="checkbox">
+                <%= f.check_box :restricted,  class: "boolean"%>
+                <p class="form-label">Restricted</p>
+                </div>
             </div>
-    
-        <% end %>
-    </article>
-</div>
 
+            <div class="form-field">
+                <%= f.text_field :encumbrance, class: "form-input integer" %>
+                <p class="form-label">Encumbrance</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :cost, class: "form-input integer" %>
+                <p class="form-label">Cost</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :rarity, class: "form-input integer" %>
+                <p class="form-label">Rarity</p>
+            </div>
+
+            <div class="form-field form-field-long">
+                <%= f.text_area :description, class: "form-input long-text" %>
+                <p class="form-label">Description</p>
+            </div>
+
+            <div class="form-field form-field-long">
+                <%= f.text_area :brands, class: "form-input long-text" %>
+                <p class="form-label">Brands</p>
+            </div>
+
+        </div>
+
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button success" %>
+        </div>
+
+    <% end %>
+
+</section>
