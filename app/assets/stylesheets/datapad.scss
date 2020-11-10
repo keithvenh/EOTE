@@ -2,7 +2,7 @@
 @import 'colors';
 
 .datapad {
-    height: 100vh;
+    height: 95vh;
     box-sizing: border-box;
     width: 75vh;
     max-width: 100vw;
@@ -39,4 +39,8 @@
 
 .alert-danger {
     color: $red;
+}
+
+section {
+    padding-bottom: 16px;
 }

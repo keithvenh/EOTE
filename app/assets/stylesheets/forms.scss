@@ -5,16 +5,27 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 75%;
     min-width: 75%;
+    max-width: 100%;
+    margin: auto;
 }
 
 .form-category {
     padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    .form-category-title {
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 12px;
+    }
 }
 
 .form-field {
     padding-left: 8px;
     margin: 8px 0;
+    box-sizing: border-box;
     .form-label {
         text-transform: uppercase;
         font-size: .8em;
@@ -29,9 +40,13 @@ form {
         color: white;
         border-bottom: 1px solid silver;
         font-size: 1.1em;
-        font-family: $primary;
+        font-family: $aurebesh;
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
+        &.text:focus {
+            font-family: $primary;
+        }
     }
     .checkbox {
         display: flex;
@@ -45,6 +60,9 @@ form {
 
 .form-button.success {
     background-color: $green;
+    align-self: center;
+    display: block;
+    margin: 6px auto;
 }
 
 .form-input.integer {

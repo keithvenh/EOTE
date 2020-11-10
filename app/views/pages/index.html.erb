@@ -1,10 +1,8 @@
 <section class="index-header">
 
-    <p class="sw user-credits">$<%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
+    <p class="integer user-credits">$<%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
 
-    <%= link_to edit_user_registration_path(@user) do %>
-        <%= translate(@user.username, "user") %>
-    <% end %>
+    <p class="sw user"><%= link_to @user.username, edit_user_registration_path(@user) %></p>
 
 </section>
 
@@ -22,35 +20,35 @@
         <thead>
             <tr>
                 <th></th>
-                <th><%= translate('Aleni')%></th>
-                <th><%= translate('Krachtig')%></th>
+                <th class='sw'>Aleni</th>
+                <th class='sw'>Krachtig</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th><%= translate('kills')%></th>
-                <td>12</td>
-                <td>21</td>
+                <th class='sw'>Kills</th>
+                <td class='integer'>12</td>
+                <td class='integer'>21</td>
             </tr>
             <tr>
-                <th><%= translate('Assists')%></th>
-                <td>2</td>
-                <td>3</td>
+                <th class='sw'>Assists</th>
+                <td class='integer'>2</td>
+                <td class='integer'>3</td>
             </tr>
             <tr>
-                <th><%= translate('Damage')%></th>
-                <td>107</td>
-                <td>168</td>
+                <th class='sw'>Damage</th>
+                <td class='integer'>107</td>
+                <td class='integer'>168</td>
             </tr>
             <tr>
-                <th><%= translate('Crits')%></th>
-                <td>2</td>
-                <td>6</td>
+                <th class='sw'>Crits</th>
+                <td class='integer'>2</td>
+                <td class='integer'>6</td>
             </tr>
             <tr>
-                <th><%= translate('Wounds')%></th>
-                <td>7</td>
-                <td>18</td>
+                <th class='sw'>Wounds</th>
+                <td class='integer'>7</td>
+                <td class='integer'>18</td>
             </tr>
         </tbody>
     </table>
@@ -61,19 +59,21 @@
 
     <%= section_header("Quick Reference") %>
 
-    <div class="skills">
-        <div class="category general">
-            <p class='sw category-title'>General</p>
-            <% @character.skills.each do |skill| %>
+    <div class="skills-list">
+        <div class="skills skills-general">
+            <div class="category general">
+                <p class='sw category-title'>General</p>
+                <% @character.skills.each do |skill| %>
 
-                    <% if skill.category == "General" && skill.level > 0 %>
-                        <div class="skill">
-                            <p class="name"><%= skill.name %></p>
-                            <%= display_level(skill.level) %>
-                        </div>
-                    <% end %>
+                        <% if skill.category == "General" && skill.level > 0 %>
+                            <div class="skill">
+                                <p class="name"><%= skill.name %></p>
+                                <%= display_level(skill.level) %>
+                            </div>
+                        <% end %>
 
-            <% end %>
+                <% end %>
+            </div>
         </div>
 
         <div class="skills skills-other">

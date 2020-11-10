@@ -18,3 +18,60 @@
         color: $green;
     }
 }
+
+.basics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 12px;
+}
+
+.attr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 12px;
+}
+
+.dataset {
+    text-align: center;
+    margin: 0 6px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    .skills {
+        width: 50%;
+        max-width: 50%;
+        box-sizing: border-box;
+    }
+
+    .category-title {
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .skill {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        .name {
+            text-transform: uppercase;
+            padding: 6px;
+            padding-left: 16px;
+            width: 50%;
+        }
+        .level-display {
+            width: 50%;
+            padding-left: 16px;
+        }
+    }
+}
+
+.skills-other {
+    flex-direction: column;
+    justify-content: flex-start;
+}

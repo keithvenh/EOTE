@@ -1,13 +1,6 @@
 module ApplicationHelper
 
-    def translate(phrase, classNames='')
-        data = "<div class='translate #{classNames}'>"
-        data += "<p class='sw'>#{phrase}"
-        data += "<span class='en-tip'>#{phrase}</span>"
-        data += "</p></div>"
-        return data.html_safe
-    end
-
+    # ===== HEADERS ===== #
     def section_header(title)
         
         display = "<div class='section-header'>"
@@ -34,6 +27,7 @@ module ApplicationHelper
         return {color: colors[rand(colors.length)], char_code: "&##{characters[rand(characters.length)]};"}
     end
 
+    # ===== Skill Levels ===== #
     def display_level(level, max_level=false)
 
         display = "<div class='level-display'>"

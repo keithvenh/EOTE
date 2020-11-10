@@ -1,79 +1,98 @@
-<div class="page-container">
-    <article class="screen screen-lg green">
-    <%= translate("Character Creation", "translate-lg translate-center") %>
-        <%= form_for @char do |f| %>
-            <div class="form-category">
-                <%= translate("General Info", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Name ::</p>
-                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Race ::</p>
-                    <%= f.text_field :race, class: "form-input text" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Career ::</p>
-                    <%= f.text_field :career, class: "form-input text" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Type ::</p>
-                    <%= f.text_field :category, class: "form-input text"%>
-                </div>
+<section class="form-section">
+    
+    <%= section_header("New Character") %>
+
+    <%= form_for @char do |f| %>
+
+        <div class="form-category">
+
+            <p class="sw form-category-title">General Info</p>
+
+            <div class="form-field">
+                <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                <p class="form-label">Name</p>
             </div>
-            <div class="form-category">
-                <%= translate("Attributes", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Brawn ::</p>
-                    <%= f.text_field :brawn, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Agility ::</p>
-                    <%= f.text_field :agility, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Intellect ::</p>
-                    <%= f.text_field :intellect, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Cunning ::</p>
-                    <%= f.text_field :cunning, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Willpower ::</p>
-                    <%= f.text_field :willpower, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Presence ::</p>
-                    <%= f.text_field :presence, class: "form-input integer" %>
-                </div>
+
+            <div class="form-field">
+                <%= f.text_field :race, class: "form-input text" %>
+                <p class="form-label">Race</p>
             </div>
-            <div class="form-category">
-                <%= translate("Derived Attributes", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Soak ::</p>
-                    <%= f.text_field :soak, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Wound Threshold ::</p>
-                    <%= f.text_field :wound_threshold, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Strain Threshold ::</p>
-                    <%= f.text_field :strain_threshold, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Defense Ranged ::</p>
-                    <%= f.text_field :defense_ranged, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Defense Melee ::</p>
-                    <%= f.text_field :defense_melee, class: "form-input integer" %>
-                </div>
+
+            <div class="form-field">
+                <%= f.text_field :career, class: "form-input text" %>
+                <p class="form-label">Career</p>
             </div>
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+
+            <div class="form-field">
+                <%= f.text_field :category, class: "form-input text"%>
+                <p class="form-label">Type</p>
             </div>
-            <% end %>
-    </article>
-</div>
+
+        </div>
+
+        <div class="form-category">
+
+            <p class="sw form-category-title">Attributes</p>
+
+            <div class="form-field">
+                <%= f.text_field :soak, class: "form-input integer" %>
+                <p class="form-label">Soak</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :wound_threshold, class: "form-input integer" %>
+                <p class="form-label">Wound Threshold</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :strain_threshold, class: "form-input integer" %>
+                <p class="form-label">Strain Threshold</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :defense_ranged, class: "form-input integer" %>
+                <p class="form-label">Defense Ranged</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :defense_melee, class: "form-input integer" %>
+                <p class="form-label">Defense Melee</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :brawn, class: "form-input integer" %>
+                <p class="form-label">Brawn</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :agility, class: "form-input integer" %>
+                <p class="form-label">Agility</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :intellect, class: "form-input integer" %>
+                <p class="form-label">Intellect</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :cunning, class: "form-input integer" %>
+                <p class="form-label">Cunning</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :willpower, class: "form-input integer" %>
+                <p class="form-label">Willpower</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :presence, class: "form-input integer" %>
+                <p class="form-label">Presence</p>
+            </div>
+
+        </div>
+
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button success" %>
+        </div>
+    <% end %>
+</section>

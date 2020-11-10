@@ -1,168 +1,183 @@
-<div class="page-container character-show-container">
+<section>
     
-    <section class="screen screen-vert green character-menu">
-        <div class="character-data">
-            <%= translate("Basics", "translate-center") %>
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-            <%= translate(@char.name, "translate-lg") %>
+        <ul class="menu">
 
-            <%= translate(@char.race, "") %>
+            <li class="link sw"><%= link_to "Home", root_path %></li>
 
-            <%= translate(@char.career, "") %>
+            <li class="link sw"><%= link_to "Update Character", edit_character_path(@char) %></li>
+
+            <li class="link sw"><%= link_to "New Skill", new_character_skill_path(@char) %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
         </div>
-        
-        <div class="bottom">
-            <p><%= link_to "Character Gear", character_gear_path(@char) %></p>
-            <p><%= link_to "Edit Character", edit_character_path(@char) %></p>
+    
+    </div>
+    
 
-            <p><%= link_to "Delete Character", @char, method: :delete, data: {confirm: "Are you sure you wish to delete this character? This cannot be undone." } %></p>
+</section>
+
+<section class="character-profile">
+
+    <%= section_header("Profile") %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Name</p>
+            <p class='sw data'><%= @char.name %></p>
         </div>
 
-    </section>
+        <div class="dataset">
+            <p class="data-title">Race</p>
+            <p class="sw data"><%= @char.race ? @char.race : "Unknown" %></p>
+        </div>
 
-    <article class="screen screen-lg orange">
+        <div class="dataset">
+            <p class="data-title">Career</p>
+            <p class="sw data"><%= @char.career ? @char.career : "Unknown" %></p>
+        </div>
 
-        <section class="character-attributes">
+    </div>
 
-            <%= translate("Attributes", "translate-center translate-lg") %>
+</section>
 
-            <div class="attribute-container">
-                <div class="general-data">
-                    <%= translate("Soak", "data-type translate-center") %>
-                    <p class="sw data"><%= @char.soak %></p>
-                </div>
+<section class="character-attributes">
 
-                <div class="general-data">
-                    <%= translate("Wounds", "data-type translate-center") %>
-                    <p class="sw data"><%= @char.wound_threshold %></p>
-                </div>
+    <%= section_header("Attributes") %>
 
-                <div class="general-data">
-                    <%= translate("Strain", "data-type translate-center") %>
-                    <p class="sw data"><%= @char.strain_threshold %></p>
-                </div>
+    <div class="attr">
 
-                <div class="general-data">
-                    <%= translate("Defense", "data-type translate-center") %>
-                    <p class="sw data"><%= @char.defense_ranged %> / <%= @char.defense_melee %></p>
-                </div>
-            </div>
+        <div class="dataset">
+            <p class="data-title">Soak</p>
+            <p class="sw data"><%= @char.soak %></p>
+        </div>
 
-            <div class="attribute-container">
+        <div class="dataset">
+            <p class="data-title">Wound Threshold</p>
+            <p class="sw data"><%= @char.wound_threshold %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Brawn", "translate-center translate-sm brawn") %>
-                    <p class="sw data brawn"><%= @char.brawn %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Strain Threshold</p>
+            <p class="sw data"><%= @char.strain_threshold %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Agility", "translate-center translate-sm agility") %>
-                    <p class="sw data agility"><%= @char.agility %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Defense</p>
+            <p class="data-subtitle">Ranged / Melee</p>
+            <p class="sw data"><%= @char.defense_ranged %> / <%= @char.defense_melee %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Intellect", "translate-center translate-sm intellect") %>
-                    <p class="sw data intellect"><%= @char.intellect %></p>
-                </div>
+    </div>
 
-                <div class="general-data">
-                    <%= translate("Cunning", "translate-center translate-sm cunning") %>
-                    <p class="sw data cunning"><%= @char.cunning %></p>
-                </div>
+    <div class="attr">
 
-                <div class="general-data">
-                    <%= translate("Willpower", "translate-center translate-sm willpower") %>
-                    <p class="sw data willpower"><%= @char.willpower %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Brawn</p>
+            <p class="sw data"><%= @char.brawn %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Presence", "translate-center translate-sm presence") %>
-                    <p class="sw data presence"><%= @char.presence %></p>
-                </div>
-            </div>
+        <div class="dataset">
+            <p class="data-title">Agility</p>
+            <p class="sw data"><%= @char.agility %></p>
+        </div>
 
-        </section>
+        <div class="dataset">
+            <p class="data-title">Intellect</p>
+            <p class="sw data"><%= @char.intellect %></p>
+        </div>
 
-        <section class="character-skills-container">
+        <div class="dataset">
+            <p class="data-title">Cunning</p>
+            <p class="sw data"><%= @char.cunning %></p>
+        </div>
 
-            <div class="character-skill-title">
-                <%= translate("Skills", "translate-lg translate-center") %>
-                <p class="new-char-skill-link"><%= link_to "New Skill", new_character_skill_path(@char) %></p>
-            </div>
+        <div class="dataset">
+            <p class="data-title">Willpower</p>
+            <p class="sw data"><%= @char.willpower %></p>
+        </div>
 
-            <div class="category-wrapper">
-                <%= translate("General", "translate-left category-title") %>
-                    <% @char.skills.each do |skill| %>
+        <div class="dataset">
+            <p class="data-title">Presence</p>
+            <p class="sw data"><%= @char.presence %></p>
+        </div>
+
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Quick Reference") %>
+
+    <div class="skills-list">
+        <div class="skills skills-general">
+            <div class="category general">
+                <p class='sw category-title'>General</p>
+                <% @character.skills.each do |skill| %>
+
                         <% if skill.category == "General" %>
-                            <%= link_to edit_character_skill_path(@char, skill) do %>
-                                <div class="skill">
-                                    <p class="<%= skill.attr.downcase %>"><%= skill.career ? '&#9865;'.html_safe : '' %> <%= skill.name %></p>
-                                    <div class="level-display">
-                                        <% i = 1 %>
-                                        <% skill.level.times do %>
-                                            <div class="level level-true level-<%= i %>"></div>
-                                            <% i += 1 %>
-                                        <% end %>
-                                        <% (5 - skill.level).times do %>
-                                            <div class="level level-false level-<%= i %>"></div>
-                                            <% i += 1 %>
-                                        <% end %>
-                                    </div>
-                                </div>
-                            <% end %>
+                            <div class="skill">
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <%= display_level(skill.level, true) %>
+                            </div>
                         <% end %>
-                    <% end %>
+
+                <% end %>
             </div>
-            <div class="category-wrapper">
-                <div class="category combat">
-                    <%= translate("Combat", "translate-left") %>
-                    <% @char.skills.each do |skill| %>
+        </div>
+
+        <div class="skills skills-other">
+            <div class="category combat">
+                <p class='sw category-title'>Combat</p>
+                <% @character.skills.each do |skill| %>
+
                         <% if skill.category == "Combat" %>
                             <div class="skill">
-                                <p class="<%= skill.attr.downcase %>"><%= skill.career ? '&#9865;'.html_safe : '' %> <%= skill.name %></p>
-                                <div class="level-display">
-                                    <% i = 1 %>
-                                    <% skill.level.times do %>
-                                        <div class="level level-true level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
-                                </div>
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
-                    <% end %>
-                </div>
-                <div class="category knowledge">
-                    <%= translate("Knowledge", "translate-left") %>
-                    <% @char.skills.each do |skill| %>
+
+                <% end %>
+            </div>
+            <div class="category knowledge">
+                <p class='sw category-title'>Knowledge</p>
+                <% @character.skills.each do |skill| %>
+
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">
-                                <p class="<%= skill.attr.downcase %>"><%= skill.career ? '&#9865;'.html_safe : '' %> <%= skill.name %></p>
-                                <div class="level-display">
-                                    <% i = 1 %>
-                                    <% skill.level.times do %>
-                                        <div class="level level-true level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
-                                    <% (5 - skill.level).times do %>
-                                        <div class="level level-false level-<%= i %>"></div>
-                                        <% i += 1 %>
-                                    <% end %>
-                                </div>
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
-                    <% end %>
-                </div>
+
+                <% end %>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </article>
+</section>
 
-    <section class="screen screen-vert blue">
-        <%= translate("Talents", "translate-center") %>
-    </section>
+<section>
 
-</div>
+    <%= section_header("Talents") %>
+
+</section>
+
+<section>
+
+    <%= section_header("Stats") %>
+
+</section>

@@ -79,37 +79,3 @@ section {
         padding: 6px;
     }
 }
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .category {
-        min-width: 50%;
-    }
-    .category-title {
-        padding: 6px;
-        font-size: 20px;
-        text-align: center;
-    }
-    .skill {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        .name {
-            flex: 1 0 0;
-            text-transform: uppercase;
-            text-align: right; 
-            padding: 6px;
-        }
-        .level-display {
-            flex: 0 0 130px;  
-            width: 130px;
-        }
-    }
-}
-
-.skills-other {
-    flex-direction: column;
-    justify-content: flex-start;
-}

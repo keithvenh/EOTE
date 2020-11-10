@@ -15,6 +15,10 @@ body {
 	color: #fff;
 	font-family: $primary;
 	letter-spacing: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
  }
 
  ::-webkit-scrollbar {
@@ -23,6 +27,13 @@ body {
 
 .sw {
   font-family: $aurebesh;
+  &:hover {
+	  font-family: $primary;
+  }
+}
+
+.integer {
+	font-family: $aurebesh;
 }
 
 a {
@@ -112,7 +123,7 @@ a {
     padding: 6px;
     cursor: pointer;
     text-align: center;
-	margin: 6px;
+	margin: 6px auto;
 	display: inline-block;
 	font-size: 1.1em;
 }
