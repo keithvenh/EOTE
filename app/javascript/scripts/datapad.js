@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",function(){
+$(document).ready(function() {
 
     document.getElementById('connection-tracker').style.marginLeft = "250px";
     const connection = setInterval(() => {

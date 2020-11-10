@@ -1,6 +1,10 @@
-document.addEventListener("DOMContentLoaded",function(){
+$('.skills.new').ready(function(){
 
-    document.getElementById('skills').addEventListener("change", function(event) {
+    console.log("TurbolinksLoad");
+    skill = document.getElementById('skill');
+    attr = document.getElementById('attribute');
+    cat = document.getElementById('category');
+    skill.addEventListener("change", function(event) {
         console.log("Changed");
         console.log(this.value);
 
@@ -9,47 +13,56 @@ document.addEventListener("DOMContentLoaded",function(){
             case "Computers":
             case "Mechanics":
             case "Medicine":
-                console.log("General Intellect");
+                attr.value = "Intellect";
+                cat.value = "General";
                 break;
             case "Athletics":
             case "Resilience":
-                console.log("General Brawn");
+                attr.value = "Brawn";
+                cat.value = "General";
                 break;
             case "Charm":
             case "Cool":
             case "Leadership":
             case "Negotiation":
-                console.log("General Presence");
+                attr.value = "Presence";
+                cat.value = "General";
                 break;
             case "Coercion":
             case "Discipline":
             case "Vigilance":
-                console.log("General Willpower");
+                attr.value = "Willpower";
+                cat.value = "General";
                 break;
             case "Coordination":
             case "Piloting (Planetary)":
             case "Piloting (Space)":
             case "Stealth":
-                console.log("General Agility");
+                attr.value = "Agility";
+                cat.value = "General";
                 break;
             case "Deception":
             case "Perception":
             case "Skulduggery":
             case "Streetwise":
             case "Survival":
-                console.log("General Cunning");
+                attr.value = "Cunning";
+                cat.value = "General";
                 break;
             case "Brawl":
             case "Melee":
-                console.log("Combat Brawn");
+                attr.value = "Brawn";
+                cat.value = "Combat";
                 break;
             case "Ranged (Light)":
             case "Ranged (Heavy)":
             case "Gunnery":
-                console.log("Combat Agility");
+                attr.value = "Agility";
+                cat.value = "Combat";
                 break;
             default:
-                console.log("Knowledge Intellect");
+                attr.value = "Intellect";
+                cat.value = "Knowledge";
         }
     })
     

@@ -44,7 +44,7 @@
 
         <div class="dataset">
             <p class="data-title">Career</p>
-            <p class="sw data"><%= @char.career ? @char.career : "Unknown" %></p>
+            <p class="sw data"><%= @char.career && @char.career != '' ? @char.career : "Unknown" %></p>
         </div>
 
     </div>
@@ -59,23 +59,23 @@
 
         <div class="dataset">
             <p class="data-title">Soak</p>
-            <p class="sw data"><%= @char.soak %></p>
+            <p class="integer data"><%= @char.soak %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Wound Threshold</p>
-            <p class="sw data"><%= @char.wound_threshold %></p>
+            <p class="integer data"><%= @char.wound_threshold %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Strain Threshold</p>
-            <p class="sw data"><%= @char.strain_threshold %></p>
+            <p class="integer data"><%= @char.strain_threshold %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Defense</p>
             <p class="data-subtitle">Ranged / Melee</p>
-            <p class="sw data"><%= @char.defense_ranged %> / <%= @char.defense_melee %></p>
+            <p class="integer data"><%= @char.defense_ranged %> / <%= @char.defense_melee %></p>
         </div>
 
     </div>
@@ -84,32 +84,32 @@
 
         <div class="dataset">
             <p class="data-title">Brawn</p>
-            <p class="sw data"><%= @char.brawn %></p>
+            <p class="integer data"><%= @char.brawn %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Agility</p>
-            <p class="sw data"><%= @char.agility %></p>
+            <p class="integer data"><%= @char.agility %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Intellect</p>
-            <p class="sw data"><%= @char.intellect %></p>
+            <p class="integer data"><%= @char.intellect %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Cunning</p>
-            <p class="sw data"><%= @char.cunning %></p>
+            <p class="integer data"><%= @char.cunning %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Willpower</p>
-            <p class="sw data"><%= @char.willpower %></p>
+            <p class="integer data"><%= @char.willpower %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Presence</p>
-            <p class="sw data"><%= @char.presence %></p>
+            <p class="integer data"><%= @char.presence %></p>
         </div>
 
 
@@ -125,7 +125,7 @@
         <div class="skills skills-general">
             <div class="category general">
                 <p class='sw category-title'>General</p>
-                <% @character.skills.each do |skill| %>
+                <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "General" %>
                             <div class="skill">
@@ -141,7 +141,7 @@
         <div class="skills skills-other">
             <div class="category combat">
                 <p class='sw category-title'>Combat</p>
-                <% @character.skills.each do |skill| %>
+                <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "Combat" %>
                             <div class="skill">
@@ -154,7 +154,7 @@
             </div>
             <div class="category knowledge">
                 <p class='sw category-title'>Knowledge</p>
-                <% @character.skills.each do |skill| %>
+                <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">

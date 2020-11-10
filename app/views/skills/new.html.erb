@@ -9,7 +9,7 @@
                 <%= f.hidden_field :character_id, value: @char.id %>
 
                 <div class="form-field">
-                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select", id: 'skills'}) %>
+                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select", id: 'skill'}) %>
                     <p class="form-label">Skill</p>
                 </div>
 
@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="form-field">
-                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select", id: 'Category'}) %>
+                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select", id: 'category'}) %>
                     <p class="form-label">Category</p>
                 </div>
 
@@ -39,7 +39,7 @@
             </div>
             
             <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+                <%= f.submit "Submit", class: "button form-button success" %>
             </div>
 
         <% end %>

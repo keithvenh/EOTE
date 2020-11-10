@@ -4,6 +4,8 @@
     <title>Iron Shadow | EOTE</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('results/5.png') %>
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
 
     <div class="datapad">
 
