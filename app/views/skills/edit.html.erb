@@ -1,6 +1,6 @@
 <section class='form-section'>
 
-    <%= section_header("New Skill for #{@char.name}") %>
+    <%= section_header("Update #{@skill.name} for #{@char.name}") %>
 
     <%= form_for [@char, @skill] do |f| %>
 
@@ -39,7 +39,7 @@
             </div>
             
             <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button success" %>
+                <%= f.submit "Submit", class: "sw button form-button success" %>
             </div>
 
             <%= link_to [@char, @skill], method: :delete do %>
