@@ -129,7 +129,7 @@
 
                         <% if skill.category == "General" %>
                             <div class="skill">
-                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
@@ -145,7 +145,7 @@
 
                         <% if skill.category == "Combat" %>
                             <div class="skill">
-                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
@@ -158,7 +158,7 @@
 
                         <% if skill.category == "Knowledge" %>
                             <div class="skill">
-                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= skill.name %></p>
+                                <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>

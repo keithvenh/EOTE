@@ -1,54 +1,51 @@
-<div class="page-container">
+<section class='form-section'>
 
-    <article class="screen screen-lg yellow skill-edit-screen">
+    <%= section_header("New Skill for #{@char.name}") %>
 
-        <%= form_for [@char, @skill] do |f| %>
-
-            <%= translate("Update Skill for #{@char.name}", "translate-lg translate-center") %>
+    <%= form_for [@char, @skill] do |f| %>
 
             <div class="form-category">
 
                 <%= f.hidden_field :character_id, value: @char.id %>
 
                 <div class="form-field">
-                    <p class="form-label">Skill ::</p>
-                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select"}) %>
+                    <%= f.select(:name, ['Astrogation', 'Athletics', 'Brawl', 'Charm', 'Coercion', 'Computers', 'Cool', 'Coordination', 'Core Worlds', 'Deception', 'Discipline', 'Education', 'Gunnery', 'Leadership', 'Lore', 'Mechanics', 'Medicine', 'Melee', 'Negotiation', 'Outer Rim', 'Perception', 'Piloting (Planetary)', 'Piloting (Space)', 'Ranged (Light)', 'Ranged (Heavy)', 'Resilience', 'Skulduggery', 'Stealth', 'Streetwise', 'Survival', 'Underworld', 'Vigilance', 'Xenology'], {prompt: ''}, {class: "form-input select", id: 'skill'}) %>
+                    <p class="form-label">Skill</p>
                 </div>
 
                 <div class="form-field">
-                    <p class="form-label">Attribute ::</p>
-                    <%= f.select(:attr, ['Agility', 'Brawn', 'Cunning', 'Intellect', 'Presence', 'Willpower'], {prompt: ''}, {class: "form-input select"}) %>
+                    <%= f.select(:attr, ['Agility', 'Brawn', 'Cunning', 'Intellect', 'Presence', 'Willpower'], {prompt: ''}, {class: "form-input select", id: 'attribute'}) %>
+                    <p class="form-label">Attribute</p>
                 </div>
 
                 <div class="form-field">
-                    <p class="form-label">Category ::</p>
-                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select"}) %>
+                    <%= f.select(:category, ['General', 'Combat', 'Knowledge'], {prompt: ''}, {class: "form-input select", id: 'category'}) %>
+                    <p class="form-label">Category</p>
                 </div>
 
                 <div class="form-field">
-                    <p class="form-label">Career? ::</p>
-                    <div class="form-input">
-                        <%= f.check_box :career, class: "boolean" %>
+                    <%= f.text_field :level, class: "form-input integer" %>
+                    <p class="form-label">Level</p>
+                </div>
+
+                <div class="form-field">
+                    <div class="checkbox">
+                    <%= f.check_box :career,  class: "boolean"%>
+                    <p class="form-label">Career</p>
                     </div>
                 </div>
 
-                <div class="form-field">
-                    <p class="form-label">Level ::</p>
-                    <%= f.text_field :level, class: "form-input integer" %>
-                </div>
 
             </div>
             
             <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+                <%= f.submit "Submit", class: "button form-button success" %>
             </div>
 
+            <%= link_to [@char, @skill], method: :delete do %>
+                <div class="button danger sw">Delete Skill</div>
+            <% end %>
+
         <% end %>
 
-        <%= link_to [@char, @skill], method: :delete, data: {confirm: "Are you sure you wish to delete this skill? This cannot be undone." }, class: "danger-link" do %>
-            <%= translate("Delete Skill", "translate-sm translate-center button danger-button") %>
-        <% end %>
-
-    </article>
-
-</div>
+</section>

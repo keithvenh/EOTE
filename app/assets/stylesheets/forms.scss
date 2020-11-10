@@ -47,6 +47,13 @@ form {
         &.text:focus {
             font-family: $primary;
         }
+        &.long-text{
+            height: 100px;
+            border: 1px solid silver;
+            &:focus {
+                font-family: $primary;
+            }
+        }
     }
     .form-input.select {
         font-family: $primary;
