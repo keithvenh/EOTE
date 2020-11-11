@@ -33,6 +33,10 @@
             <%= f.submit "Submit", class: "button form-button" %>
         </div>
 
+        <%= link_to [@char, @char_equipment], method: :delete do %>
+            <div class="button danger sw">Delete Gear</div>
+        <% end %>
+
     <% end %>
 
 </section>
