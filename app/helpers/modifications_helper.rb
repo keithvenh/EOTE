@@ -37,8 +37,12 @@ module ModificationsHelper
             num = mod.split(':')[0]
             qual = mod.split(':')[1].split('-')[0]
             desc = mod.split('-')[1]
+            append = ''
+            if desc && desc != ''
+                append = ":: #{desc}"
+            end
 
-            display += "<p><b>#{num}</b> :: #{qual} :: #{desc}</p>"
+            display += "<p><b>#{num}</b> :: #{qual} #{append}</p>"
         end
 
         display += "</div>"

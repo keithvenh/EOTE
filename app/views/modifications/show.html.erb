@@ -6,11 +6,11 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "Armory", gear_path %></li>
+            <li class="link"><%= link_to "Armory", gear_path %></li>
 
-            <li class="link sw"><%= link_to "Update Attachment", edit_modification_path(@mod) %></li>
+            <li class="link"><%= link_to "Update Attachment", edit_modification_path(@mod) %></li>
 
 
         </ul>
@@ -39,16 +39,17 @@
 
         <div class="dataset">
             <p class='data-title'>Name</p>
-            <p class='sw data'><%= @mod.name %></p>
+            <p class='data'><%= @mod.name %></p>
         </div>
 
         <div class="dataset">
-            <p class='sw data'><%= @mod.attachment_type %> Attachment</p>
+            <p class="data-title">Attachment For</p>
+            <p class='data'><%= @mod.attachment_type %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Rarity</p>
-            <p class="sw data"><%= @mod.rarity %></p>
+            <p class="data"><%= @mod.rarity %></p>
         </div>
 
         <div class="dataset">

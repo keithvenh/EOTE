@@ -2,7 +2,7 @@
 
     <p class="integer user-credits">$<%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
 
-    <p class="sw user"><%= link_to @user.username, edit_user_registration_path(@user) %></p>
+    <p class=" user"><%= link_to @user.username, edit_user_registration_path(@user) %></p>
 
 </section>
 
@@ -20,33 +20,33 @@
         <thead>
             <tr>
                 <th></th>
-                <th class='sw'>Aleni</th>
-                <th class='sw'>Krachtig</th>
+                <th>Aleni</th>
+                <th>Krachtig</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th class='sw'>Kills</th>
+                <th>Kills</th>
                 <td class='integer'>12</td>
                 <td class='integer'>21</td>
             </tr>
             <tr>
-                <th class='sw'>Assists</th>
+                <th>Assists</th>
                 <td class='integer'>2</td>
                 <td class='integer'>3</td>
             </tr>
             <tr>
-                <th class='sw'>Damage</th>
+                <th>Damage</th>
                 <td class='integer'>107</td>
                 <td class='integer'>168</td>
             </tr>
             <tr>
-                <th class='sw'>Crits</th>
+                <th>Crits</th>
                 <td class='integer'>2</td>
                 <td class='integer'>6</td>
             </tr>
             <tr>
-                <th class='sw'>Wounds</th>
+                <th>Wounds</th>
                 <td class='integer'>7</td>
                 <td class='integer'>18</td>
             </tr>
@@ -57,7 +57,7 @@
 
 <section>
 
-    <%= section_header("Quick Reference") %>
+    <%= section_header("#{@character.name} :: Skills") %>
 
     <div class="skills-list">
         <div class="skills skills-general">

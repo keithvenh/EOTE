@@ -73,9 +73,12 @@ section {
     tr {
         border-bottom: 1px solid silver;
     }
-    td, th {
-        font-family: $aurebesh;
+    td, th{
         text-align: center;
         padding: 6px;
     }
+}
+
+.armory-list {
+    padding: 12px;
 }

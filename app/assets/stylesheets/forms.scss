@@ -40,19 +40,13 @@ form {
         color: white;
         border-bottom: 1px solid silver;
         font-size: 1.1em;
-        font-family: $aurebesh;
+        font-family: $primary;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
-        &.text:focus {
-            font-family: $primary;
-        }
         &.long-text{
             height: 100px;
             border: 1px solid silver;
-            &:focus {
-                font-family: $primary;
-            }
         }
     }
     .form-input.select {

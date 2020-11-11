@@ -6,11 +6,11 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "Armory", gear_path %></li>
+            <li class="link"><%= link_to "Armory", gear_path %></li>
 
-            <li class="link sw"><%= link_to "Update Armor", edit_armor_path(@armor) %></li>
+            <li class="link"><%= link_to "Update Armor", edit_armor_path(@armor) %></li>
 
 
         </ul>
@@ -29,7 +29,7 @@
 
 <section>
 
-    <%= section_header("Armor Basics") %>
+    <%= section_header("Basics") %>
 
     <% if @armor.restricted %>
         <p class="sw text danger">Restricted</p>
@@ -58,7 +58,7 @@
 
 <section>
 
-    <%= section_header("Armor Details") %>
+    <%= section_header("Details") %>
 
     <div class="attr">
 
@@ -88,7 +88,7 @@
 
 <section>
 
-    <%= section_header("Armor Description") %>
+    <%= section_header("Description") %>
 
     <div class="description">
         <div class="dataset">
@@ -100,11 +100,11 @@
 
 <section>
 
-    <%= section_header("Armor Brands") %>
+    <%= section_header("Brands") %>
 
     <div class="description">
         <div class="dataset">
-            <p class="data"><%= @armor.brands %></p>
+            <p class="data"><%= parse_brands(@armor) %></p>
         </div>
     </div>
 

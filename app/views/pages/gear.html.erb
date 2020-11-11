@@ -6,15 +6,15 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "New Armor", new_armor_path %></li>
+            <li class="link"><%= link_to "New Armor", new_armor_path %></li>
 
-            <li class="link sw"><%= link_to "New Attachment", new_modification_path %></li>
+            <li class="link"><%= link_to "New Attachment", new_modification_path %></li>
 
-            <li class="link sw"><%= link_to "New Gear", new_equipment_path %></li>
+            <li class="link"><%= link_to "New Gear", new_equipment_path %></li>
 
-            <li class="link sw"><%= link_to "New Weapon", new_weapon_path %></li>
+            <li class="link"><%= link_to "New Weapon", new_weapon_path %></li>
 
         </ul>
 
@@ -35,12 +35,13 @@
 
     <%= section_header("Armor") %>
 
-
-    <% @armor.each do |armor| %>
-        <%= link_to armor_path(armor) do %>
-            <p class="gear-item"><%= armor.name %></p>
+    <div class='armory-list'>
+        <% @armor.each do |armor| %>
+            <%= link_to armor_path(armor) do %>
+                <p class="gear-item"><%= armor.name %></p>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 
 </section>
 
@@ -48,11 +49,13 @@
 
     <%= section_header("Attachments") %>
 
-    <% @mods.each do |mod| %>
-        <%= link_to modification_path(mod) do %>
-            <p class="gear-item"><%= mod.name %></p>
+    <div class='armory-list'>
+        <% @mods.each do |mod| %>
+            <%= link_to modification_path(mod) do %>
+                <p class="gear-item"><%= mod.name %></p>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 
 </section>
 
@@ -60,11 +63,13 @@
 
     <%= section_header("Gear") %>
 
-    <% @gear.each do |gear| %>
-        <%= link_to equipment_path(gear) do %>
-            <p class="gear-item"><%= gear.name %></p>
+    <div class='armory-list'>
+        <% @gear.each do |gear| %>
+            <%= link_to equipment_path(gear) do %>
+                <p class="gear-item"><%= gear.name %></p>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 
 </section>
 
@@ -72,10 +77,12 @@
 
     <%= section_header("Weapons") %>
             
-    <% @weapons.each do |weapon| %>
-        <%= link_to weapon_path(weapon) do %>
-            <p class="gear-item"><%= weapon.name %></p>
+    <div class='armory-list'>
+        <% @weapons.each do |weapon| %>
+            <%= link_to weapon_path(weapon) do %>
+                <p class="gear-item"><%= weapon.name %></p>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 
 </section>
