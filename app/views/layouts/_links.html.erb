@@ -7,11 +7,11 @@
 </li>
 
 <li class="link">
-    <%= link_to "Markets", store_path %>
+    <%= link_to "Markets", store_path + "?character_id=#{@character.id}" %>
 </li>
 
 <li class="link">
-    <%= link_to "Navigation", planets_path %>
+    <%= link_to "Astrogation", planets_path %>
 </li>
 
 <li class="link">

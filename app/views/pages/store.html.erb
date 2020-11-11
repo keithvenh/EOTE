@@ -1,16 +1,42 @@
 <section>
+    
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
+
+        <ul class="menu">
+
+            <li class="link"><%= link_to "Home", root_path %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
+        </div>
+    
+    </div>
+    
+
+</section>
+
+<section>
 
     <%= section_header("Armor") %>
 
-    <% @armor.each do |armor| %>
-        <p class="store-item">
-            <%= link_to new_character_character_armor_path(@char, armor_id: armor.id)  do %>
+    <div class="store-list">
+        <% @armor.each do |armor| %>
+            <p class="store-item">
+                <%= link_to new_character_character_armor_path(@char, armor_id: armor.id)  do %>
 
-                <span class="integer">$ <%= armor.cost %> </span> :: <%= armor.name %>
-                
-            <% end %>                        
-        </p>
-    <% end %>
+                    <span class="integer">$ <%= armor.cost %> </span> :: <%= armor.name %>
+                    
+                <% end %>                        
+            </p>
+        <% end %>
+    </div>
 
 </section>
 
@@ -18,15 +44,17 @@
 
     <%= section_header("Attachments") %>
 
-    <% @mods.each do |modification| %>
-        <p class="store-item">
-            <%= link_to new_character_character_modification_path(@char, modification_id: modification.id)  do %>
+    <div class='store-list'>
+        <% @mods.each do |modification| %>
+            <p class="store-item">
+                <%= link_to new_character_character_modification_path(@char, modification_id: modification.id)  do %>
 
-                <span class="integer">$ <%= modification.cost %> </span> :: <%= modification.name %>
-                
-            <% end %>                        
-        </p>
-    <% end %>
+                    <span class="integer">$ <%= modification.cost %> </span> :: <%= modification.name %>
+                    
+                <% end %>                        
+            </p>
+        <% end %>
+    </div>
 
 </section>
 
@@ -34,15 +62,17 @@
 
     <%= section_header("Gear") %>
 
-    <% @equipment.each do |equipment| %>
-        <p class="store-item">
-            <%= link_to new_character_character_equipment_path(@char, equipment_id: equipment.id)  do %>
+    <div class="store-list">
+        <% @equipment.each do |equipment| %>
+            <p class="store-item">
+                <%= link_to new_character_character_equipment_path(@char, equipment_id: equipment.id)  do %>
 
-                <span class="integer">$ <%= equipment.cost %> </span> :: <%= equipment.name %>
-                
-            <% end %>                        
-        </p>
-    <% end %>
+                    <span class="integer">$ <%= equipment.cost %> </span> :: <%= equipment.name %>
+                    
+                <% end %>                        
+            </p>
+        <% end %>
+    </div>
 
 </section>
 
@@ -50,14 +80,16 @@
 
     <%= section_header("Weapons") %>
 
-    <% @weapons.each do |weapon| %>
-        <p class="store-item">
-            <%= link_to new_character_character_weapon_path(@char, weapon_id: weapon.id)  do %>
+    <div class='store-list'>
+        <% @weapons.each do |weapon| %>
+            <p class="store-item">
+                <%= link_to new_character_character_weapon_path(@char, weapon_id: weapon.id)  do %>
 
-                <span class="itneger">$ <%= weapon.cost %> </span> :: <%= weapon.name %>
+                    <span class="integer">$ <%= weapon.cost %> </span> :: <%= weapon.name %>
 
-            <% end %>                        
-        </p>
-    <% end %>
+                <% end %>                        
+            </p>
+        <% end %>
+    </div>
 
 </section>
