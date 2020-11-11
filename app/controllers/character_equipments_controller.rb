@@ -21,6 +21,7 @@ class CharacterEquipmentsController < ApplicationController
 
   def show
     @char_equipment = CharacterEquipment.find(params[:id])
+    @equipment = @char_equipment.equipment
   end
 
   def edit

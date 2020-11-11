@@ -21,6 +21,7 @@ class CharacterModificationsController < ApplicationController
 
   def show
     @char_mod = CharacterModification.find(params[:id])
+    @mod = @char_mod.modification
   end
 
   def edit

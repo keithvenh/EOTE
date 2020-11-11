@@ -1,42 +1,42 @@
-<div class="page-container">
+<section class="form-section">
 
-    <article class="screen screen-lg green">
+    <%= section_header("New Attachment for #{@char.name}") %>
 
-    <%= translate("Update Attachment for #{@char.name}", "translate-lg translate-center") %>
+    <%= form_for [@char, @char_mod] do |f| %>
 
-        <%= form_for [@char, @char_mod] do |f| %>
+        <div class="form-category">
 
-            <div class="form-category">
+            <%= f.hidden_field :character_id, value: @char.id %>
 
-                <%= f.hidden_field :character_id, value: @char.id %>
+            <%= f.hidden_field :modification_id, value: @mod.id %>
 
-                <%= f.hidden_field :modification_id, value: @mod.id %>
-
-                <div class="form-field">
-                    <p class="form-label">Attachment ::</p>
-                    <p class="form-input"><%= @mod.name %></p>
-                </div>
-
-                <% if @mod.brands %>
-                    <div class="form-field">
-                        <p class="form-label">Brand ::</p>
-                        <%= f.select(:brand, get_brands(@mod), {prompt: ''}, {class: "form-input select"}) %>
-                    </div>
-                <% end %>
-
-                <div class="form-field">
-                    <p class="form-label">Quantity ::</p>
-                    <%= f.text_field :quantity, class: "form-input integer" %>
-                </div>
-
-            </div>
-            
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+            <div class="form-field">
+                <p class="form-input english"><%= @mod.name %></p>
+                <p class="form-label">Attachment</p>
             </div>
 
+            <% if @mod.brands %>
+                <div class="form-field">
+                    <%= f.select(:brand, get_brands(@mod), {prompt: ''}, {class: "form-input select"}) %>
+                    <p class="form-label">Brand</p>
+                </div>
+            <% end %>
+
+            <div class="form-field">
+                <%= f.text_field :quantity, class: "form-input integer" %>
+                <p class="form-label">Quantity</p>
+            </div>
+
+        </div>
+        
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button success" %>
+        </div>
+
+        <%= link_to [@char, @char_mod], method: :delete do %>
+            <div class="button danger sw">Delete Attachment</div>
         <% end %>
 
-    </article>
+    <% end %>
 
-</div>
+</section>
