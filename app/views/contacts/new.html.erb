@@ -1,36 +1,46 @@
-<div class="page-container">
-    <article class="screen screen-lg green">
-    <%= translate("Create Contact", "translate-lg translate-center") %>
-        <%= form_for @contact do |f| %>
-            <div class="form-category">
-                <%= translate("General Info", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Character ::</p>
-                    <%= f.collection_select(:character_id, @characters, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Planet ::</p>
-                    <%= f.collection_select(:planet_id, @planets, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Warmth ::</p>
-                    <%= f.text_field :warmth, class: "form-input integer" %>
-                </div>
+<section class='form-section'>
+
+    <%= section_header("New Contact") %>
+
+    <%= form_for @contact do |f| %>
+
+        <div class="form-category">
+            
+            <div class="form-field">
+                <%= f.collection_select(:character_id, @characters, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
+                <p class="form-label">Character</p>
             </div>
-            <div class="form-category">
-                <%= translate("Details", "translate-center form-category-label") %>
-                <div class="form-field form-field-long">
-                    <p class="form-label">Last Know Location ::</p>
-                    <%= f.text_area :last_known_location, class: "form-input long-text" %>
-                </div>
-                <div class="form-field form-field-long ">
-                    <p class="form-label">Contact Details ::</p>
-                    <%= f.text_area :details, class: "form-input long-text" %>
-                </div>
+
+            <div class="form-field">
+                <%= f.collection_select(:planet_id, @planets, :id, :name, {prompt: ""}, {class: "form-input select"}) %>
+                <p class="form-label">Planet</p>
             </div>
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+
+            <div class="form-field">
+                <%= f.text_field :warmth, class: "form-input integer" %>
+                <p class="form-label">Warmth</p>
             </div>
-        <% end %>
-    </article>
-</div>
+
+        </div>
+
+        <div class="form-category">
+            
+            <div class="form-field form-field-long">
+                <%= f.text_area :last_known_location, class: "form-input long-text" %>
+                <p class="form-label">Last Known Location</p>
+            </div>
+
+            <div class="form-field form-field-long ">
+                <%= f.text_area :details, class: "form-input long-text" %>
+                <p class="form-label">Contact Details</p>
+            </div>
+
+        </div>
+
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button" %>
+        </div>
+        
+    <% end %>
+
+</section>

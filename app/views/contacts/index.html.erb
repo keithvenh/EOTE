@@ -1,54 +1,41 @@
-<div class="page-container contact-index-container">
+<section>
 
-    <article class="contacts-container">
+    <%= render 'layouts/menu.html.erb' %>
 
-        <section class="screen screen-vert blue equipment-menu">
+</section>
 
-        <div class="special-characters">
-            <%= translate("Menu", "translate-center") %>
-        </div>
+<section>
 
-        <div class="bottom">
-            <p><%= link_to "New Contact", new_contact_path %></p>
-        </div>
+    <%= section_header("Warm") %>
 
-    </section>
-        
-        <section class="screen screen-vert green">
+    <% @friend.each do |cont| %>
+        <%= link_to contact_path(cont) do %>
+            <%= translate(cont.character.name, "translate-sm") %>
+        <% end %>
+    <% end %>
 
-            <%= translate("Warm", "translate-lg translate-center") %>
+</section>
 
-            <% @friend.each do |cont| %>
-                <%= link_to contact_path(cont) do %>
-                    <%= translate(cont.character.name, "translate-sm") %>
-                <% end %>
-            <% end %>
+<section class="screen screen-vert yellow">
 
-        </section>
+    <%= section_header("Neutral") %>
 
-        <section class="screen screen-vert yellow">
+    <% @neut.each do |cont| %>
+        <%= link_to contact_path(cont) do %>
+            <%= translate(cont.character.name, "translate-sm") %>
+        <% end %>
+    <% end %>
 
-            <%= translate("Neutral", "translate-lg translate-center") %>
+</section>
 
-            <% @neut.each do |cont| %>
-                <%= link_to contact_path(cont) do %>
-                    <%= translate(cont.character.name, "translate-sm") %>
-                <% end %>
-            <% end %>
+<section class="screen screen-vert red">
 
-        </section>
+    <%= section_header("Cold") %>
 
-        <section class="screen screen-vert red">
+    <% @enemy.each do |cont| %>
+        <%= link_to contact_path(cont) do %>
+            <%= translate(cont.character.name, "translate-sm") %>
+        <% end %>
+    <% end %>
 
-            <%= translate("Cold", "translate-lg translate-center") %>
-
-            <% @enemy.each do |cont| %>
-                <%= link_to contact_path(cont) do %>
-                    <%= translate(cont.character.name, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-
-    </article>
-</div>
+</section>
