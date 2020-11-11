@@ -1,88 +1,92 @@
-<div class="page-container planet-show-container">
-
-    <section class="screen screen-vert blue planet-menu">
-        <div class="planet-data">
-            <%= translate("Basics", "translate-center") %>
-
-            <%= translate(@planet.name, "translate-lg") %>
-        </div>
-        
-        <div class="bottom">
-            <p><%= link_to "Edit Planet", edit_planet_path(@planet) %></p>
-
-            <p><%= link_to "Delete Planet", @planet, method: :delete, data: {confirm: "Are you sure you wish to delete this planet? This cannot be undone." } %></p>
-        </div>
-
-    </section>
-
-    <article class="planet-show-primary">
-        
-        <div class="planet-details">
-
-            <section class="screen screen-md orange general-section">
-
-                <%= translate("General Info", "translate-center") %>
-
-                <div class="location-info">
-
-                    <div class="planet-data">
-                        <%= translate("System", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.system %></p>
-                    </div>
-
-                    <div class="planet-data">
-                        <%= translate("Sector", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.sector %></p>
-                    </div>
-
-                    <div class="planet-data">
-                        <%= translate("Region", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.region %></p>
-                    </div>
-
-                </div>
-
-                <div class="cycle-info">
-
-                    <div class="planet-data">
-                        <%= translate("Year", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.year %> DAYS</p>
-                    </div>
-
-                    <div class="planet-data">
-                        <%= translate("Day", "data-type translate-center translate-sm") %>
-                        <p class="data"><%= @planet.day %> HOURS</p>
-                    </div>
-
-                    <div class="planet-data">
-                        <%= translate("Population", "data-type translate-center translate-sm") %>
-                        <% if @planet.population %>
-                            <p class="data"><%= number_to_human(@planet.population).upcase %></p>
-                        <% else %>
-                            <p class="data">Unknown</p>
-                        <% end %>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="screen screen-md yellow">
-
-                <%= translate("Major Locations", "translate-center") %>
-
-            </section>
-
-        </div>
-
-        
-
-        <section class="screen screen-bottom green">
-
-            <%= translate("Notations", "translate-center") %>
-
-        </section>
-
-    </article>
+<section>
     
-</div>
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
+
+        <ul class="menu">
+
+            <li class="link"><%= link_to "Home", root_path %></li>
+
+            <li class="link"><%= link_to "Update Planet", edit_planet_path(@planet) %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
+        </div>
+    
+    </div>
+    
+
+</section>
+
+<section>
+
+    <%= section_header("Profile") %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Name</p>
+            <p class='data'><%= @planet.name %></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">System</p>
+            <p class="data"><%= @planet.system %></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Sector</p>
+            <p class="data"><%= @planet.sector%></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Region</p>
+            <p class="data"><%= @planet.region%></p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Data") %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Year Length</p>
+            <p class='data'><span class="integer"><%= @planet.year %></span> Days</p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Rotation</p>
+            <p class="data"><span class="integer"><%= @planet.day %></span> Hours</p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Population</p>
+            <p class="data"><%= @planet.population && @planet.population != '' ? number_to_human(@planet.population).upcase : "Unknown" %></p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Major Locations") %>
+
+</section>
+
+<section>
+
+    <%= section_header("Notations") %>
+
+</section>

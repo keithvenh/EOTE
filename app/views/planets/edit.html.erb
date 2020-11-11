@@ -1,42 +1,56 @@
-<div class="page-container">
-    <article class="screen screen-lg yellow">
-    <%= translate("Planet Creation", "translate-lg translate-center") %>
-        <%= form_for @planet do |f| %>
-            <div class="form-category">
-                <%= translate("General Info", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Name ::</p>
-                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">System ::</p>
-                    <%= f.text_field :system, class: "form-input text" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Sector ::</p>
-                    <%= f.text_field :sector, class: "form-input text" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Region ::</p>
-                    <%= f.text_field :region, class: "form-input text" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Days per Year ::</p>
-                    <%= f.text_field :year, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Hours per Day ::</p>
-                    <%= f.text_field :day, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Population ::</p>
-                    <%= f.text_field :population, class: "form-input integer" %>
-                </div>
-            </div>
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
-            </div>
-            <% end %>
-    </article>
-</div>
+<section class='form-section'>
 
+    <%= section_header("New Planet") %>
+
+    <%= form_for @planet do |f| %>
+
+        <div class="form-category">
+
+            <div class="form-field">
+                <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                <p class="form-label">Name</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :system, class: "form-input text" %>
+                <p class="form-label">System</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :sector, class: "form-input text" %>
+                <p class="form-label">Sector</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :region, class: "form-input text" %>
+                <p class="form-label">Region</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :year, class: "form-input integer" %>
+                <p class="form-label">Days per Year</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :day, class: "form-input integer" %>
+                <p class="form-label">Hours per Day</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :population, class: "form-input integer" %>
+                <p class="form-label">Population</p>
+            </div>
+
+        </div>
+
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button success" %>
+        </div>
+
+        <%= link_to @planet, method: :delete do %>
+            <div class="button danger sw">Delete Planet</div>
+        <% end %>
+
+    <% end %>
+
+</section>

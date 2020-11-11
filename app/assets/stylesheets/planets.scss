@@ -1,60 +1,9 @@
-.planet-index-container {
-    flex-direction: column;
-    align-items: space-evenly;
-}
-.planet-index-section {
+.planets {
     display: flex;
-}
-.planet-menu {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-}
-
-.planet-index-menu {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-}
-
-.planet-menu-links {
-    text-transform: uppercase;
-}
-
-.planet-show-container {
-    padding-top: 32px;
-}
-
-.planet-show-primary {
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    align-items: center;
-}
-
-.planet-details {
-    display: flex;
-}
-
-.general-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.location-info {
-    display: flex;
-    justify-content: space-evenly;
-    .data {
-        text-align: center;
-    }
-}
-
-.cycle-info {
-    display: flex;
-    justify-content: space-evenly;
-    .data {
-        text-align: center;
+    .planet-new {
+        text-align: right;
+        font-size: 24px;
+        color: $green;
     }
 }

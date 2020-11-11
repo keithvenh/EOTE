@@ -1,89 +1,42 @@
-<div class="page-container planet-index-container">
+<section>
 
-    <section class="planet-index-section">
+    <%= render 'layouts/menu.html.erb' %>
 
-        <div class="screen screen-sm green">
-            <%= translate("Deep Core", "translate-sm translate-center") %>
-            <% @deep_core.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
+</section>
+
+<section>
+
+    <%= section_header("Planets") %>
+
+    <div class="planets">
+
+        <div class="planet-list">
+
+            <% letter = "" %>
+
+            <% @planets.each do |planet| %>
+
+                <% if planet.name[0] != letter %>
+
+                    <% letter = planet.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
                 <% end %>
+
+                <p class="char-name"><%= link_to planet.name, planet_path(planet) %></p>
+
             <% end %>
+
         </div>
 
-        <div class="screen screen-sm orange">
-            <%= translate("Core", "translate-sm translate-center") %>
-            <% @core.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
+        <div class="planet-new">
+
+            <%= link_to new_planet_path do %>
+                <div class="button success">+</div>
             <% end %>
+
         </div>
 
-        <div class="screen screen-sm blue">
-            <%= translate("Colonies", "translate-sm translate-center") %>
-            <% @colonies.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
+    </div>
 
-        <div class="screen screen-sm red">
-            <%= translate("Inner Rim", "translate-sm translate-center") %>
-            <% @inner_rim.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
-
-    </section>
-
-    <section class="planet-index-section">
-
-        <div class="screen screen-sm red">
-            <%= translate("Expansion Region", "translate-sm translate-center") %>
-            <% @expansion.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="screen screen-sm yellow">
-            <%= translate("Mid Rim", "translate-sm translate-center") %>
-            <% @mid_rim.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="screen screen-sm green">
-            <%= translate("Outer Rim", "translate-sm translate-center") %>
-            <% @outer_rim.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="screen screen-sm orange">
-            <%= translate("Unknown Regions", "translate-sm translate-center") %>
-            <% @unknown.each do |planet| %>
-                <%= link_to planet_path(planet) do %>
-                    <%= translate(planet.name, "planet-list") %>
-                <% end %>
-            <% end %>
-        </div>
-
-    </section>
-
-    <section class="screen screen-bottom screen-bottom-sm blue planet-index-menu">
-        <%= translate("Menu", "translate-lg translate-center") %>
-        <div class="planet-menu-links">
-            <%= link_to "New Planet", new_planet_path %>
-        </div>
-    </section>
-</div>
+</section>
