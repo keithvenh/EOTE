@@ -8,7 +8,7 @@
 
             <li class="link sw"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "#{@char.name}'s Armory", character_gear_path %></li>
+            <li class="link sw"><%= link_to "#{@char.name}'s Armory", character_gear_path(@char) %></li>
 
             <li class="link sw"><%= link_to "Update Armor", edit_character_character_armor_path(@char, @charm) %></li>
 

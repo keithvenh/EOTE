@@ -1,10 +1,8 @@
-<div class="page-container">
-
-    <article class="screen screen-lg green">
-
-    <%= translate("New Weapon for #{@char.name}", "translate-lg translate-center") %>
+<section class="form-section">
 
         <%= form_for [@char, @char_weapon] do |f| %>
+
+            <%= translate("New Weapon for #{@char.name}", "translate-lg translate-center") %>
 
             <div class="form-category">
 
@@ -13,18 +11,20 @@
                 <%= f.hidden_field :weapon_id, value: @weapon.id %>
 
                 <div class="form-field">
-                    <p class="form-label">Weapon ::</p>
                     <p class="form-input"><%= @weapon.name %></p>
+                    <p class="form-label">Weapon</p>
                 </div>
 
-                <div class="form-field">
-                    <p class="form-label">Brand ::</p>
-                    <%= f.select(:brand, get_brands(@weapon), {prompt: ''}, {class: "form-input select"}) %>
-                </div>
+                <% if @weapon.brands %>
+                    <div class="form-field">
+                        <%= f.select(:brand, get_brands(@weapon), {prompt: ''}, {class: "form-input select"}) %>
+                        <p class="form-label">Brand</p>
+                    </div>
+                <% end %>
 
                 <div class="form-field">
-                    <p class="form-label">Quantity ::</p>
                     <%= f.text_field :quantity, class: "form-input integer" %>
+                    <p class="form-label">Quantity</p>
                 </div>
 
             </div>
@@ -35,6 +35,4 @@
 
         <% end %>
 
-    </article>
-
-</div>
+</section>
