@@ -1,65 +1,83 @@
-<div class="page-container">
-    <article class="screen screen-lg yellow">
-    <%= translate("Update Weapon", "translate-lg translate-center") %>
-        <%= form_for @weapon do |f| %>
-            <div class="form-category">
-                <%= translate("General Info", "translate-center form-category-label") %>
-                <div class="form-field">
-                    <p class="form-label">Name ::</p>
-                    <%= f.text_field :name, class: "form-input text", autofocus: true %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Restricted? ::</p>
-                    <div class="form-input">
-                        <%= f.check_box :restricted, class: "boolean" %>
-                    </div>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Skill ::</p>
-                    <%= f.select(:skill, ['Brawl', 'Melee', 'Ranged (Light)', 'Ranged (Heavy)', 'Gunnery'], {prompt: ''}, {class: "form-input select"}) %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Damage ::</p>
-                    <%= f.text_field :damage, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Critical Hit ::</p>
-                    <%= f.text_field :crit, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Range ::</p>
-                    <%= f.select(:range, ['Engaged', 'Short', 'Medium', 'Long', 'Extreme'], {prompt: ''}, {class: "form-input select"}) %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Encumbrance ::</p>
-                    <%= f.text_field :encumbrance, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Hard Points ::</p>
-                    <%= f.text_field :hard_points, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Cost ::</p>
-                    <%= f.text_field :cost, class: "form-input integer" %>
-                </div>
-                <div class="form-field">
-                    <p class="form-label">Rarity ::</p>
-                    <%= f.text_field :rarity, class: "form-input integer" %>
-                </div>
-                <div class="form-field form-field-long">
-                    <p class="form-label">Specials ::</p>
-                    <%= f.text_area :specials, class: "form-input text-long" %>
-                </div>
-                <div class="form-field form-field-long">
-                    <p class="form-label">Brands ::</p>
-                    <%= f.text_area :brands, class: "form-input text-long" %>
+<section class="form-section">
+
+    <%= section_header("New Weapon") %>
+
+    <%= form_for @weapon do |f| %>
+
+        <div class="form-category">
+
+            <div class="form-field">
+                <%= f.text_field :name, class: "form-input text", autofocus: true %>
+                <p class="form-label">Name</p>
+            </div>
+
+            <div class="form-field">
+                <div class="checkbox">
+                <%= f.check_box :restricted,  class: "boolean"%>
+                <p class="form-label">Restricted</p>
                 </div>
             </div>
-            <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+
+            <div class="form-field">
+                <%= f.select(:skill, ['Brawl', 'Melee', 'Ranged (Light)', 'Ranged (Heavy)', 'Gunnery'], {prompt: ''}, {class: "form-input select"}) %>
+                <p class="form-label">Skill</p>
             </div>
-            <% end %>
-    </article>
-</div>
 
+            <div class="form-field">
+                <%= f.text_field :damage, class: "form-input integer" %>
+                <p class="form-label">Damage</p>
+            </div>
 
+            <div class="form-field">
+                <%= f.text_field :crit, class: "form-input integer" %>
+                <p class="form-label">Critical Hit</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.select(:range, ['Engaged', 'Short', 'Medium', 'Long', 'Extreme'], {prompt: ''}, {class: "form-input select"}) %>
+                <p class="form-label">Range</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :encumbrance, class: "form-input integer" %>
+                <p class="form-label">Encumbrance</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :hard_points, class: "form-input integer" %>
+                <p class="form-label">Hard Points</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :cost, class: "form-input integer" %>
+                <p class="form-label">Cost</p>
+            </div>
+
+            <div class="form-field">
+                <%= f.text_field :rarity, class: "form-input integer" %>
+                <p class="form-label">Rarity</p>
+            </div>
+
+            <div class="form-field form-field-long">
+                <%= f.text_area :specials, class: "form-input long-text" %>
+                <p class="form-label">Specials</p>
+            </div>
+
+            <div class="form-field ">
+                <%= f.text_area :brands, class: "form-input long-text" %>
+                <p class="form-label">Brands</p>
+            </div>
+
+        </div>
+
+        <div class="form-category">
+            <%= f.submit "Submit", class: "button form-button" %>
+        </div>
+
+        <%= link_to @weapon, method: :delete do %>
+            <div class="button danger sw">Delete Weapon</div>
+        <% end %>
+
+    <% end %>
+
+</section>

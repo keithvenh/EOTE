@@ -1,85 +1,125 @@
-<div class="page-container character-show-container">
+<section>
     
-    <section class="screen screen-vert green character-menu">
-        <div class="character-data">
-            <%= translate("Basics", "translate-center") %>
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-            <% if @weapon.restricted %>
-                <%= translate("Restriced", "translate-center danger")%>
-            <% end %>
+        <ul class="menu">
 
-            <%= translate(@weapon.name, "translate") %>
+            <li class="link sw"><%= link_to "Home", root_path %></li>
 
-            <%= translate(@weapon.skill, "translate-sm") %>
+            <li class="link sw"><%= link_to "Armory", gear_path %></li>
 
-            <div class="gear-rarity">
-                <%= translate("Rarity", "translate-sm") %>
-                <p class="sw"><%= @weapon.rarity %></p>
-            </div>
+            <li class="link sw"><%= link_to "Update Attachment", edit_weapon_path(@weapon) %></li>
 
-            <p class='sw gear-cost'>$ <%= @weapon.cost %></p>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
         </div>
-        
-        <div class="bottom">
-            <p><%= link_to "Edit Weapon", edit_weapon_path(@weapon) %></p>
+    
+    </div>
+    
 
-            <p><%= link_to "Delete Weapon", @weapon, method: :delete, data: {confirm: "Are you sure you wish to delete this weapon? This cannot be undone." } %></p>
+</section>
+
+<section>
+
+    <%= section_header("Weapon Basics") %>
+
+    <% if @weapon.restricted %>
+        <p class="sw text danger">Restricted</p>
+    <% end %>
+
+    <div class="basics">
+
+        <div class="dataset">
+            <p class='data-title'>Name</p>
+            <p class='sw data'><%= @weapon.name %></p>
         </div>
 
-    </section>
+        <div class="dataset">
+            <p class="data-title">Skill</p>
+            <p class='sw data'><%= @weapon.skill %></p>
+        </div>
 
-    <article class="screen screen-lg orange">
+        <div class="dataset">
+            <p class="data-title">Rarity</p>
+            <p class="integer data"><%= @weapon.rarity %></p>
+        </div>
 
-        <section class="weapon-attributes">
+        <div class="dataset">
+            <p class="data-title">Cost</p>
+            <p class="integer data">$ <%= @weapon.cost %></p>
+        </div>
 
-            <%= translate("Attributes", "translate-center translate-lg") %>
+    </div>
 
-            <div class="attribute-container">
-                <div class="general-data">
-                    <%= translate("Damage", "data-type translate-center") %>
-                    <p class="sw data"><%= @weapon.damage %></p>
-                </div>
+</section>
 
-                <div class="general-data">
-                    <%= translate("Crit", "data-type translate-center") %>
-                    <p class="sw data"><%= @weapon.crit < 999 ? @weapon.crit : "N/A" %></p>
-                </div>
+<section>
 
-                <div class="general-data">
-                    <%= translate("Range", "data-type translate-center") %>
-                    <p class="data"><%= @weapon.range.upcase %></p>
-                </div>
-            </div>
+    <%= section_header("Weapon Details") %>
 
-            <div class="attribute-container">
+    <div class="attr">
 
-                <div class="general-data">
-                    <%= translate("Encumbrance", "translate-center translate-sm brawn") %>
-                    <p class="sw data"><%= @weapon.encumbrance %></p>
-                </div>
+        <div class="dataset">
+            <p class="data-title">Damage</p>
+            <p class="integer data"><%= @weapon.damage %></p>
+        </div>
 
-                <div class="general-data">
-                    <%= translate("Hard Points", "translate-center translate-sm agility") %>
-                    <p class="sw data"><%= @weapon.hard_points %></p>
-                </div>
+        <div class="general-data">
+            <p class="data-title">Crit</p>
+            <p class="integer data"><%= @weapon.crit < 999 ? @weapon.crit : "N/A" %></p>
+        </div>
 
-            </div>
+        <div class="dataset">
+            <p class="data-title">Range</p>
+            <p class="sw data"><%= @weapon.range.upcase %></p>
+        </div>
 
-            <%= translate("Models", "translate-center") %>
+    </div>
 
-            <%= parse_brands(@weapon) %>
+    <div class="attr">
 
+        <div class="dataset">
+            <p class="data-title">Encumbrance</p>
+            <p class="integer data"><%= @weapon.encumbrance %></p>
+        </div>
 
-        </section>
+        <div class="dataset">
+            <p class="data-title">Hard Points</p>
+            <p class="integer data"><%= @weapon.hard_points %></p>
+        </div>
 
-    </article>
+    </div>
 
-    <section class="screen screen-vert blue">
+</section>
 
-        <%= translate("Specials", "translate-center") %>
+<section>
 
-        <%= parse_specials(@weapon) %>
+    <%= section_header("Specials") %>
 
-    </section>
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= parse_specials(@weapon) %></p>
+        </div>
+    </div>
 
-</div>
+</section>
+
+<section>
+
+    <%= section_header("Brands") %>
+
+    <div class="description">
+        <div class="dataset">
+            <p class="data"><%= parse_brands(@weapon) %></p>
+        </div>
+    </div>
+
+</section>
