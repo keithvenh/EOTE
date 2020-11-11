@@ -6,36 +6,37 @@
 
 <section>
 
-    <%= section_header("Warm") %>
+    <%= section_header("Connections") %>
 
-    <% @friend.each do |cont| %>
-        <%= link_to contact_path(cont) do %>
-            <%= translate(cont.character.name, "translate-sm") %>
-        <% end %>
-    <% end %>
+    <div class="characters">
 
-</section>
+        <div class="char-list">
 
-<section class="screen screen-vert yellow">
+            <% letter = "" %>
 
-    <%= section_header("Neutral") %>
+            <% @contacts.each do |contact| %>
 
-    <% @neut.each do |cont| %>
-        <%= link_to contact_path(cont) do %>
-            <%= translate(cont.character.name, "translate-sm") %>
-        <% end %>
-    <% end %>
+                <% if contact.character.name[0] != letter %>
 
-</section>
+                    <% letter = contact.character.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
 
-<section class="screen screen-vert red">
+                <% end %>
 
-    <%= section_header("Cold") %>
+                <p class="char-name"><%= link_to contact.character.name, contact_path(contact) %></p>
 
-    <% @enemy.each do |cont| %>
-        <%= link_to contact_path(cont) do %>
-            <%= translate(cont.character.name, "translate-sm") %>
-        <% end %>
-    <% end %>
+            <% end %>
+
+        </div>
+
+        <div class="char-new">
+
+            <%= link_to new_contact_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
 
 </section>

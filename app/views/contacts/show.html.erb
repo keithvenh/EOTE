@@ -6,9 +6,9 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "Update Contact", edit_contact_path(@char) %></li>
+            <li class="link"><%= link_to "Update Contact", edit_contact_path(@contact) %></li>
 
         </ul>
 
@@ -32,22 +32,22 @@
 
         <div class="dataset">
             <p class='data-title'>Name</p>
-            <p class='sw data'><%= @contact.character.name %></p>
+            <p class='data'><%= @contact.character.name %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Race</p>
-            <p class="sw data"><%= @contact.character.race ? @contact.character.race : "Unknown" %></p>
+            <p class="data"><%= @contact.character.race ? @contact.character.race : "Unknown" %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Planet</p>
-            <p class="sw data"><%= @char.planet %></p>
+            <p class="data"><%= @contact.planet.name %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Warmth</p>
-            <p class="integer data"><%= @char.warmth %></p>
+            <p class="integer data"><%= @contact.warmth %></p>
         </div>
 
     </div>

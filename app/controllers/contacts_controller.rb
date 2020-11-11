@@ -1,8 +1,6 @@
 class ContactsController < ApplicationController
   def index
-    @friend = Contact.where("warmth > ?", 1).order('warmth DESC')
-    @neut = (Contact.where("warmth > ?", -2).where("warmth < ?", 2)).order('warmth DESC')
-    @enemy = Contact.where("warmth < ?", -1).order('warmth DESC')
+    @contacts = Contact.alphabetical
 
   end
 
