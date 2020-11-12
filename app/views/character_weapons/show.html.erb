@@ -6,11 +6,11 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "#{@char.name}'s Armory", character_gear_path(@char) %></li>
+            <li class="link"><%= link_to "#{@char.name}'s Armory", character_gear_path(@char) %></li>
 
-            <li class="link sw"><%= link_to "Update Attachment", edit_character_character_weapon_path(@char, @char_weapon) %></li>
+            <li class="link"><%= link_to "Update Attachment", edit_character_character_weapon_path(@char, @char_weapon) %></li>
 
 
         </ul>
@@ -39,12 +39,12 @@
 
         <div class="dataset">
             <p class='data-title'>Name</p>
-            <p class='sw data'><%= @weapon.name %></p>
+            <p class='data'><%= @weapon.name %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Skill</p>
-            <p class='sw data'><%= @weapon.skill %></p>
+            <p class='data'><%= @weapon.skill %></p>
         </div>
 
         <div class="dataset">
@@ -79,7 +79,7 @@
 
         <div class="dataset">
             <p class="data-title">Range</p>
-            <p class="sw data"><%= @weapon.range.upcase %></p>
+            <p class="data"><%= @weapon.range.upcase %></p>
         </div>
 
     </div>

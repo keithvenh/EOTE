@@ -6,13 +6,13 @@
 
         <ul class="menu">
 
-            <li class="link sw"><%= link_to "Home", root_path %></li>
+            <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link sw"><%= link_to "Update Character", edit_character_path(@char) %></li>
+            <li class="link"><%= link_to "Update Character", edit_character_path(@char) %></li>
 
-            <li class="link sw"><%= link_to "New Skill", new_character_skill_path(@char) %></li>
+            <li class="link"><%= link_to "New Skill", new_character_skill_path(@char) %></li>
 
-            <li class="link sw"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
+            <li class="link"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
 
         </ul>
 
@@ -36,17 +36,17 @@
 
         <div class="dataset">
             <p class='data-title'>Name</p>
-            <p class='sw data'><%= @char.name %></p>
+            <p class='data'><%= @char.name %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Race</p>
-            <p class="sw data"><%= @char.race ? @char.race : "Unknown" %></p>
+            <p class="data"><%= @char.race ? @char.race : "Unknown" %></p>
         </div>
 
         <div class="dataset">
             <p class="data-title">Career</p>
-            <p class="sw data"><%= @char.career && @char.career != '' ? @char.career : "Unknown" %></p>
+            <p class="data"><%= @char.career && @char.career != '' ? @char.career : "Unknown" %></p>
         </div>
 
     </div>
