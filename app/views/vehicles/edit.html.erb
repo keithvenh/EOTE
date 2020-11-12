@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="form-field">
-                    <%= f.text_field :hull_type, class: "form-input text" %>
+                    <%= f.select(:hull_type, ["Airspeeder", "Corvette", "Freighter", "Frigate", "Landspeeder", "Patrol Boat", "Starfighter", "Tracked", "Transport", "Walker", "Wheeled"], {prompt: ''}, {class: "form-input select", id: 'attribute'}) %>
                     <p class="form-label">Hull Type</p>
                 </div>
 

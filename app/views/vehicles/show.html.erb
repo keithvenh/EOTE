@@ -8,7 +8,7 @@
 
             <li class="link"><%= link_to "Home", root_path %></li>
 
-            <li class="link"><%= link_to "Vehicles", vehicle_path %></li>
+            <li class="link"><%= link_to "Vehicles", vehicles_path %></li>
 
             <li class="link"><%= link_to "Update Vehicle", edit_vehicle_path(@ship) %></li>
 
@@ -150,7 +150,7 @@
 
         <div class="dataset">
             <p class="data-title">Handling</p>
-            <p class="integer data"><%= @ship.handling %></p>
+            <p class="integer data"><%= @ship.handling > 0 ? "+" : '' %><%= @ship.handling %></p>
         </div>
 
     </div>
