@@ -7,7 +7,7 @@ module VehiclesHelper
 
         com.each do |c|
             com_type = c.split(':')
-            com_display += "<p> <span class='sw'>#{com_type[1]}</span> :: #{com_type[0]}</p>"
+            com_display += "<p> <span class='integer'>#{com_type[0]}</span> :: #{com_type[1]}</p>"
         end
 
         com_display += "</div>"
@@ -19,17 +19,17 @@ module VehiclesHelper
         pri = ship.primary_hyperdrive
         sec = ship.secondary_hyperdrive
 
-        hyper_display = "<p class='sw data'>"
+        hyper_display = "<p class='data'>"
         if !pri
-            hyper_display = "<p class='data'>None"
+            hyper_display += "None"
         end
 
         if pri
-            hyper_display += "#{pri}"
+            hyper_display += "Class <span class='integer'>#{pri}</span>"
         end
 
         if sec
-            hyper_display += " / #{sec}"
+            hyper_display += " / Class <span class='integer'>#{sec}</span>"
         end
 
         hyper_display += "</p>"
