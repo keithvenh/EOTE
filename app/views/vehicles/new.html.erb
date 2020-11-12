@@ -38,6 +38,13 @@
                     <p class="form-label">Rarity</p>
                 </div>
 
+                <div class="form-field">
+                    <div class="checkbox">
+                        <%= f.check_box :restricted,  class: "boolean"%>
+                        <p class="form-label">Restricted</p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="form-category">
@@ -136,7 +143,7 @@
 
                 <div class="form-field">
                     <%= f.text_field :defense_fore, class: "form-input integer" %>
-                    <p class="form-label">For</p>
+                    <p class="form-label">Fore</p>
                 </div>
 
                 <div class="form-field">
@@ -157,7 +164,7 @@
             </div>
 
             <div class="form-category">
-                <%= f.submit "Submit", class: "button form-button" %>
+                <%= f.submit "Submit", class: "button form-button success" %>
             </div>
 
         <% end %>

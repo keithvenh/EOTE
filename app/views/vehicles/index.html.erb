@@ -1,109 +1,190 @@
-<div class="page-container vehicle-index-container">
+<section>
 
-    <div class="vehicle-section">
+    <%= render 'layouts/menu.html.erb' %>
 
-        <section class="screen screen-sm blue">
-            <% iron_shadow = Vehicle.find_by(name: "Iron Shadow") %>
-            <%= translate("Your Vehicles", "translate-center") %>
-            <%= link_to vehicle_path(iron_shadow) do %>
-                <%= translate(iron_shadow.name, 'translate-sm') %>
-            <% end %>
+</section>
 
-        </section>
-        
-        <section class="screen screen-sm orange">
+<section>
 
-            <%= translate("Airspeeders", "translate-center") %>
+    <%= section_header("Speeders") %>
 
-            <% @airspeeders.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @speeders.each do |vehicle| %>
+
+                <% if vehicle.name[0] != letter %>
+
+                    <% letter = vehicle.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
                 <% end %>
+
+                <p class="char-name"><%= link_to vehicle.name, vehicle_path(vehicle) %></p>
+
             <% end %>
 
-        </section>
-
-        <section class="screen screen-sm yellow">
-
-            <%= translate("Landspeeders", "translate-center") %>
-
-            <% @landspeeders.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-
-        <section class="screen screen-sm green">
-
-            <%= translate("Wheeled and Tracked Vehicles", "translate-center") %>
-
-            <% @wheeled.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-
-    </div>
-
-    <div class="vehicle-section">
-    
-        <section class="screen screen-sm yellow">
-        
-            <%= translate("Walkers", "translate-center") %>
-
-            <% @walkers.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-        
-        <section class="screen screen-sm green">
-
-            <%= translate("Starfighters and Patrol Boats", "translate-center") %>
-
-            <% @fighters.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-
-        <section class="screen screen-sm orange">
-
-            <%= translate("Freighters and Transports", "translate-center") %>
-
-            <% @freighters.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-
-        </section>
-
-        <section class="screen screen-sm red">
-
-            <%= translate("Capital Ships", "translate-center") %>
-
-            <% @capitals.each do |ship| %>
-                <%= link_to vehicle_path(ship) do %>
-                    <%= translate(ship.model, "translate-sm") %>
-                <% end %>
-            <% end %>
-        </section>
-
-    </div>
-
-    <section class="screen screen-bottom screen-bottom-sm blue vehicle-index-menu">
-        <%= translate("Menu", "translate-lg translate-center") %>
-        <div class="planet-menu-links">
-            <%= link_to "New Vehicle", new_vehicle_path %>
         </div>
-    </section>
-</div>
+
+        <div class="char-new">
+
+            <%= link_to new_vehicle_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Ground Vehicles") %>
+
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @ground.each do |vehicle| %>
+
+                <% if vehicle.name[0] != letter %>
+
+                    <% letter = vehicle.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
+                <% end %>
+
+                <p class="char-name"><%= link_to vehicle.name, vehicle_path(vehicle) %></p>
+
+            <% end %>
+
+        </div>
+
+        <div class="char-new">
+
+            <%= link_to new_vehicle_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Fighters") %>
+
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @fighters.each do |vehicle| %>
+
+                <% if vehicle.name[0] != letter %>
+
+                    <% letter = vehicle.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
+                <% end %>
+
+                <p class="char-name"><%= link_to vehicle.name, vehicle_path(vehicle) %></p>
+
+            <% end %>
+
+        </div>
+
+        <div class="char-new">
+
+            <%= link_to new_vehicle_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Freighters") %>
+
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @freighters.each do |vehicle| %>
+
+                <% if vehicle.name[0] != letter %>
+
+                    <% letter = vehicle.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
+                <% end %>
+
+                <p class="char-name"><%= link_to vehicle.name, vehicle_path(vehicle) %></p>
+
+            <% end %>
+
+        </div>
+
+        <div class="char-new">
+
+            <%= link_to new_vehicle_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Capital Ships") %>
+
+    <div class="characters">
+
+        <div class="char-list">
+
+            <% letter = "" %>
+
+            <% @capitals.each do |vehicle| %>
+
+                <% if vehicle.name[0] != letter %>
+
+                    <% letter = vehicle.name[0] %>
+                    <p class="sw segmentor"><%= letter %></p>
+
+                <% end %>
+
+                <p class="char-name"><%= link_to vehicle.name, vehicle_path(vehicle) %></p>
+
+            <% end %>
+
+        </div>
+
+        <div class="char-new">
+
+            <%= link_to new_vehicle_path do %>
+                <div class="button success">+</div>
+            <% end %>
+
+        </div>
+
+    </div>
+
+</section>

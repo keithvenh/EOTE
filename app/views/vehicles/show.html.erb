@@ -1,107 +1,190 @@
-<div class="page-container vehicle-show-container">
+<section>
+    
+    <%= section_header("Menu") %>
+    
+    <div class="wrapper index-menu">
 
-    <section class="screen screen-vert blue vehicle-menu">
-        <div class="vehicle-data">
-            <%= translate("Basics", "translate-center") %>
+        <ul class="menu">
 
-            <%= translate(@ship.name, "translate-lg") %>
-            <%= translate(@ship.model, "translate-sm") %>
-            <%= translate(@ship.hull_type, "translate-sm") %>
-            <%= translate(@ship.manufacturer, "translate-sm") %>
+            <li class="link"><%= link_to "Home", root_path %></li>
+
+            <li class="link"><%= link_to "Vehicles", vehicle_path %></li>
+
+            <li class="link"><%= link_to "Update Vehicle", edit_vehicle_path(@vehicle) %></li>
+
+        </ul>
+
+        <div class="sidebar">
+
+            <% num = rand(6) %>
+            <%= image_tag("results/#{num}.png") %>
+
+        </div>
+    
+    </div>
+    
+
+</section>
+
+<section>
+
+    <%= section_header("Basics") %>
+
+    <% if @ship.restricted %>
+        <p class="sw text danger">Restricted</p>
+    <% end %>
+
+    <div class="basics">
+
+        <% if @ship.name && @ship.name != '' && @ship.name != @ship.model %>
+            <div class="dataset">
+                <p class='data-title'>Name</p>
+                <p class='data'><%= @ship.name %></p>
+            </div>
+        <% end %>
+        
+        <div class="dataset">
+            <p class="data-title">Model</p>
+            <p class='data'><%= @ship.model %></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Hull Type</p>
+            <p class="integer data"><%= @ship.hull_type %></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Manufacturer</p>
+            <p class="data"><%= @ship.manufacturer %></p>
+        </div>
+
+    </div>
+
+    <div class="basics">
+        
+        <div class="dataset">
+            <p class="data-title">Cost</p>
+            <p class='data'><%= @ship.cost %></p>
+        </div>
+
+        <div class="dataset">
+            <p class="data-title">Rarity</p>
+            <p class="integer data"><%= @ship.rarity %></p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <%= section_header("Hardware") %>
+
+    <div class="attr">
+
+        <div class="dataset">
+            <p class='data-title'>Hyperdrive</p>
+            <p class='data-subtitle'>Primary / Backup</p>
+            <p class='data integer'><%= @ship.primary_hyperdrive %> / <%= @ship.secondary_hyperdrive %></p>
         </div>
         
-        <div class="bottom">
-            <p><%= link_to "Edit Vehicle", edit_vehicle_path(@ship) %></p>
-
-            <p><%= link_to "Delete Vehicle", @ship, method: :delete, data: {confirm: "Are you sure you wish to delete this vehicle? This cannot be undone." } %></p>
+        <div class="dataset">
+            <p class="data-title">Navicomputer</p>
+            <p class='data'><%= @ship.navicomputer %></p>
         </div>
 
-    </section>
+        <div class="dataset">
+            <p class="data-title">Sensor Range</p>
+            <p class="integer data"><%= @ship.sensor_range %></p>
+        </div>
 
-    <article class="screen screen-lg orange vehicle-attributes">
-        <%= translate("Vehicle Attributes", "translate-lg translate-center") %>
+    </div>
 
-        <section class="vehicle-stats">
+</section>
 
-            <div class="general-data">
-                <%= translate("Complement", "translate-center") %>
-                <div class="data"><%= parse_complement(@ship) %></div>
-            </div>
+<section>
 
-            <div class="general-data">
-                <%= translate("Cost", "translate-center") %>
-                <div class="sw data"><%= @ship.cost %></div>
-            </div>
+    <%= section_header("Capacities") %>
 
-            <div class="general-data">
-                <%= translate("Rarity", "translate-center") %>
-                <div class="sw data"><%= @ship.rarity %></div>
-            </div>
+    <div class="attr">
 
-        </section>
+        <div class="dataset">
+            <p class='data-title'>Complement</p>
+            <p class='data integer'><%= parse_complement(@ship) %></p>
+        </div>
+        
+        <div class="dataset">
+            <p class="data-title">Passengers</p>
+            <p class='integer data'><%= @ship.passengers %></p>
+        </div>
 
-        <section class="vehicle-stats">
+        <div class="dataset">
+            <p class="data-title">Encumbrance Capacity</p>
+            <p class="integer data"><%= @ship.capacity %></p>
+        </div>
 
-            <div class="general-data">
-                <%= translate("Hyperdrive", "translate-center") %>
-                <div class="data"><%= parse_hyperdrive(@ship) %></div>
-            </div>
+        <div class="dataset">
+            <p class="data-title">Hard Points</p>
+            <p class="integer data"><%= @ship.hard_points %></p>
+        </div>
 
-            <div class="general-data">
-                <%= translate("Sensor Range", "translate-center") %>
-                <div class="data"><%= @ship.sensor_range.upcase %></div>
-            </div>
+    </div>
 
-            <div class="general-data">
-                <%= translate("Navicomputer", "translate-center") %>
-                <div class="data"><%= @ship.navicomputer.to_s.upcase %></div>
-            </div>
+</section>
 
-        </section>
 
-        <section class="vehicle-stats">
+<section>
 
-            <div class="general-data">
-                <%= translate("Passengers", "translate-center") %>
-                <div class="sw data"><%= @ship.passenger_capacity %></div>
-            </div>
+    <%= section_header("Flight Details") %>
 
-            <div class="general-data">
-                <%= translate("Capacity", "translate-center") %>
-                <div class="sw data"><%= @ship.capacity %></div>
-            </div>
+    <div class="attr">
 
-            <div class="general-data">
-                <%= translate("Hard Points", "translate-center") %>
-                <div class="sw data"><%= @ship.hard_points %></div>
-            </div>
+        <div class="dataset">
+            <p class='data-title'>Silhouette</p>
+            <p class='data integer'><%= @ship.silhouette %></p>
+        </div>
+        
+        <div class="dataset">
+            <p class="data-title">Speed</p>
+            <p class='integer data'><%= @ship.speed %></p>
+        </div>
 
-        </section>
+        <div class="dataset">
+            <p class="data-title">Handling</p>
+            <p class="integer data"><%= @ship.handling %></p>
+        </div>
 
-        <section class="vehicle-stats">
+    </div>
 
-            <div class="general-data">
-                <%= translate("Armor", "translate-center") %>
-                <div class="sw data"><%= @ship.armor %></div>
-            </div>
+</section>
 
-            <div class="general-data">
-                <%= translate("Hull Trauma", "translate-center") %>
-                <div class="sw data"><%= @ship.hull_trauma_threshold %></div>
-            </div>
+<section>
 
-            <div class="general-data">
-                <%= translate("System Strain", "translate-center") %>
-                <div class="sw data"><%= @ship.system_strain_threshold %></div>
-            </div>
+    <%= section_header("Defensive Capabilities") %>
 
-            <div class="general-data">
-                <%= translate("Defense", "translate-center") %>
-                <div class="sw data"><%= @ship.defense_fore %> / <%= @ship.defense_port %> / <%= @ship.defense_starboard %> / <%= @ship.defense_aft %></div>
-            </div>
+    <div class="attr">
 
-        </section>
+        <div class="dataset">
+            <p class='data-title'>Armor</p>
+            <p class='data integer'><%= @ship.armor %></p>
+        </div>
+        
+        <div class="dataset">
+            <p class="data-title">Hull Trauma</p>
+            <p class='integer data'><%= @ship.hull_trauma_threshold %></p>
+        </div>
 
-    </article>
+        <div class="dataset">
+            <p class="data-title">System Strain</p>
+            <p class="integer data"><%= @ship.system_strain_threshold %></p>
+        </div>
 
-</div>
+        <div class="dataset">
+            <p class="data-title">Defense</p>
+            <p class="data-subtitle">Fore / Port / Starboard / Aft
+            <p class="integer data"><%= @ship.defense_fore %> / <%= @ship.defense_port %> / <%= @ship.defense_starboard %> / <%= @ship.defense_aft %></p>
+        </div>
+
+    </div>
+
+</section>
