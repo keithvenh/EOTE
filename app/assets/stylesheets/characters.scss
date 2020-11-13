@@ -64,6 +64,10 @@
         display: flex;
         width: 100%;
         align-items: center;
+        &:hover .name {
+            color: #111;
+            background-color: white;
+        }
         .name {
             text-transform: uppercase;
             padding: 6px;
