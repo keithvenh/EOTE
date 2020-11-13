@@ -103,4 +103,10 @@ window.addEventListener('turbolinks:load', () => {
         })
     })
 
+    document.getElementById('hamburger').addEventListener('click', () => {
+        console.log("hamburgerclick");
+        navbar = document.getElementById('navbar').classList.toggle('open');
+        console.log(navbar);
+    })
+
 });

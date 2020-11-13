@@ -1,12 +1,20 @@
-<div class="connection">
+<div class="header">
 
-    <p class='integer'>Connection Active<span id="connection-tracker">&#9865;</span></p>
+  <div class="header-lead">
+    <div class="connection">
+      <p class='connection integer'>Connection Active</p>
+      <p id="connection-tracker">&#9865;</p>
+    </div>
+  </div>
 
+  <div class="alerts">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= notice %></p>
-    <% end %>
+    <% end %> 
+  </div>
 
-</div>
+</div> 
+

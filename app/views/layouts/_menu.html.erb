@@ -1,18 +1,10 @@
-<%= section_header("Menu") %>
+<div id='navbar' class="navbar">
 
-<div class="wrapper index-menu">
+    <p id="hamburger" class='hamburger'>&#9776;</p>
 
     <ul class="menu">
 
         <%= render 'layouts/links.html.erb' %>
 
     </ul>
-
-    <div class="sidebar">
-
-        <% num = rand(6) %>
-        <%= image_tag("results/#{num}.png") %>
-
-    </div>
-    
 </div>
