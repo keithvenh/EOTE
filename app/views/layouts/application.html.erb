@@ -19,8 +19,9 @@
 
     <div class="datapad">
 
-      <%= render 'layouts/menu.html.erb'%>
-
+      <% if user_signed_in? %>
+        <%= render 'layouts/menu.html.erb'%>
+      <% end %>
       <%= render 'layouts/datapad_header.html.erb' %>
 
       <%= yield %>
