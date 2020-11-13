@@ -1,33 +1,3 @@
-<section>
-    
-    <%= section_header("Menu") %>
-    
-    <div class="wrapper index-menu">
-
-        <ul class="menu">
-
-            <li class="link"><%= link_to "Home", root_path %></li>
-
-            <li class="link"><%= link_to "Update Character", edit_character_path(@char) %></li>
-
-            <li class="link"><%= link_to "New Skill", new_character_skill_path(@char) %></li>
-
-            <li class="link"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
-
-        </ul>
-
-        <div class="sidebar">
-
-            <% num = rand(6) %>
-            <%= image_tag("results/#{num}.png") %>
-
-        </div>
-    
-    </div>
-    
-
-</section>
-
 <section class="character-profile">
 
     <%= section_header("Profile") %>

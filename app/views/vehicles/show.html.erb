@@ -1,32 +1,4 @@
 <section>
-    
-    <%= section_header("Menu") %>
-    
-    <div class="wrapper index-menu">
-
-        <ul class="menu">
-
-            <li class="link"><%= link_to "Home", root_path %></li>
-
-            <li class="link"><%= link_to "Vehicles", vehicles_path %></li>
-
-            <li class="link"><%= link_to "Update Vehicle", edit_vehicle_path(@ship) %></li>
-
-        </ul>
-
-        <div class="sidebar">
-
-            <% num = rand(6) %>
-            <%= image_tag("results/#{num}.png") %>
-
-        </div>
-    
-    </div>
-    
-
-</section>
-
-<section>
 
     <%= section_header("Basics") %>
 

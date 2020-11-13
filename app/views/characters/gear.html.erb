@@ -1,30 +1,5 @@
 <section>
 
-    <%= section_header("Menu") %>
-
-    <div class="wrapper index-menu">
-
-        <ul class="menu">
-
-            <li class="link sw"><%= link_to "Home", root_path %></li>
-
-            <li class="link sw"><%= link_to "Get Gear", store_path + "?character_id=#{@char.id}" %></li>
-
-        </ul>
-
-        <div class="sidebar">
-
-            <% num = rand(6) %>
-            <%= image_tag("results/#{num}.png") %>
-
-        </div>
-    
-    </div>
-
-</section>
-
-<section>
-
     <%= section_header("Armor") %>
 
     <% @armor.each do |armor| %>
