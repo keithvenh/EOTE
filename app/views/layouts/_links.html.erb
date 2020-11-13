@@ -1,27 +1,31 @@
-<li class="link">
-    <%= link_to "Home", root_url %>
-</li>
+<% if controller_name == 'pages' && action_name == 'index' %>
 
-<li class="link">
-    <%= link_to "Armory", gear_path %>
-</li>
+    <li class="<%= controller_name == 'pages' && action_name == 'index' ? 'active' : '' %> link">
+        <%= link_to "Home", root_url %>
+    </li>
 
-<li class="link">
-    <%= link_to "Astrogation", planets_path %>
-</li>
+    <li class="<%= controller_name == 'pages' && action_name == 'gear' ? 'active' : '' %> link">
+        <%= link_to "Armory", gear_path %>
+    </li>
 
-<li class="link">
-    <%= link_to "Connections", contacts_path %>
-</li>
+    <li class="<%= controller_name == 'planets' && action_name == 'index' ? 'active' : '' %> link">
+        <%= link_to "Astrogation", planets_path %>
+    </li>
 
-<li class="link">
-    <%= link_to "Markets", store_path + "?character_id=#{@character.id}" %>
-</li>
+    <li class="<%= controller_name == 'contacts' && action_name == 'index' ? 'active' : '' %> link">
+        <%= link_to "Connections", contacts_path %>
+    </li>
 
-<li class="link">
-    <%= link_to "Profiles", characters_path %>
-</li>
+    <li class="<%= controller_name == 'pages' && action_name == 'store' ? 'active' : '' %> link">
+        <%= link_to "Markets", store_path + "?character_id=#{@character.id}" %>
+    </li>
 
-<li class="link">
-    <%= link_to "Vehicles", vehicles_path %>
-</li>
+    <li class="<%= controller_name == 'characters' && action_name == 'index' ? 'active' : '' %> link">
+        <%= link_to "Profiles", characters_path %>
+    </li>
+
+    <li class="<%= controller_name == 'vehicles' && action_name == 'index' ? 'active' : '' %> link">
+        <%= link_to "Vehicles", vehicles_path %>
+    </li>
+
+<% end %>

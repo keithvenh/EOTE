@@ -180,8 +180,24 @@
 
         <div class="dataset">
             <p class="data-title">Defense</p>
-            <p class="data-subtitle">Fore / Port / Starboard / Aft
-            <p class="integer data"><%= @ship.defense_fore %> / <%= @ship.defense_port %> / <%= @ship.defense_starboard %> / <%= @ship.defense_aft %></p>
+            <div class="defense">
+                <div class="def">
+                    <p>Fore</p>
+                    <p class="integer"><%= (@ship.defense_fore && @ship.defense_fore > 0 && @ship.defense_fore != '') ? @ship.defense_fore : '-' %></p>
+                </div>
+                <div class="def">
+                    <p>Port</p>
+                    <p class="integer"><%= (@ship.defense_port && @ship.defense_port > 0 && @ship.defense_port != '') ? @ship.defense_port : '-' %></p>
+                </div>
+                <div class="def">
+                    <p>Starboard</p>
+                    <p class="integer"><%= (@ship.defense_starboard && @ship.defense_starboard > 0 && @ship.defense_starboard != '') ? @ship.defense_starboard : '-' %></p>
+                </div>
+                <div class="def">
+                    <p>Aft</p>
+                    <p class="integer"><%= (@ship.defense_aft && @ship.defense_aft > 0 && @ship.defense_aft != '') ? @ship.defense_aft : '-' %></p>
+                </div>
+            </div>
         </div>
 
     </div>

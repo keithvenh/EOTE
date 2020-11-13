@@ -8,6 +8,7 @@
 @import "forms";
 @import "characters";
 @import "planets";
+@import "vehicles";
 
 body {
 	background-color: #000;
@@ -23,13 +24,23 @@ body {
  }
 
  ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
+
+/*
+::-webkit-scrollbar the scrollbar.
+::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+::-webkit-scrollbar-thumb the draggable scrolling handle.
+::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+::-webkit-scrollbar-corner
+*/
 
 .sw {
   font-family: $aurebesh;
   &:hover {
 	  font-family: $primary;
+	  cursor: help;
   }
 }
 
@@ -46,6 +57,11 @@ a {
 	text-decoration: none;
 }
 
+.link.active {
+	background-color: white;
+	color: #111;
+	text-transform: uppercase;
+}
 .wrapper {
 	display: flex;
 }

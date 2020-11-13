@@ -55,9 +55,43 @@
 
 </section>
 
-<section>
+<section class='skills-section'>
 
     <%= section_header("#{@character.name} :: Skills") %>
+
+    <div class="attributes">
+
+        <div class="attribute" id="brawn">
+            <p>Brawn</p>
+            <p class='integer'><%= @character.brawn %></p>
+        </div>
+
+        <div class="attribute" id="agility">
+            <p>Agility</p>
+            <p class='integer'><%= @character.agility %></p>
+        </div>
+
+        <div class="attribute" id="intellect">
+            <p>Intellect</p>
+            <p class='integer'><%= @character.intellect %></p>
+        </div>
+
+        <div class="attribute" id="cunning">
+            <p>Cunning</p>
+            <p class='integer'><%= @character.cunning %></p>
+        </div>
+
+        <div class="attribute" id="willpower">
+            <p>Willpower</p>
+            <p class='integer'><%= @character.willpower %></p>
+        </div>
+
+        <div class="attribute" id="presence">
+            <p>Presence</p>
+            <p class='integer'><%= @character.presence %></p>
+        </div>
+
+    </div>
 
     <div class="skills-list">
         <div class="skills skills-general">
@@ -66,9 +100,9 @@
                 <% @character.skills.each do |skill| %>
 
                         <% if skill.category == "General" && skill.level > 0 %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level) %>
+                                <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
 
@@ -82,9 +116,9 @@
                 <% @character.skills.each do |skill| %>
 
                         <% if skill.category == "Combat" && skill.level > 0 %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level) %>
+                                <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
 
@@ -95,9 +129,9 @@
                 <% @character.skills.each do |skill| %>
 
                         <% if skill.category == "Knowledge" && skill.level > 0 %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level) %>
+                                <%= display_level(skill.level, true) %>
                             </div>
                         <% end %>
 

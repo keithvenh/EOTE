@@ -28,7 +28,6 @@ section {
     display: flex;
     border-bottom: 2px solid white;
     justify-content: space-between;
-    align-items: center;
     padding: 6px;
     p {
         font-size: 20px;
@@ -42,10 +41,12 @@ section {
 .menu {
     display: flex;
     padding: 6px;
-    flex-direction: column;
+    width: 65%;
+    flex-wrap: wrap;
     li {
         border: 2px solid #111;
         padding: 6px;
+        width: 45%;
         cursor: pointer;
         &:hover {
             border-color: silver;
@@ -81,4 +82,19 @@ section {
 
 .armory-list, .store-list {
     padding: 12px;
+}
+
+.attributes {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    .attribute {
+        width: 16%;
+        text-align: center;
+        padding: 6px 0;
+    }
+}
+
+.skill {
+    cursor: default;
 }

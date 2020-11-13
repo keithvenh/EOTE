@@ -82,46 +82,45 @@
 
     </div>
 
-    <div class="attr">
-
-        <div class="dataset">
-            <p class="data-title">Brawn</p>
-            <p class="integer data"><%= @char.brawn %></p>
-        </div>
-
-        <div class="dataset">
-            <p class="data-title">Agility</p>
-            <p class="integer data"><%= @char.agility %></p>
-        </div>
-
-        <div class="dataset">
-            <p class="data-title">Intellect</p>
-            <p class="integer data"><%= @char.intellect %></p>
-        </div>
-
-        <div class="dataset">
-            <p class="data-title">Cunning</p>
-            <p class="integer data"><%= @char.cunning %></p>
-        </div>
-
-        <div class="dataset">
-            <p class="data-title">Willpower</p>
-            <p class="integer data"><%= @char.willpower %></p>
-        </div>
-
-        <div class="dataset">
-            <p class="data-title">Presence</p>
-            <p class="integer data"><%= @char.presence %></p>
-        </div>
-
-
-    </div>
-
 </section>
 
 <section>
 
     <%= section_header("Quick Reference") %>
+
+    <div class="attributes">
+
+        <div class="attribute" id="brawn">
+            <p>Brawn</p>
+            <p class='integer'><%= @character.brawn %></p>
+        </div>
+
+        <div class="attribute" id="agility">
+            <p>Agility</p>
+            <p class='integer'><%= @character.agility %></p>
+        </div>
+
+        <div class="attribute" id="intellect">
+            <p>Intellect</p>
+            <p class='integer'><%= @character.intellect %></p>
+        </div>
+
+        <div class="attribute" id="cunning">
+            <p>Cunning</p>
+            <p class='integer'><%= @character.cunning %></p>
+        </div>
+
+        <div class="attribute" id="willpower">
+            <p>Willpower</p>
+            <p class='integer'><%= @character.willpower %></p>
+        </div>
+
+        <div class="attribute" id="presence">
+            <p>Presence</p>
+            <p class='integer'><%= @character.presence %></p>
+        </div>
+
+    </div>
 
     <div class="skills-list">
         <div class="skills skills-general">
@@ -130,7 +129,7 @@
                 <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "General" %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>
@@ -146,7 +145,7 @@
                 <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "Combat" %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>
@@ -159,7 +158,7 @@
                 <% @char.skills.each do |skill| %>
 
                         <% if skill.category == "Knowledge" %>
-                            <div class="skill">
+                            <div class="skill <%= skill.attr.downcase %>">
                                 <p class="name"><%= skill.career ? "&#9865;".html_safe : '' %> <%= link_to skill.name, edit_character_skill_path(@char, skill) %></p>
                                 <%= display_level(skill.level, true) %>
                             </div>

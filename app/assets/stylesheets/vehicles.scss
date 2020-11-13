@@ -1,42 +1,10 @@
-.vehicle-index-container {
-    flex-direction: column;
-}
-
-.vehicle-section {
+.defense {
     display: flex;
-}
-
-.vehicle-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.vehicle-attributes {
-    display: flex;
-    flex-direction: column;
-}
-
-.vehicle-stats {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 16px;
-    .general-data .data {
-        text-align: center;
+    .def {
+        border-right: 1px solid white;
+        padding: 0 6px;
     }
-}
-
-.complement {
-    p {
-        text-align: center;
-        text-transform: uppercase;
-        margin: 6px;
+    &:last-child {
+        border-right: none;
     }
-}
-
-.vehicle-index-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
 }
