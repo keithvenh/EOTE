@@ -1,11 +1,15 @@
 window.addEventListener('turbolinks:load', () => {
 
-    document.getElementById('connection-tracker').style.marginLeft = "250px";
+    setTimeout(() => {
+        document.getElementById('connection').innerHTML = "Connection Active";
+    }, 3000)
+
+    document.getElementById('connection-tracker').style.marginTop = "1vh";
     const connection = setInterval(() => {
-        let margin = Math.floor(Math.random()*20)
-        document.getElementById('connection-tracker').style.marginLeft = `${margin}%`;
+        let margin = Math.floor(Math.random()*13)
+        document.getElementById('connection-tracker').style.marginTop = `${margin}vh`;
         
-    }, 5000)
+    }, 3000)
 
     document.querySelectorAll('.brawn').forEach(item => {
         const brawn = document.getElementById('brawn');
