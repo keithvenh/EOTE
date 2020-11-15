@@ -1,70 +1,15 @@
 <div class="header">
 
-  <div class="header-lead">
-
-    <div class="header-display">
-      <p class='sw connection' id="connection">Connection Waiting</p>
-
-      <div class='header-bottom'>
-        <div class="bars">
-
-          <div class='bars-1'>
-
-            <div id="bar-1">
-
-            </div>
-
-            <div id="bar-2">
-
-            </div>
-
-            <div id="bar-3">
-
-            </div>
-
-            <div id="bar-4">
-
-            </div>
-
-          </div>
-
-          <div class='bars-2'>
-
-          </div>
-
-          <div class='bars-3'>
-
-          </div>
-
-          <div class='bars-4'>
-
-          </div>
-
-        </div>
-
-        <div class='header-menu'>
-
-          <ul class="menu">
-          
-            <li class='link'><%= link_to "Home", root_path %></li>
-
-            <li class='link'><%= link_to "Profiles", characters_path %></li>
-
-            <li class="link"><%= link_to "More", vehicles_path %></li>
-
-          </ul>
-
-        </div>
-      </div>
-
-    </div>
-
+  <div class="header-lead"> 
+    <p class='sw connection' id="connection">Connection Waiting</p>
     <p class="tracker"><span id="connection-tracker">&#9865;</span></p>
+
+    <%= render 'layouts/menu.html.erb'%>
 
   </div>
 
   <div class='header-icon'>
 
   </div>
-</div> 
 
+</div> 

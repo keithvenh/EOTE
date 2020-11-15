@@ -1,27 +1,49 @@
 <li class="<%= controller_name == 'pages' && action_name == 'index' ? 'active' : '' %> link">
-    <%= link_to "Home", root_url %>
-</li>
-
-<li class="<%= controller_name == 'pages' && action_name == 'gear' ? 'active' : '' %> link">
-    <%= link_to "Armory", gear_path %>
-</li>
-
-<li class="<%= controller_name == 'planets' && action_name == 'index' ? 'active' : '' %> link">
-    <%= link_to "Astrogation", planets_path %>
-</li>
-
-<li class="<%= controller_name == 'contacts' && action_name == 'index' ? 'active' : '' %> link">
-    <%= link_to "Connections", contacts_path %>
-</li>
-
-<li class="<%= controller_name == 'pages' && action_name == 'store' ? 'active' : '' %> link">
-    <%= link_to "Markets", store_path + "?character_id=#{@character.id}" %>
+    <%= link_to root_url do %>
+        <i class="fas fa-home"></i>
+    <% end %>
+    <span class='tooltip'>Home</span>
 </li>
 
 <li class="<%= controller_name == 'characters' && action_name == 'index' ? 'active' : '' %> link">
-    <%= link_to "Profiles", characters_path %>
+    <%= link_to characters_path do %>
+        <i class="fas fa-users"></i>
+    <% end %>
+    <span class='tooltip'>Profiles</span>
 </li>
 
 <li class="<%= controller_name == 'vehicles' && action_name == 'index' ? 'active' : '' %> link">
-    <%= link_to "Vehicles", vehicles_path %>
+    <%= link_to vehicles_path do %>
+        <i class="fas fa-fighter-jet"></i>
+    <% end %>
+    <span class='tooltip'>Vehicles</span>
 </li>
+
+<li class="<%= controller_name == 'planets' && action_name == 'index' ? 'active' : '' %> link">
+    <%= link_to planets_path do %>
+        <i class="fas fa-globe"></i>
+    <% end %>
+    <span class='tooltip'>Astrogation</span>
+</li>
+
+<li class="<%= controller_name == 'pages' && action_name == 'gear' ? 'active' : '' %> link">
+    <%= link_to gear_path do %>
+        <i class="fas fa-campground"></i>
+    <% end %>
+    <span class='tooltip'>Gear</span>
+</li>
+
+<li class="<%= controller_name == 'contacts' && action_name == 'index' ? 'active' : '' %> link">
+    <%= link_to contacts_path do %>
+        <i class="fas fa-people-arrows"></i>
+    <% end%>
+    <span class='tooltip'>Contacts</span>
+</li>
+
+<li class="<%= controller_name == 'pages' && action_name == 'store' ? 'active' : '' %> link">
+    <%= link_to store_path + "?character_id=#{@character.id}" do %>
+        <i class="fas fa-cash-register"></i>
+    <% end %>
+    <span class='tooltip'>Market</span>
+</li>
+

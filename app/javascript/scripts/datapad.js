@@ -4,10 +4,10 @@ window.addEventListener('turbolinks:load', () => {
         document.getElementById('connection').innerHTML = "Connection Active";
     }, 3000)
 
-    document.getElementById('connection-tracker').style.marginTop = "1vh";
+    document.getElementById('connection-tracker').style.marginLeft = "10%";
     const connection = setInterval(() => {
-        let margin = Math.floor(Math.random()*13)
-        document.getElementById('connection-tracker').style.marginTop = `${margin}vh`;
+        let margin = Math.floor(Math.random()*90)
+        document.getElementById('connection-tracker').style.marginLeft = `${margin}%`;
         
     }, 3000)
 

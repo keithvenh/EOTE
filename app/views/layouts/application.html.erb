@@ -11,6 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
     <%= javascript_pack_tag 'forms' %>
   </head>
@@ -28,9 +29,6 @@
         <% end %> 
       </div>
 
-      <% if user_signed_in? %>
-        <%= render 'layouts/menu.html.erb'%>
-      <% end %>
       <%= render 'layouts/datapad_header.html.erb' %>
 
       <%= yield %>
