@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_16_202712) do
+ActiveRecord::Schema.define(version: 2020_11_16_204055) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -216,6 +216,7 @@ ActiveRecord::Schema.define(version: 2020_11_16_202712) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "restricted"
     t.string "sourcebook"
+    t.text "description"
   end
 
   create_table "weapons", force: :cascade do |t|
