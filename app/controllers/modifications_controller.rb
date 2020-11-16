@@ -42,6 +42,6 @@ class ModificationsController < ApplicationController
   private
 
     def modification_params
-      params.require(:modification).permit(:name, :restricted, :cost, :encumbrance, :hp_required, :rarity, :brands, :base_modifiers, :mod_options, :attachment_type)
+      params.require(:modification).permit(:name, :restricted, :cost, :encumbrance, :hp_required, :rarity, :brands, :base_modifiers, :mod_options, :attachment_type, :sourcebook)
     end
 end

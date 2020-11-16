@@ -45,6 +45,6 @@ class VehiclesController < ApplicationController
   private
 
     def vehicle_params
-      params.require(:vehicle).permit(:name, :manufacturer, :model, :hull_type, :primary_hyperdrive, :secondary_hyperdrive, :navicomputer, :sensor_range, :passenger_capacity, :complement, :cost, :rarity, :hard_points, :capacity, :silhouette, :speed, :handling, :armor, :hull_trauma_threshold, :system_strain_threshold, :defense_fore, :defense_aft, :defense_port, :defense_starboard, :restricted)
+      params.require(:vehicle).permit(:name, :manufacturer, :model, :hull_type, :primary_hyperdrive, :secondary_hyperdrive, :navicomputer, :sensor_range, :passenger_capacity, :complement, :cost, :rarity, :hard_points, :capacity, :silhouette, :speed, :handling, :armor, :hull_trauma_threshold, :system_strain_threshold, :defense_fore, :defense_aft, :defense_port, :defense_starboard, :restricted, :sourcebook)
     end
 end

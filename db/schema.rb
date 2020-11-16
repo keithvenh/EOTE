@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_12_011429) do
+ActiveRecord::Schema.define(version: 2020_11_16_202712) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_011429) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "hard_points"
+    t.string "sourcebook"
   end
 
   create_table "character_armors", force: :cascade do |t|
@@ -129,6 +130,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_011429) do
     t.text "brands"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "sourcebook"
   end
 
   create_table "modifications", force: :cascade do |t|
@@ -144,6 +146,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_011429) do
     t.string "attachment_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "sourcebook"
   end
 
   create_table "planets", force: :cascade do |t|
@@ -212,6 +215,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_011429) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "restricted"
+    t.string "sourcebook"
   end
 
   create_table "weapons", force: :cascade do |t|
@@ -229,6 +233,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_011429) do
     t.text "brands"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "sourcebook"
   end
 
   add_foreign_key "character_armors", "armors"
