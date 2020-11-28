@@ -1,11 +1,5 @@
 window.addEventListener('turbolinks:load', () => {
 
-    $('#fix').height('300px');
-    $("#fix").append("<p>" + $('#datapad').height() + "</p>");
-    $('#datapad').height(window.innerHeight);
-    $("#fix").append("<p>" + $('#datapad').height() + "</p>");
-
-
     setTimeout(() => {
         document.getElementById('connection').innerHTML = "Connection Active";
     }, 3000)
