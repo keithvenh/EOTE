@@ -4,7 +4,7 @@
     <p class='sw connection' id="connection">Connection Waiting</p>
     <p class="tracker"><span id="connection-tracker">&#9865;</span></p>
 
-    <% if controller_name != 'pages' && action_name != 'index' %>
+    <% if ((controller_name != 'pages' || action_name != 'index') && (controller_name != 'registrations' || action_name != 'new') && (controller_name != 'sessions')) %>
       <%= render 'layouts/menu.html.erb'%>
     <% end %>
 
