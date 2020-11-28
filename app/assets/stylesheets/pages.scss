@@ -53,6 +53,23 @@ section {
     }
 }
 
+
+.large-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    .link {
+        height: 150px;
+        width: 150px;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        margin: 20px;
+    }
+}
 .stats-table {
     width: 100%;
     tr {

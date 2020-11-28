@@ -1,139 +1,65 @@
 <section class="index-header">
 
-    <p class="integer user-credits">$<%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
+    <p class="integer user-credits">$ <%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
 
     <p class=" user"><%= link_to @user.username, edit_user_registration_path(@user) %></p>
 
 </section>
 
-<section class="stats">
+<div class='large-links'>
 
-    <%= section_header("Statistics") %>
-
-    <table class="stats-table">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Aleni</th>
-                <th>Krachtig</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Kills</th>
-                <td class='integer'>12</td>
-                <td class='integer'>21</td>
-            </tr>
-            <tr>
-                <th>Assists</th>
-                <td class='integer'>2</td>
-                <td class='integer'>3</td>
-            </tr>
-            <tr>
-                <th>Damage</th>
-                <td class='integer'>107</td>
-                <td class='integer'>168</td>
-            </tr>
-            <tr>
-                <th>Crits</th>
-                <td class='integer'>2</td>
-                <td class='integer'>6</td>
-            </tr>
-            <tr>
-                <th>Wounds</th>
-                <td class='integer'>7</td>
-                <td class='integer'>18</td>
-            </tr>
-        </tbody>
-    </table>
-
-</section>
-
-<section class='skills-section'>
-
-    <%= section_header("#{@character.name} :: Skills") %>
-
-    <div class="attributes">
-
-        <div class="attribute" id="brawn">
-            <p>Brawn</p>
-            <p class='integer'><%= @character.brawn %></p>
+    <%= link_to edit_user_registration_path(@user) do %>
+        <div class='link'>
+            <i class="fas fa-address-card"></i>
         </div>
+    <% end %>
 
-        <div class="attribute" id="agility">
-            <p>Agility</p>
-            <p class='integer'><%= @character.agility %></p>
+    <%= link_to characters_path do %>
+        <div class='link'>
+            <i class="fas fa-users"></i>
         </div>
+    <% end %>
 
-        <div class="attribute" id="intellect">
-            <p>Intellect</p>
-            <p class='integer'><%= @character.intellect %></p>
+    <%= link_to vehicles_path do %>
+        <div class='link'>
+            <i class="fas fa-fighter-jet"></i>
         </div>
+    <% end %>
 
-        <div class="attribute" id="cunning">
-            <p>Cunning</p>
-            <p class='integer'><%= @character.cunning %></p>
+    <%= link_to planets_path do %>
+        <div class='link'>
+            <i class="fas fa-globe"></i>
         </div>
+    <% end %>
 
-        <div class="attribute" id="willpower">
-            <p>Willpower</p>
-            <p class='integer'><%= @character.willpower %></p>
+    <%= link_to gear_path do %>
+        <div class='link'>
+            <i class="fas fa-campground"></i>
         </div>
+    <% end %>
 
-        <div class="attribute" id="presence">
-            <p>Presence</p>
-            <p class='integer'><%= @character.presence %></p>
+    <%= link_to contacts_path do %>
+        <div class='link'>
+            <i class="fas fa-people-arrows"></i>
         </div>
+    <% end%>
 
-    </div>
-
-    <div class="skills-list">
-        <div class="skills skills-general">
-            <div class="category general">
-                <p class='sw category-title'>General</p>
-                <% @character.skills.each do |skill| %>
-
-                        <% if skill.category == "General" && skill.level > 0 %>
-                            <div class="skill <%= skill.attr.downcase %>">
-                                <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level, true) %>
-                            </div>
-                        <% end %>
-
-                <% end %>
-            </div>
+    <%= link_to store_path do %>
+        <div class='link'>
+            <i class="fas fa-cash-register"></i>
         </div>
+    <% end %>
 
-        <div class="skills skills-other">
-            <div class="category combat">
-                <p class='sw category-title'>Combat</p>
-                <% @character.skills.each do |skill| %>
-
-                        <% if skill.category == "Combat" && skill.level > 0 %>
-                            <div class="skill <%= skill.attr.downcase %>">
-                                <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level, true) %>
-                            </div>
-                        <% end %>
-
-                <% end %>
-            </div>
-            <div class="category knowledge">
-                <p class='sw category-title'>Knowledge</p>
-                <% @character.skills.each do |skill| %>
-
-                        <% if skill.category == "Knowledge" && skill.level > 0 %>
-                            <div class="skill <%= skill.attr.downcase %>">
-                                <p class="name"><%= skill.name %></p>
-                                <%= display_level(skill.level, true) %>
-                            </div>
-                        <% end %>
-
-                <% end %>
-            </div>
+    <%= link_to stats_path do %>
+        <div class='link'>
+            <i class="fas fa-chart-bar"></i>
         </div>
-    </div>
+    <% end %>
 
-    
+    <%= link_to dice_path do %>
+        <div class='link'>
+            <i class="fas fa-dice"></i>
+        </div>
+    <% end %>
 
-</section>
+</div>

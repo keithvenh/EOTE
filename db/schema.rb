@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_16_204055) do
+ActiveRecord::Schema.define(version: 2020_11_16_210349) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -149,6 +149,14 @@ ActiveRecord::Schema.define(version: 2020_11_16_204055) do
     t.string "sourcebook"
   end
 
+  create_table "notations", force: :cascade do |t|
+    t.integer "contact_id", null: false
+    t.text "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_notations_on_contact_id"
+  end
+
   create_table "planets", force: :cascade do |t|
     t.string "name"
     t.string "system"
@@ -248,5 +256,6 @@ ActiveRecord::Schema.define(version: 2020_11_16_204055) do
   add_foreign_key "character_weapons", "weapons"
   add_foreign_key "contacts", "characters"
   add_foreign_key "contacts", "planets"
+  add_foreign_key "notations", "contacts"
   add_foreign_key "skills", "characters"
 end

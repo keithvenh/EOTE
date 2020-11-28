@@ -1,18 +1,18 @@
 # CREATE USERS
 User.create(
-    email: "krachtig@iron-shadow.com",
-    username: "Krachtig",
-    password: "Krachtig",
-    password_confirmation: "Krachtig",
-    credits: 3721
+    email: "zvenhui@eote.com",
+    username: "zvenhui",
+    password: "zvenhui  zvenhui",
+    password_confirmation: "zvenhui",
+    credits: 0
 )
 
 User.create(
-    email: "aleni@iron-shadow.com",
+    email: "aleni@eote.com",
     username: "Aleni",
     password: "Aleni1",
     password_confirmation: "Aleni1",
-    credits: 4386
+    credits: 0
 )
 
 Character.create(

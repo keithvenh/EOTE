@@ -27,4 +27,12 @@ class PagesController < ApplicationController
     @gear = Equipment.all.order('name ASC')
     @weapons = Weapon.all.order('name ASC')
   end
+
+  def stats
+  end
+
+  def dice
+  
+  end
+
 end

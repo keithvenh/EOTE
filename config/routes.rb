@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about', as: 'about'
   get 'help', to: 'pages#help', as: 'help'
   get 'gear', to: 'pages#gear', as: 'gear'
-  get 'store', to: 'pages#store'
+  get 'store', to: 'pages#store', as: 'store'
+  get 'stats', to: 'pages#stats', as: 'stats'
+  get 'dice', to: 'pages#dice', as: 'dice'
   
   devise_for :users
 

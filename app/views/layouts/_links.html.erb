@@ -41,7 +41,7 @@
 </li>
 
 <li class="<%= controller_name == 'pages' && action_name == 'store' ? 'active' : '' %> link">
-    <%= link_to store_path + "?character_id=#{@character.id}" do %>
+    <%= link_to store_path do %>
         <i class="fas fa-cash-register"></i>
     <% end %>
     <span class='tooltip'>Market</span>

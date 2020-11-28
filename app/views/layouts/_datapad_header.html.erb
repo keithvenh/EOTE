@@ -4,7 +4,9 @@
     <p class='sw connection' id="connection">Connection Waiting</p>
     <p class="tracker"><span id="connection-tracker">&#9865;</span></p>
 
-    <%= render 'layouts/menu.html.erb'%>
+    <% if controller_name != 'pages' && action_name != 'index' %>
+      <%= render 'layouts/menu.html.erb'%>
+    <% end %>
 
   </div>
 
