@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    @characters = Character.all.order("name ASC")
-    @planets = Planet.all.order("name ASC")
-    @vehicles = Vehicle.all.order("name ASC")
-    @contacts = Contact.all
+    @rolls = Roll.all
   end
 
   def about

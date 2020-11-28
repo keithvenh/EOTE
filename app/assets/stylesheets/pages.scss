@@ -103,3 +103,24 @@ section {
 .skill {
     cursor: default;
 }
+
+.roll-table {
+    background-color: white;
+    color: #111;
+    margin: 20px;
+    border: 1px solid white;
+    td, th {
+        padding: 3px;
+        border: 1px solid #111;
+        text-align: center;
+        img {
+            max-height: 20px;
+            max-width: 20px;
+        }
+    }
+    th {
+        background-color: #111;
+        color: white;
+        border: 1px solid white;
+    }
+}
