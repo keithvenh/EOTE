@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_16_210349) do
+ActiveRecord::Schema.define(version: 2020_11_28_091924) do
 
   create_table "armors", force: :cascade do |t|
     t.string "name"
@@ -169,6 +169,19 @@ ActiveRecord::Schema.define(version: 2020_11_16_210349) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "rolls", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "character_id", null: false
+    t.string "skill"
+    t.string "dice"
+    t.string "dice_results"
+    t.string "roll_result"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_rolls_on_character_id"
+    t.index ["user_id"], name: "index_rolls_on_user_id"
+  end
+
   create_table "skills", force: :cascade do |t|
     t.integer "character_id", null: false
     t.string "name"
@@ -191,6 +204,8 @@ ActiveRecord::Schema.define(version: 2020_11_16_210349) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.integer "credits"
+    t.integer "character_id"
+    t.index ["character_id"], name: "index_users_on_character_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -257,5 +272,8 @@ ActiveRecord::Schema.define(version: 2020_11_16_210349) do
   add_foreign_key "contacts", "characters"
   add_foreign_key "contacts", "planets"
   add_foreign_key "notations", "contacts"
+  add_foreign_key "rolls", "characters"
+  add_foreign_key "rolls", "users"
   add_foreign_key "skills", "characters"
+  add_foreign_key "users", "characters"
 end

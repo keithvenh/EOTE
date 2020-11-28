@@ -1,17 +1,17 @@
 # CREATE USERS
 User.create(
-    email: "zvenhui@eote.com",
-    username: "zvenhui",
-    password: "zvenhui  zvenhui",
+    email: "zvenhui@datapad.io",
+    username: "zack",
+    password: "zvenhui",
     password_confirmation: "zvenhui",
     credits: 0
 )
 
 User.create(
-    email: "aleni@eote.com",
-    username: "Aleni",
-    password: "Aleni1",
-    password_confirmation: "Aleni1",
+    email: "keithvenh@datapad.io",
+    username: "keith",
+    password: "keithvenh",
+    password_confirmation: "keithvenh",
     credits: 0
 )
 
@@ -200,3 +200,153 @@ knowledge_skills.each do |s|
         career: s[2]
     )
 end
+
+Character.create (
+    name: "Storm Trooper",
+    race: "Human",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Gamorrean Guard",
+    race: "Gamorrean",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Tie Fighter Pilot",
+    race: "Human",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Trex",
+    race: "Trandoshan",
+    category: "Nemesis"
+)
+
+Character.create (
+    name: "Bounty Hunter",
+    race: "Various",
+    category: "Rival"
+)
+
+Character.create (
+    name: "B'ura B'an",
+    race: "Twi'lek",
+    category: "Rival"
+)
+
+Character.create (
+    name: "Aqualish Thug",
+    race: "Aqualish",
+    category: "Minion"
+)
+
+Character.create (
+    name: "New Meen Villager",
+    race: "Twi'lek",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Angu Drombb",
+    race: "Human",
+    category: "Rival"
+)
+
+Character.create (
+    name: "Blurrg",
+    race: "Blurrg",
+    category: "Animal"
+)
+
+Character.create (
+    name: "Geonosian Guard",
+    race: "Geonosian",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Vrixx'tt",
+    race: "Gand",
+    category: "Rival"
+)
+
+Character.create (
+    name: "Lowhhrick",
+    race: "Wookiee",
+    category: "Named NPC"
+)
+
+Character.create (
+    name: "41-VEX",
+    race: "Droid",
+    category: "Named NPC"
+)
+
+Character.create (
+    name: "Pash",
+    race: "Human",
+    category: "Named NPC"
+)
+
+Character.create (
+    name: "Oskara",
+    race: "Twi'lek",
+    category: "Named NPC"
+)
+
+Character.create (
+    name: "Teemo the Hutt",
+    race: "Hutt",
+    category: "Nemesis"
+)
+
+Character.create (
+    name: "Thweek",
+    race: "Kubaz",
+    category: "Rival"
+)
+
+Character.create(
+    name: "Guda Azad",
+    race: "Devaronian",
+    category: "Rival"
+)
+
+Character.create (
+    name: "Street Tough",
+    race: "Various",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Nikto Thug",
+    race: "Nikto",
+    category: "Minion"
+)
+
+Character.create (
+    name: "R3-M1",
+    race: "Droid",
+    category: "Player Character"
+)
+
+Character.create (
+    name: "Yiyar Clan Member",
+    race: "Rodian",
+    category: "Minion"
+)
+
+Character.create (
+    name: "WED Treadwell Repair Droid",
+    race: "Droid",
+    category: "Minion"
+)
+
+Character.create (
+    name: "Yav Yiyar",
+    race: "Rodian",
+    category: "Nemesis"
+)

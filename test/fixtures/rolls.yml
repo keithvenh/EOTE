@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  character: one
+  skill: MyString
+  dice: MyString
+  dice_results: MyString
+  roll_result: MyString
+
+two:
+  user: two
+  character: two
+  skill: MyString
+  dice: MyString
+  dice_results: MyString
+  roll_result: MyString

@@ -2,64 +2,93 @@
 
     <p class="integer user-credits">$ <%= number_with_delimiter(@user.credits, delimiter: ',') %></p>
 
-    <p class=" user"><%= link_to @user.username, edit_user_registration_path(@user) %></p>
+    <p class=" user">
+        <%= link_to @user.username, edit_user_registration_path(@user) %>
+        <% if @user.character_id && @user.character_id != '' %>
+            (<%= link_to @user.character.name, edit_character_path(@user.character) %>)
+        <% end %>
+    </p>
 
 </section>
 
-<div class='large-links'>
+<% if @user.character %>
 
-    <%= link_to edit_user_registration_path(@user) do %>
-        <div class='link'>
-            <i class="fas fa-address-card"></i>
+    <section>
+    
+        <%= section_header("Quick Stats") %>
+
+        <div class="attributes">
+
+            <div class="attribute" id="brawn">
+                <p>Brawn</p>
+                <p class='integer'><%= @user.character.brawn %></p>
+            </div>
+
+            <div class="attribute" id="agility">
+                <p>Agility</p>
+                <p class='integer'><%= @user.character.agility %></p>
+            </div>
+
+            <div class="attribute" id="intellect">
+                <p>Intellect</p>
+                <p class='integer'><%= @user.character.intellect %></p>
+            </div>
+
+            <div class="attribute" id="cunning">
+                <p>Cunning</p>
+                <p class='integer'><%= @user.character.cunning %></p>
+            </div>
+
+            <div class="attribute" id="willpower">
+                <p>Willpower</p>
+                <p class='integer'><%= @user.character.willpower %></p>
+            </div>
+
+            <div class="attribute" id="presence">
+                <p>Presence</p>
+                <p class='integer'><%= @user.character.presence %></p>
+            </div>
+
         </div>
-    <% end %>
 
-    <%= link_to characters_path do %>
-        <div class='link'>
-            <i class="fas fa-users"></i>
-        </div>
-    <% end %>
+            <div class="skills-list">
 
-    <%= link_to vehicles_path do %>
-        <div class='link'>
-            <i class="fas fa-fighter-jet"></i>
-        </div>
-    <% end %>
+                <div class="skills skills-general">
 
-    <%= link_to planets_path do %>
-        <div class='link'>
-            <i class="fas fa-globe"></i>
-        </div>
-    <% end %>
+                    <% @user.character.skills.each do |skill| %>
 
-    <%= link_to gear_path do %>
-        <div class='link'>
-            <i class="fas fa-campground"></i>
-        </div>
-    <% end %>
+                        <% if skill.level > 0 && skill.category == "General" %>
 
-    <%= link_to contacts_path do %>
-        <div class='link'>
-            <i class="fas fa-people-arrows"></i>
-        </div>
-    <% end%>
+                            <div class="skill <%= skill.attr.downcase %>">
+                                <p class="name"><%= link_to skill.name, edit_character_skill_path(@user.character, skill) %></p>
+                                <%= display_level(skill.level, true) %>
+                            </div>
 
-    <%= link_to store_path do %>
-        <div class='link'>
-            <i class="fas fa-cash-register"></i>
-        </div>
-    <% end %>
+                        <% end %>
 
-    <%= link_to stats_path do %>
-        <div class='link'>
-            <i class="fas fa-chart-bar"></i>
-        </div>
-    <% end %>
+                    <% end %>
 
-    <%= link_to dice_path do %>
-        <div class='link'>
-            <i class="fas fa-dice"></i>
-        </div>
-    <% end %>
+                </div>
 
-</div>
+                <div class="skills skills-other">
+
+                    <% @user.character.skills.each do |skill| %>
+
+                        <% if skill.level > 0 && skill.category != "General" %>
+
+                            <div class="skill <%= skill.attr.downcase %>">
+                                <p class="name"><%= link_to skill.name, edit_character_skill_path(@user.character, skill) %></p>
+                                <%= display_level(skill.level, true) %>
+                            </div>
+
+                        <% end %>
+
+                    <% end %>
+                    
+                </div>
+
+            </div>
+
+    </section>
+
+<% end %>

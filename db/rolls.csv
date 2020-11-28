@@ -1,0 +1,421 @@
+﻿roller,character,skill,difficulty,dice,diceresuls,result
+Keith,Aleni,Stealth,Average,gggpp,sucadv;suc;null;thr;thr,sucsucthr
+Zack,Krachtig,Athletics,Average,gggbpp,adv;adv;adv;suc;fai;thrfai;,faiadvadv
+Keith,Gamorrean Guard,Vigilance,Initiative,g,advadv,advadv
+Keith,Aleni,Vigilance,Initiative,yg,null;suc,suc
+Zack,Krachtig,Cool,Initiative,gb,suc;null,suc
+Zack,Krachtig,Ranged (Light),Easy,gggbp,adv;adv;advadv;null;thr,advadvadv
+Keith,Gamorrean Guard,Melee,Easy,yyygp,adv;tri;tri;suc;thr,sucsucsuctritri
+Keith,Aleni,Ranged (Heavy),Easy,yygbbr,sucadv;suc;sucadv;null;advadv;thrthr,sucsucsucadvadv
+Zack,Krachtig,Destiny,Destiny,w,dspdsp,dspdsp
+Keith,Aleni,Destiny,Destiny,w,dspdsp,dspdsp
+Keith,Gamorrean Guard,Melee,Average,yygppk,sucadv;sucsuc;suc;thr;thr;null,sucsucsucsucthr
+Keith,Aleni,Ranged (Heavy),Easy,yygr,advadv;suc;suc;thrthr,sucsuc
+Zack,Krachtig,Brawl,Easy,yggbp,null;suc;adv;adv;thr,sucadv
+Zack,Krachtig,Mechanics,Hard,yygbppp,advadv;sucadv;suc;null;thr;thrthr;thr,sucsucthr
+Zack,Krachtig,Coercion,Opposed,ygbrp,suc;advadv;sucadv;thrthr;thrthr,sucsucthr
+Zack,Krachtig,Computers,Average,yggppk,sucsuc;suc;suc;fai;fai;thr,sucsucthr
+Zack,Krachtig,Destiny,Destiny,w,dsp,dsp
+Keith,Aleni,Destiny,Destiny,w,lsp,lsp
+Zack,Krachtig,Computers,Average,yggppk,sucadv;sucadv;sucsuc;thr;thrfai;fai,sucsuc
+Zack,Krachtig,Destiny,Destiny,w,dspdsp,dspdsp
+Keith,Aleni,Destiny,Destiny,w,dsp,dsp
+Zack,Krachtig,Mechanics,Hard,yygbppp,sucadv;sucsuc;suc;sucadv;thr;fai;null,sucsucsucsucthr
+Keith,Storm Trooper,Athletics,Average,gggppk,sucsuc;null;sucadv;thrthr;fai;thr,sucsucthrthr
+Keith,Storm Trooper,Athletics,Average,gggppk,sucsuc;advadv;adv;null;fai;thr,sucadvadv
+Keith,Aleni,Athletics,Average,ggpp,null;adv;faifai;thrthr,faifaithr
+Zack,Krachtig,Athletics,Average,gggpp,advadv;suc;sucsuc;thr;thrthr,sucsucsucthr
+Keith,Storm Trooper,Athletics,Average,gggppkk,sucsuc;adv;suc;fai;faifai;null;fai,faiadv
+Keith,Storm Trooper,Athletics,Average,gggbppk,sucadv;adv;suc;adv;thr;thr;fai,sucadv
+Keith,Aleni,Athletics,Average,ggpp,advadv;sucadv;null;thr,sucadvadv
+Zack,Krachtig,Athletics,Average,gggpp,sucadv;adv;sucsuc;fai;thr;,sucsucadv
+Keith,Storm Trooper,Athletics,Average,gggbbpp,adv;null;suc;suc;null;thr;null,sucsuc
+Keith,Storm Trooper,Athletics,Average,gggpp,suc;advadv;suc;thr;thr,sucsuc
+Keith,Aleni,Athletics,Average,gggbbbpp,sucsuc;adv;sucsuc;adv;suc;adv;thrthr;faifai,sucsucsucadv
+Zack,Krachtig,Ranged (Heavy),Hard,gggrpp,suc;adv;adv;faifai;thrfai;thrfai,faifaifai
+Keith,Storm Trooper,Athletics,Average,gggppk,advadv;sucadv;adv;null;thrthr;thr,sucadv
+Keith,Storm Trooper,Athletics,Average,gggppk,suc;advadv;sucsuc;thr;thr;fai,sucsuc
+Keith,Aleni,Athletics,Average,ggbpp,advadv;suc;advadv;thrfai;thr,advadv
+Zack,Krachtig,Coordination,Easy,yygp,sucadv;null;suc;faifai,adv
+Keith,Storm Trooper,Cool,Initiative,yyg,sucadv;sucadv;adv,sucsucadvadvadv
+Keith,Storm Trooper,Cool,Initiative,yyg,sucadv;advadv;sucsuc,sucsucsucadvadvadv
+Keith,Aleni,Cool,Initiative,yg,null;advadv,advadv
+Zack,Krachtig,Cool,Initiative,g,advadv,advadv
+Zack,Krachtig,Skulduggery,Average,yggppk,sucadv;sucadv;suc;thr;null;thr,sucsucsuc
+Keith,Aleni,Coordination,Average,yggbpp,sucsuc;sucsuc;adv;adv;thrthr;thrfai,sucsucsucthr
+Keith,Storm Trooper,Ranged (Heavy),Easy,yygp,sucsuc;advadv;adv;thr,sucsucadvadv
+Keith,Storm Trooper,Ranged (Heavy),Easy,yygp,null;sucadv;suc;null,sucsucadv
+Keith,Aleni,Survival,Easy,yygp,sucadv;sucadv;adv;thrfai,sucadvadv
+Keith,Aleni,Medicine,Average,gggpp,sucadv;sucsuc;suc;null;null,sucsucsucsucadv
+Zack,Krachtig,Medicine,Average,gggpp,null;sucadv;adv;thr;fai,adv
+Zack,Krachtig,Deception,Opposed,gggbrpp,suc;suc;null;suc;fai;thrthr;faifai,thrthr
+Zack,Krachtig,Mechanics,Easy,yygp,sucadv;sucadv;null;thr,sucsucadv
+Keith,Tie Fighter Pilot,Cool,Initiative,yg,advadv;suc,sucadvadv
+Keith,Aleni,Vigilance,Initiative,yg,suc;adv,sucadv
+Zack,Krachtig,Vigilance,Initiative,gg,null;null,nil
+Keith,Tie Fighter Pilot,Gunnery,Average,yggbppk,sucadv;null;suc;null;thrfai;thr;fai,thr
+Keith,Aleni,Piloting (Space),Hard,yygbppp,advadv;tri;suc;advadv;thr;thrthr;fai,sucadvtri
+Zack,Krachtig,Gunnery,Average,gggbbpp,adv;adv;sucadv;sucadv;null;thrfai;thrthr,sucadv
+Keith,Tie Fighter Pilot,Gunnery,Average,yggrpkk,null;adv;sucadv;thrthr;null;thr;null,sucthr
+Zack,Krachtig,Gunnery,Average,gggbpp,sucsuc;adv;adv;suc;thrthr;faifai,suc
+Keith,Aleni,Piloting (Space),Hard,yygrpp,sucadv;sucsuc;sucadv;null;fai;thrfai,sucsucadv
+Keith,Tie Fighter Pilot,Gunnery,Average,gggrpkk,sucadv;sucadv;null;thrfai;fai;fai;thr,fai
+Zack,Krachtig,Gunnery,Average,gggbbpp,sucadv;sucsuc;advadv;advadv;adv;thrthr;null,sucsucsucadvadvadvadv
+Keith,Aleni,Mechanics,Average,gggpp,advadv;suc;suc;thr;faifai,adv
+Keith,Trex,Coordination,Easy,yygp,sucsuc;advadv;suc;null,sucsucsucadvadv
+Zack,Krachtig,Mechanics,Average,yygbbpp,suc;suc;sucadv;suc;sucadv;fai;thr,sucsucsucsucadv
+Keith,Aleni,Piloting (Space),Hard,yygppp,sucsuc;sucsuc;sucsuc;thrthr;thr;fai,sucsucsucsucsucthrthrthr
+Keith,Tie Fighter Pilot,Gunnery,Average,yygrpk,tri;sucadv;suc;null;thrfai;null,sucsuctri
+Zack,Krachtig,Gunnery,Average,gggbbpp,suc;suc;sucsuc;sucadv;suc;thrthr;thrthr,sucsucsucsucsucsucthrthrthr
+Keith,Aleni,Piloting (Space),Hard,yyyrpp,adv;sucadv;suc;thr;thr;fai,suc
+Keith,Tie Fighter Pilot,Gunnery,Average,gggrpk,suc;adv;adv;faifai;null;thr,faiadv
+Keith,Tie Fighter Pilot,Gunnery,Average,yggrpk,suc;sucsuc;suc;thrfai;thr;null,sucsucsucthrthr
+Zack,Krachtig,Gunnery,Average,gggbbbppk,sucadv;adv;null;sucadv;sucadv;null;thrfai;thr;thr,sucsucadv
+Keith,Aleni,Astrogation,Easy,yggp,advadv;suc;sucadv;fai,sucadvadvadv
+Keith,Aleni,Medicine,Easy,gggp,adv;advadv;adv;thr,advadvadv
+Zack,Krachtig,Medicine,Easy,gggpp,suc;sucadv;adv;thr;null,sucsucadv
+Zack,Krachtig,Mechanics,Average,yygpp,sucadv;sucsuc;sucadv;thrthr;faifai,sucsuc
+Keith,Aleni,Mechanics,Average,gggpp,adv;null;advadv;null;thrfai,faiadvadv
+Zack,Krachtig,Computers,Easy,yggpk,null;sucadv;advadv;thrfai;null,advadv
+Keith,Aleni,Computers,Easy,gggpk,sucadv;sucadv;sucadv;thrthr;thr,sucsucsuc
+Zack,Krachtig,Perception,Average,yggbpp,suc;adv;adv;null;thr;fai,adv
+Zack,Krachtig,Computers,Easy,yggpk,suc;sucadv;adv;thrthr;null,sucsuc
+Zack,Krachtig,Computers,Average,yggppk,sucsuc;adv;sucadv;thr;thr;fai,sucsuc
+Keith,Aleni,Perception,Average,yggpp,suc;adv;adv;fai;thr,adv
+Keith,Aleni,Destiny,Destiny,w,lsplsp,lsplsp
+Zack,Krachtig,Mechanics,Hard,yygpppk,null;advadv;advadv;thrthr;null;faifai;thr,faifaiadv
+Zack,Krachtig,Destiny,Destiny,w,lsplsp,lsplsp
+Keith,Aleni,Mechanics,Hard,yggbpppk,sucsuc;adv;sucadv;advadv;thr;thr;faifai;fai,advadv
+Zack,Krachtig,Astrogation,Easy,yggpk,sucadv;suc;suc;fai;null,sucsucadv
+Zack,Krachtig,Mechanics,Average,yygpp,tri;null;sucsuc;thrthr;thr,sucsucsucthrthrthrtri
+Zack,Krachtig,Computers,Easy,yggbpk,adv;suc;sucsuc;null;thr;fai,sucsuc
+Zack,Krachtig,Perception,Average,yggbbbpp,sucsuc;sucadv;sucsuc;adv;null;advadv;thrfai;thrfai,sucsucsucadvadv
+Zack,Krachtig,Computers,Easy,yggbp,tri;sucadv;sucsuc;advadv;fai,sucsucsucadvadvadvtri
+Zack,Krachtig,Computers,Easy,yggbp,sucadv;suc;sucsuc;advadv;fai,sucsucsucadvadvadv
+Zack,Krachtig,Perception,Hard,yggppp,null;adv;suc;null;null;null,sucadv
+Zack,Krachtig,Cool,Average,gppw,suc;null;thr;dsp,sucthrdsp
+Keith,Aleni,Cool,Easy,ygpw,suc;sucsuc;thr;lsplsp,sucsucsucthrlsplsp
+Zack,Krachtig,Skulduggery,Average,yggppw,tri;adv;adv;thrfai;thrfai;dsp,faitridsp
+Keith,Aleni,Cool,Easy,ygpw,sucadv;sucsuc;thr;lsp,sucsucsuclsp
+Zack,Krachtig,Mechanics,Hard,yygppp,sucadv;sucadv;sucsuc;thrfai;thrfai;thrthr,sucsucthrthr
+Keith,Aleni,Knowledge (Xenology),Hard,yygppp,sucadv;sucadv;adv;thr;thr;thr,sucsuc
+Zack,Krachtig,Knowledge (Outer Rim),Hard,yggppp,suc;advadv;null;thrfai;thrfai;thrfai,faifaithr
+Zack,Krachtig,Mechanics,Average,yygbpp,sucadv;sucsuc;adv;suc;thr;faifai,sucsucadv
+Zack,Krachtig,Knowledge (Outer Rim),Average,yggpp,sucadv;advadv;adv;thrthr;fai,advadv
+Keith,Aleni,Knowledge (Underworld),Average,gggpp,null;adv;suc;thrthr;thr,sucthrthr
+Zack,Krachtig,Knowledge (Core Worlds),Average,gggbpp,adv;sucsuc;adv;suc;fai;thr,sucadv
+Keith,Aleni,Stealth,Opposed,yggrp,tri;adv;advadv;thr;thrfai,advtri
+Zack,Krachtig,Mechanics,Easy,yygbp,null;advadv;null;suc;thr,sucadv
+Keith,Aleni,Charm,Opposed,ggpp,null;adv;thr;thr,thr
+Keith,Bounty Hunter,Cool,Initiative,gg,adv;adv,advadv
+Keith,Bounty Hunter,Cool,Initiative,gg,suc;suc,sucsuc
+Keith,Aleni,Vigilance,Initiative,yg,sucsuc;suc,sucsucsuc
+Zack,Krachtig,Vigilance,Initiative,gg,suc;sucadv,sucsucadv
+Zack,Krachtig,Ranged (Heavy),Average,yggppk,adv;suc;adv;null;thr;null,sucadv
+Keith,Aleni,Ranged (Heavy),Average,yygbppk,advadv;sucadv;suc;null;faifai;thrthr;fai,faiadv
+Keith,Bounty Hunter,Ranged (Heavy),Average,yggppk,null;suc;adv;thrthr;thrthr;null,sucthrthrthr
+Keith,B'ura B'an,Cool,Initiative,r,faifai,faifai
+Keith,Bounty Hunter,Ranged (Heavy),Easy,yggrk,sucsuc;adv;sucadv;thrfai;null,sucsucadv
+Keith,B'ura B'an,Ranged (Light),Easy,ggbp,null;adv;adv;null,advadv
+Zack,Krachtig,Ranged (Heavy),Easy,yggbbbp,sucsuc;adv;advadv;advadv;advadv;null;thr,sucsucadvadvadvadvadvadv
+Keith,Aleni,Ranged (Heavy),Easy,yyybr,tri;advadv;sucadv;suc;thr,sucsucsucadvadvtri
+Zack,Krachtig,Mechanics,Easy,yygbp,tri;sucadv;suc;null;thr,sucsucsuctri
+Zack,Krachtig,Mechanics,Hard,yygppp,sucsuc;sucsuc;suc;thrfai;faifai;null,sucsucthr
+Keith,Aleni,Cool,Initiative,yg,suc;suc,sucsuc
+Zack,Krachtig,Vigilance,Initiative,ggg,adv;adv;sucsuc,sucsucadvadv
+Keith,Aleni,Ranged (Heavy),Average,yygbpp,suc;advadv;advadv;suc;thr;faifai,advadvadv
+Zack,New Meen Villager,Cool,Initiative,g,null,nil
+Zack,New Meen Villager,Cool,Initiative,g,sucadv,sucadv
+Keith,Aqualish Thug,Vigilance,Initiative,g,advadv,advadv
+Keith,Aqualish Thug,Vigilance,Initiative,g,advadv,advadv
+Zack,Krachtig,Ranged (Heavy),Average,yggbbbbpp,adv;suc;sucadv;suc;advadv;advadv;adv;thr;thr,sucsucsucadvadvadvadvadv
+Keith,Aleni,Ranged (Heavy),Average,yygbbbppk,advadv;suc;adv;sucadv;suc;null;thr;fai;thr,sucsucadvadv
+Zack,Krachtig,Ranged (Heavy),Average,yggbbbpp,tri;adv;adv;null;null;sucadv;thr;thrfai,sucadvtri
+Zack,New Meen Villager,Ranged (Heavy),Average,ygbbppk,suc;null;null;suc;faifai;faifai;thr,faifaithr
+Keith,Angu Drombb,Cool,Initiative,g,suc,suc
+Keith,Aqualish Thug,Cool,Initiative,g,sucsuc,sucsuc
+Zack,New Meen Villager,Ranged (Light),Average,yyppk,tri;suc;thr;thr;fai,sucthrthrtri
+Zack,New Meen Villager,Ranged (Light),Easy,ygpk,null;sucsuc;fai;thr,sucthr
+Zack,Krachtig,Ranged (Light),Easy,yypkk,adv;suc;faifai;thr;thr,faithr
+Keith,Aleni,Ranged (Heavy),Easy,yygbpk,tri;null;advadv;advadv;faifai;fai,faifaiadvadvadvadvtri
+Keith,Krachtig,Ranged (Heavy),Easy,yggbbbbpk,tri;null;sucsuc;adv;advadv;sucadv;sucadv;thrfai;null,sucsucsucsucadvadvadvadvtri
+Keith,Aqualish Thug,Ranged (Light),Easy,yybbbrk,sucsuc;sucadv;adv;adv;sucadv;faifai;thr,sucsucadvadvadv
+Zack,New Meen Villager,Ranged (Light),Easy,yybpk,advadv;sucadv;null;faifai;null,faiadvadvadv
+Keith,Angu Drombb,Ranged (Light),Easy,yybbbpkk,advadv;suc;suc;null;null;thr;thr;thr,sucsucthr
+Zack,New Meen Villager,Ranged (Light),Easy,ygbbpk,sucadv;sucsuc;sucadv;advadv;faifai;null,sucsucadvadvadvadv
+Zack,New Meen Villager,Ranged (Light),Easy,ygbbpk,advadv;adv;null;adv;thr;fai,faiadvadvadv
+Zack,Krachtig,Ranged (Heavy),Easy,yggbbbbp,sucadv;adv;sucsuc;null;suc;sucadv;sucadv;thrfai,sucsucsucsucsucadvadvadv
+Keith,Aqualish Thug,Ranged (Light),Easy,ygbpk,advadv;suc;null;thr;null,sucadv
+Zack,New Meen Villager,Ranged (Light),Easy,yybbpk,adv;sucsuc;null;adv;fai;null,sucadvadv
+Keith,Aleni,Ranged (Heavy),Easy,yyybbrk,sucadv;sucadv;suc;null;null;thrthr;thr,sucsucsucthr
+Keith,Aleni,Perception,Easy,yggbp,suc;adv;null;advadv;faifai,faiadvadvadv
+Zack,Krachtig,Ranged (Light),Simple,yggb,sucadv;advadv;suc;adv,sucsucadvadvadvadv
+Zack,Krachtig,Computers,Hard,yygbbppp,adv;tri;suc;null;adv;thr;thr;faifai,tri
+Zack,Krachtig,Medicine,Easy,gggp,adv;null;suc;thr,suc
+Zack,Krachtig,Medicine,Easy,gggp,null;suc;sucsuc;thr,sucsucsucthr
+Keith,Aleni,Destiny,Destiny,w,dspdsp,dspdsp
+Keith,Aleni,Perception,Hard,yggppp,suc;adv;advadv;thr;fai;thr,adv
+Zack,Krachtig,Perception,Hard,yggbppp,sucsuc;null;null;null;thrfai;thrthr;faifai,faithrthrthr
+Keith,Aleni,Negotiation,Average,ggbbpp,suc;null;null;adv;thrthr;fai,thr
+Keith,Aleni,Negotiation,Average,ggbpp,suc;advadv;null;faifai;thr,faiadv
+Zack,Krachtig,Negotiation,Average,gbpp,advadv;sucadv;null;thr,sucadvadv
+Zack,Krachtig,Mechanics,Easy,yygp,suc;sucsuc;adv;null,sucsucsucadv
+Zack,Krachtig,Mechanics,Hard,yygbppp,null;suc;advadv;adv;thrthr;thrfai;thrthr,thrthr
+Zack,Krachtig,Mechanics,Average,yygbpp,tri;sucsuc;advadv;null;thr;thrfai,sucsuctri
+Zack,Krachtig,Computers,Average,yggpp,tri;sucadv;adv;null;thrthr,sucsuctri
+Zack,Krachtig,Mechanics,Easy,yygp,suc;advadv;sucsuc;thrfai,sucsucadv
+Zack,Krachtig,Mechanics,Average,yygpp,null;sucadv;sucadv;thr;faifai,adv
+Zack,Krachtig,Mechanics,Simple,yyg,tri;suc;adv,sucsucadvtri
+Zack,Krachtig,Mechanics,Simple,yyg,sucadv;sucadv;suc,sucsucsucadvadv
+Zack,Krachtig,Mechanics,Simple,yyg,tri;suc;sucadv,sucsucsucadvtri
+Zack,Krachtig,Mechanics,Simple,yyg,sucadv;null;suc,sucsucadv
+Zack,Krachtig,Computers,Simple,ygg,null;adv;null,adv
+Zack,Krachtig,Computers,Simple,ygg,tri;suc;suc,sucsucsuctri
+Zack,Krachtig,Mechanics,Hard,yygppp,sucadv;sucadv;adv;fai;fai;thrthr,adv
+Zack,Krachtig,Mechanics,Hard,yygbppp,null;sucadv;null;null;faifai;fai;faifai,faifaifaifaiadv
+Zack,Krachtig,Mechanics,Hard,yygppp,null;adv;adv;thr;thrthr;fai,faithr
+Zack,Krachtig,Mechanics,Hard,yygppp,sucadv;tri;null;thr;fai;fai,tri
+Zack,Krachtig,Mechanics,Hard,yygbbppp,adv;sucadv;adv;adv;sucadv;thr;faifai;faifai,faifaiadvadvadvadv
+Zack,Krachtig,Mechanics,Hard,yygbbbbppp,sucadv;sucsuc;null;sucadv;suc;null;null;thr;fai;fai,sucsucsucadv
+Zack,Krachtig,Mechanics,Average,yygpp,sucadv;adv;suc;thr;thrthr,sucsucthr
+Zack,Krachtig,Destiny,Destiny,w,lsplsp,lsplsp
+Zack,Krachtig,Mechanics,Hard,yygppp,null;advadv;adv;thrfai;faifai;thr,faifaifaiadv
+Keith,Aleni,Mechanics,Hard,gggppp,adv;suc;sucsuc;thr;thr;fai,sucsucthr
+Keith,Aleni,Cool,Average,ygppw,advadv;sucsuc;faifai;faifai;lsp,faifaiadvadvlsp
+Keith,Aleni,Cool,Average,ygbppw,suc;suc;suc;fai;thr;lsp,sucsucthrlsp
+Keith,Aleni,Cool,Average,ygppw,sucsuc;sucadv;null;thr;lsplsp,sucsucsuclsplsp
+Keith,Aleni,Cool,Average,ygppw,sucadv;suc;thr;thr;dsp,sucsucthrdsp
+Keith,Aleni,Cool,Average,ygppkw,suc;adv;thr;fai;fai;dsp,faidsp
+Keith,Aleni,Cool,Average,ygppw,tri;adv;fai;null;lsplsp,advtrilsplsp
+Keith,Aleni,Cool,Average,ygppw,adv;suc;fai;thr;lsplsp,lsplsp
+Zack,Krachtig,Mechanics,Hard,yygppp,sucsuc;suc;suc;thrfai;null;thr,sucsucsucthrthr
+Keith,Aleni,Negotiation,Easy,ggp,advadv;sucadv;fai,advadvadv
+Zack,Krachtig,Negotiation,Easy,gbbbpk,sucadv;null;null;null;thr;null,suc
+Keith,Aleni,Perception,Easy,yggp,tri;null;advadv;thrfai,advtri
+Keith,Aleni,Coordination,Average,yggbpp,sucadv;suc;adv;advadv;faifai;null,advadvadvadv
+Keith,Aleni,Perception,Easy,yggbbbbp,sucadv;sucadv;sucsuc;null;adv;suc;adv;thr,sucsucsucsucsucadvadvadv
+Keith,Aleni,Survival,Hard,yygbbbppp,adv;sucsuc;null;null;suc;null;faifai;thrfai;thrfai,faithr
+Keith,Aleni,Perception,Average,yygpp,sucadv;sucadv;advadv;thr;thr,sucsucadvadv
+Keith,Aleni,Coordination,Average,gggbbpp,adv;sucadv;adv;adv;null;faifai;thr,faiadvadvadv
+Keith,Aleni,Coordination,Average,gggbbbppk,adv;adv;suc;null;null;null;thr;faifai;fai,faifaiadv
+Keith,Aleni,Survival,Easy,yygbp,suc;sucadv;suc;adv;thr,sucsucsucadv
+Keith,Aleni,Vigilance,Average,ygbpp,sucadv;adv;sucadv;thrfai;fai,advadv
+Keith,Aleni,Ranged (Heavy),Easy,yygbbpkk,advadv;suc;suc;suc;null;thr;null;null,sucsucsucadv
+Zack,Blurrg,Brawl,Easy,ggpk,advadv;adv;thrthr;fai,faiadv
+Keith,Aleni,Ranged (Heavy),Easy,yygbbp,sucadv;advadv;adv;adv;advadv;fai,advadvadvadvadvadvadv
+Zack,Krachtig,Medicine,Easy,gggp,null;advadv;sucadv;faifai,faiadvadvadv
+Keith,Aleni,Cool,Average,ygppw,sucadv;sucsuc;thr;thr;dsp,sucsucsucthrdsp
+Keith,Aleni,Cool,Average,ygppw,sucadv;adv;thr;faifai;dsp,faiadvdsp
+Keith,Aleni,Cool,Average,ygppw,sucsuc;sucadv;faifai;null;dspdsp,sucadvdsp
+Keith,Aleni,Cool,Average,ygppw,sucadv;suc;fai;faifai;dspdsp,faiadvdspdsp
+Keith,Aleni,Cool,Average,ygppw,tri;sucsuc;thrfai;thr;dspdsp,sucsucthrthrtridspdsp
+Keith,Aleni,Cool,Average,ygppkw,sucadv;suc;null;null;fai;dsp,sucadvdsp
+Keith,Aleni,Cool,Average,ygppw,sucadv;sucsuc;null;thr;dsp,sucsucsucdsp
+Zack,Krachtig,Astrogation,Easy,yggp,advadv;adv;suc;thr,sucadvadv
+Keith,Geonosian Guard,Perception,Opposed,ygrpp,sucadv;adv;thr;fai;thrthr,thr
+Keith,Geonosian Guard,Perception,Opposed,ygrppk,sucadv;sucsuc;des;faifai;thrthr;null,thrdes
+Keith,Aleni,Charm,Hard,ggbppp,advadv;suc;suc;thr;thrthr;thr,sucsucthrthr
+Keith,Aleni,Negotiation,Opposed,ggbrp,advadv;null;sucadv;thrthr;thr,suc
+Keith,Aleni,Perception,Average,yggbpp,null;suc;suc;suc;thrfai;thr,sucsucthrthr
+Keith,Aleni,Charm,Average,ygbppk,sucsuc;null;null;thr;thrthr;thr,sucsucthrthrthrthr
+Keith,Aleni,Charm,Average,ggbbpp,null;adv;sucadv;advadv;fai;fai,faiadvadvadvadv
+Keith,Aleni,Perception,Easy,yggbp,suc;advadv;adv;advadv;thrfai,advadvadvadv
+Keith,Aleni,Charm,Average,ggbpp,sucadv;null;null;thr;thr,sucthr
+Keith,Aleni,Vigilance,Initiative,yg,suc;sucsuc,sucsucsuc
+Zack,Krachtig,Vigilance,Initiative,yg,suc;adv,sucadv
+Keith,Vrixx'tt,Cool,Initiative,gg,sucadv;null,sucadv
+Zack,Krachtig,Ranged (Heavy),Average,yggbrp,tri;suc;sucadv;null;des;thr,sucsuctrides
+Keith,Aleni,Ranged (Heavy),Average,yygbrp,suc;advadv;advadv;null;faifai;thr,faiadvadvadv
+Keith,Vrixx'tt,Ranged (Heavy),Hard,yyggrppk,suc;suc;suc;sucadv;des;thr;fai;null,sucsucdes
+Keith,Aleni,Ranged (Heavy),Average,yygbbppk,sucsuc;tri;sucsuc;suc;advadv;thr;thr;thr,sucsucsucsucsucsucthrtri
+Keith,Aleni,Medicine,Easy,yygp,sucsuc;sucsuc;sucadv;faifai,sucsucsucadv
+Keith,Aleni,Destiny,Destiny,w,lsp,lsp
+Zack,Krachtig,Destiny,Destiny,w,lsp,lsp
+Zack,Krachtig,Computers,Easy,yggbbbpk,sucsuc;suc;sucadv;null;suc;sucadv;thr;thr,sucsucsucsucsucsuc
+Zack,Krachtig,Perception,Simple,ygg,sucadv;suc;suc,sucsucsucadv
+Keith,Aleni,Perception,Simple,ygg,sucsuc;null;suc,sucsucsuc
+Zack,Krachtig,Computers,Average,yggbbbpp,sucadv;null;sucadv;null;adv;sucadv;faifai;thrthr,sucadvadv
+Zack,Krachtig,Computers,Hard,yggbbbbbppp,sucsuc;adv;suc;null;null;adv;advadv;null;thrthr;thr;fai,sucsucadv
+Zack,Krachtig,Computers,Hard,yggbbbbppp,null;adv;sucadv;null;null;adv;adv;thr;thr;thr,sucadv
+Zack,Krachtig,Computers,Hard,yggbbbbppp,sucsuc;suc;suc;null;suc;suc;null;thr;thr;thr,sucsucsucsucsucsucthrthrhtr
+Keith,Aleni,Knowledge (Xenology),Daunting,yygpppp,suc;adv;adv;null;thr;thr;fai,nil
+Keith,Aleni,Stealth,Easy,yggbp,sucsuc;adv;suc;null;thr,sucsucsuc
+Keith,Aleni,Vigilance,Initiative,yg,suc;sucsuc,sucsucsuc
+Zack,Krachtig,Vigilance,Initiative,gg,suc;adv,sucadv
+Zack,Lowhhrick,Vigilance,Initiative,yg,sucadv;sucsuc,sucsucsucadv
+Zack,41-VEX,Vigilance,Initiative,yg,sucadv;adv,sucadvadv
+Keith,Geonosian Guard,Vigilance,Initiative,y,null,nil
+Keith,Gamorrean Guard,Vigilance,Initiative,yg,sucadv;null,sucadv
+Zack,Pash,Cool,Initiative,ggg,sucsuc;null;adv,sucsucadv
+Zack,Oskara,Cool,Initiative,ggg,suc;adv;adv,sucadvadv
+Keith,Teemo the Hutt,Vigilance,Initiative,ggggg,adv;adv;suc;adv;adv,sucadvadvadvadv
+Zack,Oskara,Ranged (Heavy),Average,yyggbpp,null;suc;adv;sucadv;null;thr;thrfai,suc
+Zack,Pash,Ranged (Light),Average,yygbpp,sucadv;sucadv;sucadv;null;thr;thrfai,sucsucadv
+Keith,Aleni,Ranged (Heavy),Average,yygbbpp,sucsuc;sucadv;advadv;advadv;sucadv;thr;thr,sucsucsucsucadvadvadvadv
+Zack,Krachtig,Ranged (Light),Easy,yggbp,adv;sucadv;adv;sucadv;null,sucsucadvadvadvadv
+Zack,41-VEX,Ranged (Light),Easy,ygbbbp,tri;advadv;advadv;suc;adv;fai,sucadvadvadvadvadvtri
+Zack,Lowhhrick,Melee,Easy,yyggbbp,advadv;tri;sucsuc;suc;suc;advadv;thr,sucsucsucsucsucadvadvadvtri
+Keith,Gamorrean Guard,Ranged (Light),Easy,yggp,sucsuc;advadv;sucadv;thr,sucsucsucadvadv
+Keith,Teemo the Hutt,Ranged (Light),Average,ygppk,suc;sucadv;fai;thrfai;thr,thr
+Keith,Aleni,Ranged (Heavy),Average,yygbbbrp,suc;sucadv;advadv;null;null;null;thr;thr,sucsucadv
+Zack,Lowhhrick,Melee,Average,yyggbbbbpp,tri;sucadv;sucsuc;adv;advadv;adv;null;suc;thrthr;thrthr,sucsucsucsucsucadvtri
+Zack,Lowhhrick,Melee,Average,yyggbbbbpp,tri;sucadv;sucadv;sucsuc;advadv;null;advadv;adv;thrfai;thr,sucsucsucsucadvadvadvadvadvtri
+Zack,Krachtig,Ranged (Heavy),Easy,yggbbbbrk,suc;suc;null;null;adv;suc;null;des;fai,sucadvdes
+Keith,Thweek,Ranged (Light),Easy,yggp,sucsuc;sucadv;sucsuc;thr,sucsucsucsucsuc
+Keith,Teemo the Hutt,Ranged (Light),Average,ygppkk,advadv;adv;null;null;thr;thr,adv
+Zack,Pash,Ranged (Light),Easy,yygbbp,sucsuc;sucadv;suc;null;advadv;fai,sucsucsucadvadvadv
+Zack,Oskara,Ranged (Heavy),Easy,yyggbbbbp,sucadv;sucsuc;sucsuc;sucsuc;sucadv;adv;null;suc;thr,sucsucsucsucsucsucsucsucsucadvadv
+Zack,Lowhhrick,Melee,Average,yyggbbbbbpp,tri;sucadv;adv;sucadv;adv;suc;null;null;null;fai;thr,sucsucsucadvadvadvtri
+Keith,Aleni,Ranged (Heavy),Easy,yygbr,advadv;sucadv;advadv;suc;fai,sucadvadvadvadvadv
+Zack,Krachtig,Ranged (Heavy),Easy,yggbbbbbbr,tri;null;adv;suc;adv;null;suc;null;adv;thr,sucsucsucadvadvtri
+Keith,Thweek,Ranged (Light),Easy,yggp,adv;adv;advadv;fai,faiadvadvadvadv
+Keith,Teemo the Hutt,Melee,Average,yyggggppkkkk,suc;advadv;advadv;suc;advadv;adv;thr;thr;null;thr;thr;null,sucsucadvadvadv
+Keith,Gamorrean Guard,Melee,Easy,ygggp,sucadv;suc;sucadv;adv;faifai,sucadvadvadv
+Zack,Pash,Ranged (Light),Easy,yygbpk,null;null;adv;sucadv;thr;null,sucadv
+Zack,Oskara,Ranged (Heavy),Easy,yyggbbp,tri;sucadv;sucadv;suc;null;null;thr,sucsucsucsucadvtri
+Keith,Aleni,Ranged (Heavy),Average,yyybbbrp,sucsuc;adv;sucadv;null;null;sucadv;thrfai;faifai,sucadvadv
+Zack,Krachtig,Coercion,Average,ggbbbrp,suc;adv;null;adv;advadv;des;faifai,faifaiadvadvadvadvdes
+Zack,Krachtig,Mechanics,Easy,yygbp,suc;sucadv;adv;null;fai,sucadvadv
+Zack,Krachtig,Mechanics,Average,yygbbbpp,sucadv;sucadv;adv;suc;suc;advadv;thrthr;fai,sucsucsucadvadvadv
+Zack,41-VEX,Medicine,Average,yyggbpp,null;suc;advadv;suc;advadv;thr;null,sucsucadvadvadv
+Zack,41-VEX,Medicine,Average,yyggbppp,tri;sucadv;sucsuc;null;advadv;thr;faifai;thrfai,sucadvtri
+Zack,Krachtig,Perception,Average,yggpp,sucadv;sucadv;sucadv;fai;thrthr,sucsucadv
+Keith,Aleni,Perception,Average,yggbpp,adv;adv;null;suc;fai;thrthr,nil
+Keith,Aleni,Charm,Easy,ggp,null;suc;null,suc
+Zack,Krachtig,Charm,Easy,gp,suc;thrthr,sucthrthr
+Zack,Krachtig,Coordination,Easy,yygp,sucadv;tri;null;thrfai,suctri
+Keith,Aleni,Coordination,Easy,yggbp,tri;adv;sucadv;advadv;thr,sucsucadvadvadvtri
+Keith,Aleni,Negotiation,Easy,ygbp,tri;adv;null;faifai,faiadvtri
+Keith,Aleni,Negotiation,Opposed,ygbpp,sucadv;sucadv;sucadv;thr;thr,sucsucsucadv
+Keith,Aleni,Negotiation,Average,ygbbpp,tri;suc;suc;null;thr;faifai,sucthrtri
+Keith,Aleni,Destiny,Destiny,w,dsp,dsp
+Zack,Krachtig,Destiny,Destiny,w,lsplsp,lsplsp
+Zack,Krachtig,Leadership,Average,gggbppk,adv;sucadv;null;adv;faifai;thr;fai,faifaiadvadv
+Zack,Krachtig,Leadership,Average,gggbbppk,null;suc;sucadv;advadv;null;thr;null;null,sucsucadvadv
+Zack,Krachtig,Leadership,Easy,gbbbp,null;advadv;advadv;sucadv;fai,advadvadvadvadv
+Zack,Guda Azad,Leadership,Easy,yggbbp,tri;suc;null;null;adv;thr,sucsuctri
+Zack,Krachtig,Computers,Average,yggpp,sucadv;sucsuc;sucsuc;thr;thr,sucsucsucsucsucthr
+Zack,Krachtig,Negotiation,Opposed,gbrp,sucadv;adv;thr;thr,suc
+Keith,Krachtig,Stealth,Average,yggpp,suc;suc;suc;thrfai;fai,sucthr
+Keith,Krachtig,Perception,Easy,yggp,suc;sucadv;suc;thrfai,sucsuc
+Keith,Krachtig,Coercion,Easy,ggp,sucadv;sucadv;thr,sucsucadv
+Keith,Krachtig,Mechanics,Easy,yygp,advadv;adv;null;thrfai,faiadvadv
+Keith,Krachtig,Mechanics,Hard,yygbbppp,suc;suc;advadv;suc;advadv;thr;fai;thr,sucsucadvadv
+Keith,Krachtig,Mechanics,Average,yygbbpp,advadv;sucadv;suc;suc;null;null;faifai,sucadvadvadv
+Keith,Krachtig,Vigilance,Initiative,ggb,adv;advadv;sucadv,sucadvadvadvadv
+Keith,Street Toughs,Cool,Initiative,gb,sucsuc;adv,sucsucadv
+Zack,Gamorrean Guard Guard,Vigilance,Initiative,g,null,nil
+Zack,Nikto Thugs,Vigilance,Initiative,g,adv,adv
+Keith,Krachtig,Mechanics,Simple,yyg,tri;sucadv;sucsuc,sucsucsucsucadvtri
+Keith,Krachtig,Ranged (Heavy),Average,yggbbpp,suc;adv;adv;suc;null;faifai;faifai,faifaiadvadv
+Keith,Street Toughs,Ranged (Light),Average,ygbbbbpp,suc;adv;null;suc;sucadv;adv;thr;thrfai,sucsucadv
+Keith,Street Toughs,Ranged (Light),Easy,ygbpk,adv;advadv;sucadv;fai;thr,advadvadv
+Keith,Krachtig,Ranged (Heavy),Average,yggbbbbppk,adv;adv;sucsuc;suc;adv;null;null;thrthr;thr;fai,sucsuc
+Zack,Nikto Thugs,Ranged (Light),Easy,ygpk,sucsuc;adv;faifai;fai,faiadv
+Keith,Street Toughs,Ranged (Light),Easy,ygbpk,adv;adv;advadv;null;null,advadvadvadv
+Keith,Street Toughs,Ranged (Light),Easy,ygbbbbpk,sucsuc;adv;advadv;sucadv;null;null;thrfai;thr,sucsucadvadv
+Keith,Krachtig,Ranged (Heavy),Average,yggbbbppk,sucsuc;advadv;sucsuc;adv;sucadv;null;fai;thrthr;null,sucsucsucsucadvadv
+Keith,R3-M1,Astrogation,Easy,yyyp,adv;null;adv;thr,adv
+Zack,Krachtig,Athletics,Average,gggppk,suc;adv;sucsuc;thr;thrfai;fai,sucadv
+Keith,Aleni,Athletics,Average,ggppk,advadv;adv;thr;faifai;fai,faifaifaiadvadv
+Zack,Krachtig,Coordination,Average,gyyppk,suc;tri;sucsuc;fai;thr;thr,sucsucsucthrthrtri
+Keith,Aleni,Athletics,Average,ggbbppk,advadv;suc;suc;suc;thrthr;thrthr;null,sucsucsucthrthr
+Keith,Aleni,Stealth,Opposed,yggbppk,null;adv;adv;null;fai;thr;null,faiadv
+Keith,Aleni,Perception,Easy,yggbbp,tri;adv;adv;suc;suc;fai,sucsucadvadvtri
+Zack,Krachtig,Computers,Easy,yggbbpk,sucadv;suc;suc;null;suc;null;thr,sucsucsucsuc
+Zack,Krachtig,Stealth,Average,gggbpp,adv;advadv;adv;sucadv;thrfai;thr,advadvadv
+Keith,Aleni,Stealth,Average,yggpp,sucadv;null;adv;faifai;thrfai,faifaiadv
+Zack,Krachtig,Stealth,Average,gggbbpp,null;suc;suc;null;sucadv;faifai;faifai,faiadv
+Keith,Aleni,Stealth,Average,ggybbpp,sucadv;suc;adv;suc;advadv;thr;thr,sucsucsucadvadv
+Keith,Aleni,Coercion,Opposed,ggrp,sucsuc;suc;fai;thr,sucsucthr
+Zack,Krachtig,Negotiation,Opposed,grp,suc;thr;thr,sucthrthr
+Keith,Aleni,Perception,Easy,yggbbp,sucadv;sucsuc;suc;null;advadv;faifai,sucsucadvadvadv
+Keith,Aleni,Coercion,Average,ggbbpp,advadv;suc;null;suc;thrfai;null,sucadv
+Keith,Aleni,Stealth,Average,yggbbppk,sucadv;sucadv;adv;advadv;sucadv;fai;thr;null,sucsucadvadvadvadvadv
+Zack,Krachtig,Stealth,Average,gggbbbppk,adv;adv;suc;sucadv;null;null;thrthr;fai;null,sucadv
+Zack,Krachtig,Athletics,Hard,gggbppp,suc;suc;sucsuc;null;null;faifai;thr,sucsucthr
+Keith,Aleni,Athletics,Hard,ggbppp,adv;sucsuc;null;thr;thrthr;thr,sucsucthrthrthr
+Zack,Krachtig,Medicine,Easy,gggp,adv;null;sucsuc;thrthr,sucsucthr
+Keith,Aleni,Negotiation,Opposed,ygbrpk,adv;advadv;null;faifai;thr;fai,faifaifaiadvadv
+Zack,Krachtig,Mechanics,Hard,yygbppp,sucadv;sucsuc;suc;sucadv;thr;fai;null,sucsucsucsucadv
+Zack,R3-M1,Astrogation,Easy,yyypk,sucadv;suc;sucsuc;thrthr;thr,sucsucsucsucthrthr
+Zack,Krachtig,Destiny,Destiny,w,dsp,dsp
+Keith,Aleni,Destiny,Destiny,w,dsp,dsp
+Zack,Krachtig,Force Sense,Force,w,lsplsp,lsplsp
+Keith,Aleni,Negotiation,Opposed,ygbbrrr,sucadv;adv;adv;adv;faifai;thrfai;fai,faifaifaiadvadvadv
+Keith,Aleni,Negotiation,Opposed,ygbbbbrrr,sucadv;sucadv;null;sucadv;adv;adv;fai;thrthr;null,sucsucadvadvadv
+Zack,Krachtig,Mechanics,Hard,yygppp,suc;advadv;null;thr;thr;thr,sucthr
+Zack,Krachtig,Mechanics,Daunting,yygpppp,sucsuc;null;null;thrthr;faifai;thr;thrfai,faithrthrthrthr
+Zack,Krachtig,Knowledge (Outer Rim),Average,yggpp,advadv;null;suc;null;thr,sucadv
+Zack,Krachtig,Knowledge (Core Worlds),Average,gggpp,sucsuc;adv;advadv;thr;thr,sucsucadv
+Zack,Krachtig,Perception,Hard,yggbpppk,sucadv;suc;null;null;null;thr;fai;fai,nil
+Keith,Aleni,Perception,Hard,yggbpppk,suc;advadv;sucadv;adv;thrfai;thr;faifai;fai,faifaiadvadv
+Keith,Yiyar Clan Member,Stealth,Opposed,gggrpp,suc;suc;null;fai;null;thr,sucthr
+Keith,Aleni,Negotiation,Easy,ygbp,sucadv;sucsuc;suc;null,sucsucsucsucadv
+Keith,Aleni,Negotiation,Simple,ygb,sucadv;sucadv;advadv,sucsucadvadvadvadv
+Zack,Krachtig,Negotiation,Simple,gg,suc;sucadv,sucsucadv
+Keith,Aleni,Negotiation,Simple,ygb,sucsuc;sucadv;advadv,sucsucsucadvadvadv
+Zack,Krachtig,Negotiation,Simple,gg,adv;adv;,advadv
+Zack,Krachtig,Negotiation,Simple,gg,suc;adv,sucadv
+Zack,Krachtig,Athletics,Hard,gggbpppk,adv;suc;suc;sucadv;thr;null;thrfai;fai,suc
+Keith,Aleni,Athletics,Hard,ggbpppk,advadv;advadv;adv;null;null;faifai;fai,faifaiadvadvadvadvadv
+Zack,Krachtig,Perception,Daunting,yggbpppp,sucsuc;null;adv;null;thr;thr;thr;thrfai,sucthrthrthr
+Zack,Krachtig,Athletics,Hard,gggbpppk,advadv;adv;adv;suc;faifai;faifai;thr;null,faifaifaiadvadvadv
+Zack,Krachtig,Force Sense,Force,w,dsp,dsp
+Keith,Aleni,Streetwise,Average,gggbpp,advadv;sucadv;adv;sucadv;faifai;fai,faiadvadvadvadvadv
+Keith,Aleni,Charm,Average,ggbbrp,null;suc;null;adv;thr;fai,nil
+Keith,Aleni,Negotiation,Hard,ygbppp,sucsuc;sucsuc;sucadv;thrthr;faifai;thr,sucsucsucthrthr
+Zack,Krachtig,Streetwise,Average,gggppkk,suc;sucadv;adv;thr;thrthr;fai;null,sucthr
+Zack,Krachtig,Knowledge (Underworld),Average,gggpp,null;sucadv;null;thr;fai,nil
+Keith,Aleni,Knowledge (Underworld),Average,gggpp,suc;suc;null;thr;thr,sucsucthrthr
+Zack,Krachtig,Streetwise,Average,gggppk,adv;adv;suc;thrfai;faifai;thr,faifai
+Keith,Aleni,Streetwise,Average,gggppk,suc;advadv;adv;fai;fai;null,faiadvadvadv
+Zack,Krachtig,Streetwise,Average,gggppk,suc;null;suc;thr;thrfai;null,sucthrthr
+Keith,Aleni,Streetwise,Average,gggppk,null;adv;adv;thr;fai;thr,fai
+Zack,Krachtig,Perception,Easy,yggbp,null;sucsuc;adv;null;fai,sucadv
+Zack,Krachtig,Negotiation,Simple,g,suc,suc
+Zack,Krachtig,Negotiation,Hard,gbppp,suc;sucadv;fai;thrthr;thr,sucthrthr
+Zack,Krachtig,Knowledge (Underworld),Average,gggpp,sucsuc;suc;adv;fai;faifai,adv
+Keith,Aleni,Negotiation,Easy,ygbp,sucsuc;advadv;sucadv;fai,sucsucadvadvadv
+Keith,Aleni,Negotiation,Average,ygbbbpp,suc;suc;adv;null;null;thr;null,sucsuc
+Keith,Aleni,Negotiation,Average,ygbbppk,adv;null;suc;null;thr;thrthr;thr,sucthrthrthr
+Keith,Aleni,Perception,Hard,yggbppp,tri;null;suc;advadv;thrthr;thr;thrthr,sucsucthrthrthrtri
+Keith,Aleni,Perception,Average,yggbpp,sucsuc;adv;suc;null;thr;thr,sucsucsucthr
+Zack,Krachtig,Perception,Hard,yggbppp,sucsuc;suc;adv;advadv;fai;thr;thr,sucsucadv
+Zack,Krachtig,Perception,Average,yggbpp,sucsuc;suc;null;null;thrfai;thr,sucsucthrthr
+Keith,Aleni,Vigilance,Initiative,yg,suc;advadv,sucadvadv
+Zack,Krachtig,Vigilance,Initiative,gg,adv;suc,sucadv
+Keith,WED Treadwell Repair Droid,Vigilance,Initiative,g,adv,adv
+Keith,Aleni,Ranged (Heavy),Average,yygbbbpp,sucsuc;null;sucsuc;sucadv;null;sucadv;faifai;thrthr,sucsucsucsuc
+Keith,Aleni,Cool,Average,ygppw,sucadv;advadv;thr;thr;dspdsp,sucadvdsp
+Keith,Aleni,Cool,Average,ygppkw,sucsuc;sucadv;thr;thrfai;null;dsp,sucsucthrdsp
+Keith,Aleni,Cool,Average,ygppkw,sucadv;adv;faifai;null;thr;dsp,faiadvdsp
+Keith,Aleni,Cool,Average,ygppkw,suc;advadv;thr;thr;fai;dsp,dsp
+Keith,Aleni,Cool,Average,ygppw,suc;advadv;thrthr;thrthr;dsp,sucthrthrdsp
+Keith,Aleni,Cool,Average,ygppkkw,sucadv;sucadv;faifai;thr;fai;thr;dsp,faidsp
+Keith,Aleni,Cool,Average,ygppw,sucsuc;null;null;thr;dspdsp,sucsucthrdspdsp
+Zack,Krachtig,Stealth,Easy,gggp,null;null;suc;thr,sucthr
+Keith,Yiyar Clan Member,Vigilance,Initiative,y,sucadv,sucadv
+Keith,Yiyar Clan Member,Vigilance,Initiative,y,sucsuc,sucsuc
+Keith,Yav Yiyar,Vigilance,Initiative,yy,adv;tri,sucadvtri
+Keith,Aleni,Vigilance,Initiative,yg,sucadv;sucsuc,sucsucsucadv
+Zack,Krachtig,Vigilance,Initiative,gg,sucsuc;advadv,sucsucadvadv
+Keith,Aleni,Ranged (Heavy),Average,yygbrpk,suc;sucadv;advadv;null;fai;thrthr;thr,suc
+Keith,Aleni,Coordination,Average,yggbpp,suc;suc;adv;adv;fai;fai,advadv
+Zack,Krachtig,Coordination,Average,yygbpp,tri;null;suc;sucadv;thrfai;thr,sucsucthrtri
+Zack,Krachtig,Brawl,Average,yygbrr,sucsuc;adv;sucadv;null;faifai;thr,sucadv
+Keith,Yiyar Clan Member,Ranged (Light),Easy,yggbpk,suc;suc;suc;null;thrthr;thr,sucsucsucthrthrthr
+Keith,Yiyar Clan Member,Ranged (Light),Easy,yggbpkk,sucsuc;sucsuc;adv;null;thrthr;fai;null,sucsucsucthr
+Keith,Yav Yiyar,Piloting (Planetary),Hard,yggpppk,tri;suc;suc;thr;thr;thr;fai,sucsucthrthrthrtri
+Keith,Yav Yiyar,Brawl,Average,gggppkk,adv;adv;advadv;null;thrfai;null;fai,faifaiadvadvadv
+Zack,Krachtig,Athletics,Hard,yggppp,suc;null;sucadv;faifai;faifai;thr,faifai
+Keith,Aleni,Ranged (Heavy),Average,yyybppk,null;sucadv;advadv;null;faifai;thrthr;null,faiadv
+Keith,Yiyar Clan Member,Ranged (Light),Easy,yggbpk,advadv;null;adv;adv;thr;null,advadvadv
+Keith,Yiyar Clan Member,Melee,Easy,yybpk,sucadv;sucadv;advadv;thr;null,sucsucadvadvadv
+Keith,Aleni,Perception,Easy,yggbp,sucsuc;advadv;suc;advadv;thr,sucsucsucadvadvadv
+Zack,Krachtig,Skulduggery,Easy,yggrk,suc;suc;null;thrfai;fai,thr
+Keith,Aleni,Ranged (Light),Easy,ygrk,sucsuc;sucsuc;thrfai;fai,sucsucthr
+Keith,Aleni,Ranged (Light),Easy,ygpk,advadv;adv;thrthr;fai,faiadv
+Zack,Krachtig,Skulduggery,Easy,yggpk,suc;suc;advadv;thrthr;thr,sucsucthr
+Zack,Krachtig,Piloting (Planetary),Hard,yggpppk,sucsuc;adv;sucsuc;fai;thrthr;thrthr;null,sucsucsucthrthrthr
+Keith,Yiyar Clan Member,Ranged (Light),Easy,yggbpkk,sucadv;adv;sucsuc;suc;null;null;thr,sucsucsucsucadv

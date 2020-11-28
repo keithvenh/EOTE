@@ -21,6 +21,11 @@
         </div>
 
         <div class="form-field">
+          <%= f.collection_select :character_id, Character.where(category: "Player Character"), :id, :name, {prompt: ''}, {class: "form-input select"} %>
+          <p class="form-label">Character</p>
+        </div>
+
+        <div class="form-field">
           <%= f.text_field :credits, class: "form-input integer" %>
           <p class="form-label">Credits</p>
         </div>
