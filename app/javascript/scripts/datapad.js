@@ -1,5 +1,8 @@
 window.addEventListener('turbolinks:load', () => {
 
+    document.body.height = window.innerHeight;
+    $("#datapad").height = window.innerHeight;
+
     setTimeout(() => {
         document.getElementById('connection').innerHTML = "Connection Active";
     }, 3000)
