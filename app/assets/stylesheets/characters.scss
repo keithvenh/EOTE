@@ -33,6 +33,11 @@
     margin: 12px;
 }
 
+.data-title, .data-subtitle {
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 .description {
     padding: 12px;
     p {
@@ -49,13 +54,16 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     box-sizing: border-box;
+    width: 100%;
     .skills {
         box-sizing: border-box;
+        width: 50%;
     }
 
     .category-title {
         padding: 12px;
         font-size: 20px;
+        box-sizing: border-box;
     }
 
     .skill {
@@ -71,7 +79,7 @@
             text-transform: uppercase;
             padding: 6px;
             padding-left: 16px;
-            width: 50%;
+            width: calc(100% - 150px);
             box-sizing: border-box;
         }
         .level-display {
@@ -85,4 +93,10 @@
 .skills-other {
     flex-direction: column;
     justify-content: flex-start;
+}
+
+@media only screen and (max-width: 812px) {
+    .skills-list .skills {
+        width: 100%;
+    }
 }

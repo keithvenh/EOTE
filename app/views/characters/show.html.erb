@@ -1,3 +1,11 @@
+<section class="links">
+
+    <p class="link"><%= link_to "Update Character", edit_character_path(@char) %></p>
+    <p class="link"><%= link_to "New Skill", new_character_skill_path(@char) %></p>
+    <p class="link"><%= link_to "New Gear", new_character_character_weapon_path(@char) %></p>
+
+</section>
+
 <section class="character-profile">
 
     <%= section_header("Profile") %>
@@ -62,32 +70,32 @@
 
         <div class="attribute" id="brawn">
             <p>Brawn</p>
-            <p class='integer'><%= @character.brawn %></p>
+            <p class='integer'><%= @char.brawn %></p>
         </div>
 
         <div class="attribute" id="agility">
             <p>Agility</p>
-            <p class='integer'><%= @character.agility %></p>
+            <p class='integer'><%= @char.agility %></p>
         </div>
 
         <div class="attribute" id="intellect">
             <p>Intellect</p>
-            <p class='integer'><%= @character.intellect %></p>
+            <p class='integer'><%= @char.intellect %></p>
         </div>
 
         <div class="attribute" id="cunning">
             <p>Cunning</p>
-            <p class='integer'><%= @character.cunning %></p>
+            <p class='integer'><%= @char.cunning %></p>
         </div>
 
         <div class="attribute" id="willpower">
             <p>Willpower</p>
-            <p class='integer'><%= @character.willpower %></p>
+            <p class='integer'><%= @char.willpower %></p>
         </div>
 
         <div class="attribute" id="presence">
             <p>Presence</p>
-            <p class='integer'><%= @character.presence %></p>
+            <p class='integer'><%= @char.presence %></p>
         </div>
 
     </div>

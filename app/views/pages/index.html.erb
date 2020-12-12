@@ -5,7 +5,7 @@
     <p class=" user">
         <%= link_to @user.username, edit_user_registration_path(@user) %>
         <% if @user.character_id && @user.character_id != '' %>
-            (<%= link_to @user.character.name, edit_character_path(@user.character) %>)
+            (<%= link_to @user.character.name, character_path(@user.character) %>)
         <% end %>
     </p>
 
@@ -92,101 +92,3 @@
     </section>
 
 <% end %>
-
-<section>
-
-    <%= section_header("Rolls") %>
-
-    <% rolls = parse_dice(@rolls) %>
-
-    <table class='roll-table'>
-        <tr>
-            <th>Die</th>
-            <th>Rolls</th>
-            <th>Success</th>
-            <th>Advantage</th>  
-            <th>Triumph</th>
-            <th>Blank</th>
-        </tr>
-
-        <tr>
-            <td>All</td>
-            <td><%= rolls[:all][:positive][:count] %></td>
-            <td><%= rolls[:all][:positive][:suc] %></td>
-            <td><%= rolls[:all][:positive][:adv] %></td>
-            <td><%= rolls[:all][:positive][:tri] %></td>
-            <td><%= rolls[:all][:positive][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/yellow.png') %></td>
-            <td><%= rolls[:y][:count] %></td>
-            <td><%= rolls[:y][:suc] %></td>
-            <td><%= rolls[:y][:adv] %></td>
-            <td><%= rolls[:y][:tri] %></td>
-            <td><%= rolls[:y][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/green.png') %></td>
-            <td><%= rolls[:g][:count] %></td>
-            <td><%= rolls[:g][:suc] %></td>
-            <td><%= rolls[:g][:adv] %></td>
-            <td>-</td>
-            <td><%= rolls[:g][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/blue.png') %></td>
-            <td><%= rolls[:b][:count] %></td>
-            <td><%= rolls[:b][:suc] %></td>
-            <td><%= rolls[:b][:adv] %></td>
-            <td>-</td>
-            <td><%= rolls[:b][:blank] %></td>
-        </tr>
-
-        <tr>
-            <th>Die</th>
-            <th>Rolls</th>
-            <th>Failure</th>
-            <th>Threat</th>
-            <th>Despair</th>
-            <th>Blank</th>
-        </tr>
-
-        <tr>
-            <td>All</td>
-            <td><%= rolls[:all][:negative][:count] %></td>
-            <td><%= rolls[:all][:negative][:fai] %></td>
-            <td><%= rolls[:all][:negative][:thr] %></td>
-            <td><%= rolls[:all][:negative][:des] %></td>
-            <td><%= rolls[:all][:negative][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/red.png') %></td>
-            <td><%= rolls[:r][:count] %></td>
-            <td><%= rolls[:r][:fai] %></td>
-            <td><%= rolls[:r][:thr] %></td>
-            <td><%= rolls[:r][:des] %></td>
-            <td><%= rolls[:r][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/purple.png') %></td>
-            <td><%= rolls[:p][:count] %></td>
-            <td><%= rolls[:p][:fai] %></td>
-            <td><%= rolls[:p][:thr] %></td>
-            <td>-</td>
-            <td><%= rolls[:p][:blank] %></td>
-        </tr>
-
-        <tr>
-            <td><%= image_tag('SWRPG/black.png') %></td>
-            <td><%= rolls[:k][:count] %></td>
-            <td><%= rolls[:k][:fai] %></td>
-            <td><%= rolls[:k][:thr] %></td>
-            <td>-</td>
-            <td><%= rolls[:k][:blank] %></td>
-        </tr>
-</section>
